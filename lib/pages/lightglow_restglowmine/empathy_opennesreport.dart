@@ -1,14 +1,18 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
+import 'package:minove/pages/soulglow_purevibehome/easepond_sdpondnav.dart';
 
 class EmpathyOpennesreport extends StatefulWidget {
   const EmpathyOpennesreport({super.key});
+  
 
   @override
   State<EmpathyOpennesreport> createState() => _EmpathyOpennesreport();
 }
 
 class _EmpathyOpennesreport extends State<EmpathyOpennesreport> {
-  final TextEditingController _betundrargm = TextEditingController();
+  final TextEditingController _dicumalfea = TextEditingController();
+  String ollifyilqu = "";
   @override
   void initState() {
     super.initState();
@@ -43,14 +47,20 @@ class _EmpathyOpennesreport extends State<EmpathyOpennesreport> {
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  width: 32,
-                  height: 32,
-                  decoration: BoxDecoration(),
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('assets/images/iudcbiuqh.png'),
+                InkWell(
+                  splashColor: Colors.transparent,
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    width: 32,
+                    height: 32,
+                    decoration: BoxDecoration(),
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('assets/images/iudcbiuqh.png'),
+                        ),
                       ),
                     ),
                   ),
@@ -143,7 +153,7 @@ class _EmpathyOpennesreport extends State<EmpathyOpennesreport> {
                         ),
                         child: TextField(
                           maxLines: 3,
-                          controller: _betundrargm,
+                          controller: _dicumalfea,
                           decoration: InputDecoration(
                             hintText: 'Detailed reasons for the report',
                             hintStyle: TextStyle(
@@ -172,40 +182,53 @@ class _EmpathyOpennesreport extends State<EmpathyOpennesreport> {
                         child: DecoratedBox(decoration: BoxDecoration()),
                       ),
                       Center(
-                        child: Container(
-                          width: 236,
-                          height: 56,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Color.fromRGBO(255, 255, 255, 1),
-                              width: 2,
-                            ),
-                            borderRadius: BorderRadius.circular(32),
-                          ),
-                          child: DecoratedBox(
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          onTap: () async {
+                            if (ollifyilqu != "" && _dicumalfea.text != "") {
+                              await thepondLoad();
+                              BotToast.showText(
+                                text:
+                                    "Thank you for your feedback, we will take it seriously.",
+                              );
+                              Navigator.pop(context);
+                            }
+                          },
+                          child: Container(
+                            width: 236,
+                            height: 56,
                             decoration: BoxDecoration(
                               border: Border.all(
-                                color: Color.fromRGBO(174, 106, 66, 1),
-                                width: 3,
+                                color: Color.fromRGBO(255, 255, 255, 1),
+                                width: 2,
                               ),
                               borderRadius: BorderRadius.circular(32),
                             ),
-                            child: Align(
-                              alignment: AlignmentDirectional(0, 0),
-                              child: Text(
-                                'Submit',
-                                style: TextStyle(
-                                  fontFamily: 'FredokaOne',
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w400,
+                            child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                border: Border.all(
                                   color: Color.fromRGBO(174, 106, 66, 1),
+                                  width: 3,
+                                ),
+                                borderRadius: BorderRadius.circular(32),
+                              ),
+                              child: Align(
+                                alignment: AlignmentDirectional(0, 0),
+                                child: Text(
+                                  'Submit',
+                                  style: TextStyle(
+                                    fontFamily: 'FredokaOne',
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color.fromRGBO(174, 106, 66, 1),
+                                  ),
                                 ),
                               ),
                             ),
                           ),
                         ),
                       ),
-                         SizedBox(
+                      SizedBox(
                         height: 30,
                         child: DecoratedBox(decoration: BoxDecoration()),
                       ),
@@ -221,34 +244,44 @@ class _EmpathyOpennesreport extends State<EmpathyOpennesreport> {
   }
 
   Widget _litstabiyji(minove) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 8),
-      child: Container(
-        width: double.infinity,
-        height: 60,
-        decoration: BoxDecoration(
-          border: Border.all(color: Color.fromRGBO(255, 255, 255, 1), width: 2),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: DecoratedBox(
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Color.fromRGBO(174, 106, 66, 1),
-              width: 3,
+    return InkWell(
+      splashColor: Colors.transparent,
+      onTap: () {
+        setState(() {
+          ollifyilqu = minove;
+        });
+      },
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 8),
+        child: Container(
+          width: double.infinity,
+          height: 60,
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: ollifyilqu == minove
+                    ? Color.fromRGBO(174, 106, 66, 1)
+                    : Colors.transparent,
+                width: 2,
+              ),
+              borderRadius: BorderRadius.circular(10),
+              color: ollifyilqu == minove
+                  ? Color.fromRGBO(251, 246, 232, 1)
+                  : Color.fromRGBO(235, 229, 213, 1),
             ),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Align(
-            alignment: AlignmentDirectional(-1, 0),
-            child: Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: Text(
-                minove,
-                style: TextStyle(
-                  fontFamily: 'PatrickHand',
-                  fontSize: 20,
-                  fontWeight: FontWeight.w400,
-                  color: Color.fromRGBO(91, 56, 41, 1),
+            child: Align(
+              alignment: AlignmentDirectional(-1, 0),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text(
+                  minove,
+                  style: TextStyle(
+                    fontFamily: 'PatrickHand',
+                    fontSize: 20,
+                    fontWeight: FontWeight.w400,
+                    color: Color.fromRGBO(91, 56, 41, 1),
+                  ),
                 ),
               ),
             ),

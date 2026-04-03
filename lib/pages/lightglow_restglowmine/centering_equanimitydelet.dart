@@ -1,4 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:minove/itpeacestorge/soulbalastorge.dart';
+import 'package:minove/pages/softvibe_comfortvibefirst/relief_soothingstart.dart';
+import 'package:minove/pages/soulglow_purevibehome/easepond_sdpondnav.dart';
 
 class CenteringEquanimitydelet extends StatefulWidget {
   const CenteringEquanimitydelet({super.key});
@@ -71,6 +76,7 @@ class _CenteringEquanimitydelet extends State<CenteringEquanimitydelet> {
                           fontSize: 20,
                           fontWeight: FontWeight.w400,
                           color: Color.fromRGBO(91, 56, 41, 1),
+                          decoration: TextDecoration.none,
                         ),
                       ),
                       Container(
@@ -90,33 +96,87 @@ class _CenteringEquanimitydelet extends State<CenteringEquanimitydelet> {
                         height: 26,
                         child: DecoratedBox(decoration: BoxDecoration()),
                       ),
-                      Container(
-                        width: 236,
-                        height: 46,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Color.fromRGBO(255, 255, 255, 1),
-                            width: 2,
-                          ),
-                          borderRadius: BorderRadius.circular(32),
-                        ),
-                        child: DecoratedBox(
+                      GestureDetector(
+                        onTap: () async {
+                          try {
+                            await thepondLoad();
+
+                            int tsheheaNum = Random().nextInt(9000) + 1000;
+
+                            if (FFAppState().aceinsideliTable[FFAppState()
+                                    .acecenterDex]["baserentylId"] ==
+                                23) {
+                              FFAppState().aceinsideliTable[FFAppState()
+                                      .acecenterDex]["tranathAvatar"] =
+                                  "assets/images/minovelogo.png";
+                              FFAppState().aceinsideliTable[FFAppState()
+                                      .acecenterDex]["softcloudName"] =
+                                  "User$tsheheaNum";
+                              FFAppState().aceinsideliTable[FFAppState()
+                                      .acecenterDex]["gentlepondGood"] =
+                                  0;
+                              FFAppState().aceinsideliTable[FFAppState()
+                                      .acecenterDex]["mindreleaseFL"] =
+                                  [];
+                              FFAppState().aceinsideliTable[FFAppState()
+                                      .acecenterDex]["uilwindFS"] =
+                                  [];
+                              FFAppState().aceinsideliTable[FFAppState()
+                                      .acecenterDex]["softwinddBl"] =
+                                  [];
+                              FFAppState().aceinsideliTable[FFAppState()
+                                      .acecenterDex]["anquilwater"] =
+                                  2;
+                            }
+
+                            Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const ReliefSoothingstart(),
+                              ),
+                              (Route<dynamic> route) => false,
+                            );
+
+                            FFAppState().rolificIndex = 0;
+
+                            await Future.delayed(
+                              const Duration(milliseconds: 800),
+                            );
+                            FFAppState().acecenterDex = -1;
+                          } catch (e) {
+                            return;
+                          }
+                        },
+                        child: Container(
+                          width: 236,
+                          height: 46,
                           decoration: BoxDecoration(
                             border: Border.all(
-                              color: Color.fromRGBO(174, 106, 66, 1),
-                              width: 3,
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                              width: 2,
                             ),
                             borderRadius: BorderRadius.circular(32),
                           ),
-                          child: Align(
-                            alignment: AlignmentDirectional(0, 0),
-                            child: Text(
-                              'Sure',
-                              style: TextStyle(
-                                fontFamily: 'FredokaOne',
-                                fontSize: 20,
-                                fontWeight: FontWeight.w400,
+                          child: DecoratedBox(
+                            decoration: BoxDecoration(
+                              border: Border.all(
                                 color: Color.fromRGBO(174, 106, 66, 1),
+                                width: 3,
+                              ),
+                              borderRadius: BorderRadius.circular(32),
+                            ),
+                            child: Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Text(
+                                'Sure',
+                                style: TextStyle(
+                                  fontFamily: 'FredokaOne',
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color.fromRGBO(174, 106, 66, 1),
+                                  decoration: TextDecoration.none,
+                                ),
                               ),
                             ),
                           ),
@@ -132,15 +192,20 @@ class _CenteringEquanimitydelet extends State<CenteringEquanimitydelet> {
             height: 24,
             child: DecoratedBox(decoration: BoxDecoration()),
           ),
-          Container(
-            width: 24,
-            height: 24,
-            decoration: BoxDecoration(),
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("assets/images/cnvuieqwg.png"),
-                  fit: BoxFit.cover,
+          GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Container(
+              width: 24,
+              height: 24,
+              decoration: BoxDecoration(),
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/cnvuieqwg.png"),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),

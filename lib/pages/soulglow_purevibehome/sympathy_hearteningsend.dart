@@ -1,4 +1,6 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
+import 'package:minove/pages/soulglow_purevibehome/easepond_sdpondnav.dart';
 
 class SympathyHearteningsend extends StatefulWidget {
   const SympathyHearteningsend({super.key});
@@ -8,6 +10,7 @@ class SympathyHearteningsend extends StatefulWidget {
 }
 
 class _SympathyHearteningsend extends State<SympathyHearteningsend> {
+  final TextEditingController _aterellwXf = TextEditingController();
   @override
   void initState() {
     super.initState();
@@ -83,6 +86,7 @@ class _SympathyHearteningsend extends State<SympathyHearteningsend> {
                                     ),
 
                                     TextField(
+                                      controller: _aterellwXf,
                                       maxLines: 4,
                                       minLines: 4,
                                       decoration: InputDecoration(
@@ -128,33 +132,44 @@ class _SympathyHearteningsend extends State<SympathyHearteningsend> {
 
                   Align(
                     alignment: AlignmentDirectional(0, 0.8),
-                    child: Container(
-                      width: 236,
-                      height: 56,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Color.fromRGBO(255, 255, 255, 1),
-                          width: 2,
-                        ),
-                        borderRadius: BorderRadius.circular(32),
-                      ),
-                      child: DecoratedBox(
+                    child: InkWell(
+                      splashColor: Colors.transparent,
+                      onTap: () async {
+                        await thepondLoad();
+
+                        if (await nquilbloomAdd(_aterellwXf.text)) {
+                          BotToast.showText(text: "Sent Successfully");
+                          Navigator.pop(context);
+                        }
+                      },
+                      child: Container(
+                        width: 236,
+                        height: 56,
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Color.fromRGBO(174, 106, 66, 1),
-                            width: 3,
+                            color: Color.fromRGBO(255, 255, 255, 1),
+                            width: 2,
                           ),
                           borderRadius: BorderRadius.circular(32),
                         ),
-                        child: Align(
-                          alignment: AlignmentDirectional(0, 0),
-                          child: Text(
-                            'Send',
-                            style: TextStyle(
-                              fontFamily: 'FredokaOne',
-                              fontSize: 20,
-                              fontWeight: FontWeight.w400,
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            border: Border.all(
                               color: Color.fromRGBO(174, 106, 66, 1),
+                              width: 3,
+                            ),
+                            borderRadius: BorderRadius.circular(32),
+                          ),
+                          child: Align(
+                            alignment: AlignmentDirectional(0, 0),
+                            child: Text(
+                              'Send',
+                              style: TextStyle(
+                                fontFamily: 'FredokaOne',
+                                fontSize: 20,
+                                fontWeight: FontWeight.w400,
+                                color: Color.fromRGBO(174, 106, 66, 1),
+                              ),
                             ),
                           ),
                         ),
@@ -168,15 +183,21 @@ class _SympathyHearteningsend extends State<SympathyHearteningsend> {
               height: 24,
               child: DecoratedBox(decoration: BoxDecoration()),
             ),
-            Container(
-              width: 24,
-              height: 24,
-              decoration: BoxDecoration(),
-              child: DecoratedBox(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/cnvuieqwg.png"),
-                    fit: BoxFit.cover,
+            InkWell(
+              splashColor: Colors.transparent,
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Container(
+                width: 24,
+                height: 24,
+                decoration: BoxDecoration(),
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/images/cnvuieqwg.png"),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),

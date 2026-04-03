@@ -1,4 +1,8 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
+import 'package:minove/itpeacestorge/soulbalastorge.dart';
+import 'package:minove/pages/softvibe_comfortvibefirst/respite_stillnesignup.dart';
+import 'package:minove/pages/soulglow_purevibehome/serenity_clarityhome.dart';
 
 class HealingReleaselogin extends StatefulWidget {
   const HealingReleaselogin({super.key});
@@ -206,66 +210,110 @@ class _HealingReleaselogin extends State<HealingReleaselogin> {
                       ),
                       Align(
                         alignment: AlignmentDirectional(1, 0),
-                        child: Text(
-                          'FORGOT?',
-                          style: TextStyle(
-                            fontFamily: 'PatrickHand',
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: Color.fromRGBO(174, 106, 66, 1),
-                            decoration: TextDecoration.underline,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 72,
-                        child: DecoratedBox(decoration: BoxDecoration()),
-                      ),
-                      Align(
-                        alignment: AlignmentDirectional(0, 0),
-                        child: Text(
-                          "Don't have an account? Sign up",
-                          style: TextStyle(
-                            fontFamily: 'PatrickHand',
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: Color.fromRGBO(174, 106, 66, 1),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 72,
-                        child: DecoratedBox(decoration: BoxDecoration()),
-                      ),
-                      Align(
-                        alignment: AlignmentDirectional(0, 0),
-                        child: Container(
-                          width: 236,
-                          height: 56,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Color.fromRGBO(255, 255, 255, 1),
-                              width: 2,
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          onTap: () {
+                            Navigator.push(context,MaterialPageRoute(builder: (context) => const RespiteStillnesignup(waracefulmth: 1,)));
+                          },
+                          child: Text(
+                            'FORGOT?',
+                            style: TextStyle(
+                              fontFamily: 'PatrickHand',
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                              color: Color.fromRGBO(174, 106, 66, 1),
+                              decoration: TextDecoration.underline,
                             ),
-                            borderRadius: BorderRadius.circular(32),
                           ),
-                          child: DecoratedBox(
+                        ),
+                      ),
+                      SizedBox(
+                        height: 72,
+                        child: DecoratedBox(decoration: BoxDecoration()),
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(0, 0),
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          onTap: () {
+                            Navigator.push(context,MaterialPageRoute(builder: (context) => const RespiteStillnesignup(waracefulmth: 0,)));
+                          },
+                          child: Text(
+                            "Don't have an account? Sign up",
+                            style: TextStyle(
+                              fontFamily: 'PatrickHand',
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                              color: Color.fromRGBO(174, 106, 66, 1),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 72,
+                        child: DecoratedBox(decoration: BoxDecoration()),
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(0, 0),
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          onTap: () {
+                            if (_gratitudeyoux.text != "" &&
+                                _reprievemim.text != "") {
+                              final serentDex = FFAppState().aceinsideliTable
+                                  .indexWhere(
+                                    (e) =>
+                                        e["ulreleaseType"] == 0 &&
+                                        e["sngfieldEmail"] ==
+                                            _gratitudeyoux.text &&
+                                        e["gsllwellPasw"] == _reprievemim.text,
+                                  );
+
+                              if (serentDex != -1) {
+                                FFAppState().acecenterDex = serentDex;
+
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const SerenityClarityhome(),
+                                  ),
+                                );
+                              } else {
+                                BotToast.showText(
+                                  text: "Incorrect Account or Password",
+                                );
+                              }
+                            }
+                          },
+                          child: Container(
+                            width: 236,
+                            height: 56,
                             decoration: BoxDecoration(
                               border: Border.all(
-                                color: Color.fromRGBO(174, 106, 66, 1),
-                                width: 3,
+                                color: Color.fromRGBO(255, 255, 255, 1),
+                                width: 2,
                               ),
                               borderRadius: BorderRadius.circular(32),
                             ),
-                            child: Align(
-                              alignment: AlignmentDirectional(0, 0),
-                              child: Text(
-                                'Sign in',
-                                style: TextStyle(
-                                  fontFamily: 'FredokaOne',
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w400,
+                            child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                border: Border.all(
                                   color: Color.fromRGBO(174, 106, 66, 1),
+                                  width: 3,
+                                ),
+                                borderRadius: BorderRadius.circular(32),
+                              ),
+                              child: Align(
+                                alignment: AlignmentDirectional(0, 0),
+                                child: Text(
+                                  'Sign in',
+                                  style: TextStyle(
+                                    fontFamily: 'FredokaOne',
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color.fromRGBO(174, 106, 66, 1),
+                                  ),
                                 ),
                               ),
                             ),

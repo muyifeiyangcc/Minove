@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:minove/itpeacestorge/soulbalastorge.dart';
+import 'package:minove/pages/lightglow_restglowmine/tranquility_meditatjh.dart';
+import 'package:minove/pages/soulglow_purevibehome/easepond_sdpondnav.dart';
 
 class MindshineCalmglowment extends StatefulWidget {
-  const MindshineCalmglowment({super.key});
+  const MindshineCalmglowment({super.key, required this.lemencyncId});
+
+  final int lemencyncId;
 
   @override
   State<MindshineCalmglowment> createState() => _MindshineCalmglowment();
 }
 
 class _MindshineCalmglowment extends State<MindshineCalmglowment> {
-  final TextEditingController _betundrargm = TextEditingController();
+  final TextEditingController _obtumaciou = TextEditingController();
   @override
   void initState() {
     super.initState();
@@ -19,8 +24,26 @@ class _MindshineCalmglowment extends State<MindshineCalmglowment> {
     super.dispose();
   }
 
+  dynamic getIgnosset() {
+    try {
+      return FFAppState().aceinsideliTable
+          .where(
+            (e) =>
+                e["ulreleaseType"] == 4 &&
+                e["niveomitantId"] == widget.lemencyncId
+                && !FFAppState().aceinsideliTable[FFAppState().acecenterDex]["softwinddBl"].contains(e["tediluviandUid"])
+          )
+          .toList()
+          .reversed
+          .toList();
+    } catch (e) {
+      return [];
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    final relictowerList = getIgnosset();
     return Align(
       alignment: Alignment.bottomCenter,
       child: Stack(
@@ -30,17 +53,23 @@ class _MindshineCalmglowment extends State<MindshineCalmglowment> {
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom: 20, right: 15),
-                child: Container(
-                  width: 24,
-                  height: 24,
-                  decoration: BoxDecoration(),
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage("assets/images/cnvuieqwg.png"),
-                        fit: BoxFit.cover,
+              InkWell(
+                splashColor: Colors.transparent,
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 20, right: 15),
+                  child: Container(
+                    width: 24,
+                    height: 24,
+                    decoration: BoxDecoration(),
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/images/cnvuieqwg.png"),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                   ),
@@ -80,7 +109,7 @@ class _MindshineCalmglowment extends State<MindshineCalmglowment> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Comment:   (21)',
+                          'Comment:   (${relictowerList.length})',
                           style: TextStyle(
                             fontFamily: 'FredokaOne',
                             fontSize: 20,
@@ -114,9 +143,13 @@ class _MindshineCalmglowment extends State<MindshineCalmglowment> {
                               ),
                             ),
 
-                            itemCount: 3,
+                            itemCount: relictowerList.length,
                             itemBuilder: (context, index) {
+                              final lailiate = eacewindind(
+                                relictowerList[index]["tediluviandUid"],
+                              );
                               return Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Row(
                                     children: [
@@ -129,7 +162,7 @@ class _MindshineCalmglowment extends State<MindshineCalmglowment> {
                                             decoration: BoxDecoration(
                                               image: DecorationImage(
                                                 image: AssetImage(
-                                                  "assets/images/minovelogo.png",
+                                                  lailiate["tranathAvatar"],
                                                 ),
                                                 fit: BoxFit.cover,
                                               ),
@@ -145,9 +178,11 @@ class _MindshineCalmglowment extends State<MindshineCalmglowment> {
                                       ),
                                       Flex(
                                         direction: Axis.vertical,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            'Linh Nguyen',
+                                            lailiate["softcloudName"],
                                             style: TextStyle(
                                               fontFamily: 'PatrickHand',
                                               fontSize: 16,
@@ -161,7 +196,7 @@ class _MindshineCalmglowment extends State<MindshineCalmglowment> {
                                             ),
                                           ),
                                           Text(
-                                            'Tue Dec 14 2021',
+                                            relictowerList[index]["latarcateDate"],
                                             style: TextStyle(
                                               fontFamily: 'PatrickHand',
                                               fontSize: 12,
@@ -177,23 +212,41 @@ class _MindshineCalmglowment extends State<MindshineCalmglowment> {
                                         ],
                                       ),
                                       Spacer(),
-                                      Container(
-                                        width: 32,
-                                        height: 32,
-                                        decoration: BoxDecoration(),
-                                        child: Align(
-                                          alignment: AlignmentDirectional(0, 0),
-                                          child: Container(
-                                            width: 20,
-                                            height: 20,
-                                            decoration: BoxDecoration(),
-                                            child: DecoratedBox(
-                                              decoration: BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                    "assets/images/iweninvcxd.png",
+                                      if(relictowerList[index]["tediluviandUid"] != FFAppState().aceinsideliTable[FFAppState().acecenterDex]["baserentylId"])
+                                      InkWell(
+                                        splashColor: Colors.transparent,
+                                        onTap: () async {
+                                          await showDialog(
+                                            context: context,
+                                            builder: (context) {
+                                              return TranquilityMeditatjh(
+                                                phytendausUid:
+                                                     relictowerList[index]["tediluviandUid"],
+                                              );
+                                            },
+                                          );
+                                        },
+                                        child: Container(
+                                          width: 32,
+                                          height: 32,
+                                          decoration: BoxDecoration(),
+                                          child: Align(
+                                            alignment: AlignmentDirectional(
+                                              0,
+                                              0,
+                                            ),
+                                            child: Container(
+                                              width: 20,
+                                              height: 20,
+                                              decoration: BoxDecoration(),
+                                              child: DecoratedBox(
+                                                decoration: BoxDecoration(
+                                                  image: DecorationImage(
+                                                    image: AssetImage(
+                                                      "assets/images/iweninvcxd.png",
+                                                    ),
+                                                    fit: BoxFit.cover,
                                                   ),
-                                                  fit: BoxFit.cover,
                                                 ),
                                               ),
                                             ),
@@ -208,7 +261,7 @@ class _MindshineCalmglowment extends State<MindshineCalmglowment> {
                                       bottom: 20,
                                     ),
                                     child: Text(
-                                      'Unfortunately, the account balance is insufficient to cover this bill. Please top it up.',
+                                      relictowerList[index]["dirctiliousNr"],
                                       style: TextStyle(
                                         fontFamily: 'PatrickHand',
                                         fontSize: 16,
@@ -263,7 +316,7 @@ class _MindshineCalmglowment extends State<MindshineCalmglowment> {
                       children: [
                         Expanded(
                           child: TextField(
-                            controller: _betundrargm,
+                            controller: _obtumaciou,
                             decoration: InputDecoration(
                               hintText: 'Enter the reply content',
                               hintStyle: TextStyle(
@@ -286,17 +339,30 @@ class _MindshineCalmglowment extends State<MindshineCalmglowment> {
                             ),
                           ),
                         ),
-                        Container(
-                          width: 32,
-                          height: 32,
-                          decoration: BoxDecoration(),
-                          child: DecoratedBox(
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage("assets/images/anciuf.png"),
-                                fit: BoxFit.cover,
+                        InkWell(
+                          splashColor: Colors.transparent,
+                          onTap: () {
+                            if (_obtumaciou.text != "") {
+                              scuousisquAdd(
+                                _obtumaciou.text,
+                                widget.lemencyncId,
+                              );
+                              _obtumaciou.text = "";
+                              setState(() {});
+                            }
+                          },
+                          child: Container(
+                            width: 32,
+                            height: 32,
+                            decoration: BoxDecoration(),
+                            child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage("assets/images/anciuf.png"),
+                                  fit: BoxFit.cover,
+                                ),
+                                borderRadius: BorderRadius.circular(24),
                               ),
-                              borderRadius: BorderRadius.circular(24),
                             ),
                           ),
                         ),

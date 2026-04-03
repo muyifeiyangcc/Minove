@@ -1,4 +1,9 @@
+import 'dart:math';
+
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
+import 'package:minove/itpeacestorge/soulbalastorge.dart';
+import 'package:minove/pages/soulglow_purevibehome/serenity_clarityhome.dart';
 
 class RespiteStillnesignup extends StatefulWidget {
   const RespiteStillnesignup({super.key, required this.waracefulmth});
@@ -23,6 +28,38 @@ class _RespiteStillnesignup extends State<RespiteStillnesignup> {
   @override
   void dispose() {
     super.dispose();
+  }
+
+  int moniousreAdd() {
+    try {
+      int tiougyrics = Random().nextInt(9000) + 1000;
+      int proentaId = FFAppState().aceinsideliTable.last["baserentylId"] + 1;
+      FFAppState().aceinsideliTable.add({
+        "ulreleaseType": 0,
+        "baserentylId": proentaId,
+        "sngfieldEmail": _orelaxationemail.text,
+        "gsllwellPasw": _coeasemim.text,
+        "tranathAvatar": "assets/images/minovelogo.png",
+        "softcloudName": "User$tiougyrics",
+        "gentlepondGood": 0,
+        "mindreleaseFL": [],
+        "uilwindFS": [],
+        "softwinddBl": [],
+        "anquilwater": 2,
+      });
+
+      int dolentDex = FFAppState().aceinsideliTable.indexWhere(
+        (e) => e["baserentylId"] == proentaId,
+      );
+
+      if (dolentDex >= 0) {
+        return dolentDex;
+      } else {
+        return -1;
+      }
+    } catch (e) {
+      return -1;
+    }
   }
 
   @override
@@ -68,7 +105,7 @@ class _RespiteStillnesignup extends State<RespiteStillnesignup> {
                   ),
                 ),
                 Text(
-                  widget.waracefulmth==0?'Sign up':"Forgot password",
+                  widget.waracefulmth == 0 ? 'Sign up' : "Forgot password",
                   style: TextStyle(
                     fontFamily: 'FredokaOne',
                     fontSize: 20,
@@ -259,33 +296,60 @@ class _RespiteStillnesignup extends State<RespiteStillnesignup> {
                       ),
                       Align(
                         alignment: AlignmentDirectional(0, 0),
-                        child: Container(
-                          width: 236,
-                          height: 56,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Color.fromRGBO(255, 255, 255, 1),
-                              width: 2,
-                            ),
-                            borderRadius: BorderRadius.circular(32),
-                          ),
-                          child: DecoratedBox(
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          onTap: () {
+                            if (_orelaxationemail.text == "" ||
+                                _coeasemim.text == "" ||
+                                _ilettinggonpasw.text == "") {
+                              BotToast.showText(text: "Complete content");
+                              return;
+                            }
+
+                            if (widget.waracefulmth == 0) {
+                              final leoliticntDex = moniousreAdd();
+
+                              if (leoliticntDex >= 0) {
+                                FFAppState().acecenterDex = leoliticntDex;
+
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const SerenityClarityhome(),
+                                  ),
+                                );
+                              }
+                            }
+                          },
+                          child: Container(
+                            width: 236,
+                            height: 56,
                             decoration: BoxDecoration(
                               border: Border.all(
-                                color: Color.fromRGBO(174, 106, 66, 1),
-                                width: 3,
+                                color: Color.fromRGBO(255, 255, 255, 1),
+                                width: 2,
                               ),
                               borderRadius: BorderRadius.circular(32),
                             ),
-                            child: Align(
-                              alignment: AlignmentDirectional(0, 0),
-                              child: Text(
-                                widget.waracefulmth==0?'Sign up':"Save",
-                                style: TextStyle(
-                                  fontFamily: 'FredokaOne',
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w400,
+                            child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                border: Border.all(
                                   color: Color.fromRGBO(174, 106, 66, 1),
+                                  width: 3,
+                                ),
+                                borderRadius: BorderRadius.circular(32),
+                              ),
+                              child: Align(
+                                alignment: AlignmentDirectional(0, 0),
+                                child: Text(
+                                  widget.waracefulmth == 0 ? 'Sign up' : "Save",
+                                  style: TextStyle(
+                                    fontFamily: 'FredokaOne',
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color.fromRGBO(174, 106, 66, 1),
+                                  ),
                                 ),
                               ),
                             ),

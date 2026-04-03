@@ -1,14 +1,18 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
+import 'package:minove/pages/soulglow_purevibehome/easepond_sdpondnav.dart';
 
 class MindcalmAnchoringlook extends StatefulWidget {
-  const MindcalmAnchoringlook({super.key});
+  const MindcalmAnchoringlook({super.key, required this.ecloudWz});
+
+  final dynamic ecloudWz;
 
   @override
   State<MindcalmAnchoringlook> createState() => _MindcalmAnchoringlook();
 }
 
 class _MindcalmAnchoringlook extends State<MindcalmAnchoringlook> {
-  final TextEditingController _betundrargm = TextEditingController();
+  final TextEditingController _onrestwad = TextEditingController();
   @override
   void initState() {
     super.initState();
@@ -21,6 +25,7 @@ class _MindcalmAnchoringlook extends State<MindcalmAnchoringlook> {
 
   @override
   Widget build(BuildContext context) {
+    final hebreezeu = eacewindind(widget.ecloudWz["serenecloudUid"]);
     return Align(
       alignment: AlignmentDirectional(0, 0),
       child: SingleChildScrollView(
@@ -82,7 +87,7 @@ class _MindcalmAnchoringlook extends State<MindcalmAnchoringlook> {
                                     decoration: BoxDecoration(
                                       image: DecorationImage(
                                         image: AssetImage(
-                                          "assets/images/minovelogo.png",
+                                          hebreezeu["tranathAvatar"],
                                         ),
                                         fit: BoxFit.cover,
                                       ),
@@ -98,9 +103,10 @@ class _MindcalmAnchoringlook extends State<MindcalmAnchoringlook> {
                               ),
                               Flex(
                                 direction: Axis.vertical,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Linh Nguyen',
+                                    hebreezeu["softcloudName"],
                                     style: TextStyle(
                                       fontFamily: 'PatrickHand',
                                       fontSize: 16,
@@ -109,7 +115,7 @@ class _MindcalmAnchoringlook extends State<MindcalmAnchoringlook> {
                                     ),
                                   ),
                                   Text(
-                                    'Tue Dec 14 2021',
+                                    widget.ecloudWz["acepondDate"],
                                     style: TextStyle(
                                       fontFamily: 'PatrickHand',
                                       fontSize: 12,
@@ -126,10 +132,10 @@ class _MindcalmAnchoringlook extends State<MindcalmAnchoringlook> {
                             child: DecoratedBox(decoration: BoxDecoration()),
                           ),
                           Text(
-                            "Are you sure you want to spend 100 coins to increase the number of times?",
+                            widget.ecloudWz["heartwiContent"],
                             style: TextStyle(
                               fontFamily: 'PatrickHand',
-                              fontSize: 20,
+                              fontSize: 16,
                               fontWeight: FontWeight.w400,
                               color: Color.fromRGBO(91, 56, 41, 1),
                             ),
@@ -155,7 +161,7 @@ class _MindcalmAnchoringlook extends State<MindcalmAnchoringlook> {
                           ),
 
                           TextField(
-                            controller: _betundrargm,
+                            controller: _onrestwad,
                             decoration: InputDecoration(
                               hintText: 'Enter the reply content',
                               hintStyle: TextStyle(
@@ -166,7 +172,6 @@ class _MindcalmAnchoringlook extends State<MindcalmAnchoringlook> {
                               ),
                               border: InputBorder.none,
                               contentPadding: EdgeInsets.symmetric(
-                               
                                 vertical: 10,
                               ),
                             ),
@@ -186,33 +191,45 @@ class _MindcalmAnchoringlook extends State<MindcalmAnchoringlook> {
                             height: 33,
                             child: DecoratedBox(decoration: BoxDecoration()),
                           ),
-                          Container(
-                            width: 236,
-                            height: 46,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Color.fromRGBO(255, 255, 255, 1),
-                                width: 2,
-                              ),
-                              borderRadius: BorderRadius.circular(32),
-                            ),
-                            child: DecoratedBox(
+                          InkWell(
+                          splashColor: Colors.transparent,
+                          onTap: () async {
+                           if(_onrestwad.text!=""){
+                            await thepondLoad();
+                            BotToast.showText(text: "Reply successful.");
+                            Navigator.pop(context);
+                           }else{
+                            BotToast.showText(text: "The reply content cannot be empty.");
+                           }
+                          },
+                            child: Container(
+                              width: 236,
+                              height: 46,
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                  color: Color.fromRGBO(174, 106, 66, 1),
-                                  width: 3,
+                                  color: Color.fromRGBO(255, 255, 255, 1),
+                                  width: 2,
                                 ),
                                 borderRadius: BorderRadius.circular(32),
                               ),
-                              child: Align(
-                                alignment: AlignmentDirectional(0, 0),
-                                child: Text(
-                                  'Reply',
-                                  style: TextStyle(
-                                    fontFamily: 'FredokaOne',
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w400,
+                              child: DecoratedBox(
+                                decoration: BoxDecoration(
+                                  border: Border.all(
                                     color: Color.fromRGBO(174, 106, 66, 1),
+                                    width: 3,
+                                  ),
+                                  borderRadius: BorderRadius.circular(32),
+                                ),
+                                child: Align(
+                                  alignment: AlignmentDirectional(0, 0),
+                                  child: Text(
+                                    'Reply',
+                                    style: TextStyle(
+                                      fontFamily: 'FredokaOne',
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w400,
+                                      color: Color.fromRGBO(174, 106, 66, 1),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -229,15 +246,21 @@ class _MindcalmAnchoringlook extends State<MindcalmAnchoringlook> {
               height: 24,
               child: DecoratedBox(decoration: BoxDecoration()),
             ),
-            Container(
-              width: 24,
-              height: 24,
-              decoration: BoxDecoration(),
-              child: DecoratedBox(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/cnvuieqwg.png"),
-                    fit: BoxFit.cover,
+            InkWell(
+              splashColor: Colors.transparent,
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Container(
+                width: 24,
+                height: 24,
+                decoration: BoxDecoration(),
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/images/cnvuieqwg.png"),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),

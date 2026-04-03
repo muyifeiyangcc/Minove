@@ -45,5 +45,13 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+
+		<key>NSCameraUsageDescription</key>
+		<string>This app needs to access your camera to take pictures, making it convenient for you to shoot and upload videos or other images. All shooting data will be securely stored on your personal device. We will only upload or share it with your explicit consent.</string>
+		<key>NSMicrophoneUsageDescription</key>
+		<string>This app needs access to your microphone for audio recording, which lets you have smooth voice chats. We will only use or access the recorded content if you give us explicit permission.</string>
+		<key>NSPhotoLibraryUsageDescription</key>
+		<string>This app needs access to your album to let you select and upload videos or other pictures. All the files you choose will only be used for the purposes you've approved, and they'll be securely stored on your device—we'll only upload or share them if you agree.</string>
+		
 </dict>
 </plist>
