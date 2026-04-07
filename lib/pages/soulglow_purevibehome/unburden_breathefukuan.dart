@@ -1,4 +1,8 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
+import 'package:minove/itpeacestorge/soulbalastorge.dart';
+import 'package:minove/pages/soulglow_purevibehome/easepond_sdpondnav.dart';
+import 'package:minove/pages/soulglow_purevibehome/grounding_selflovemeim.dart';
 
 class UnburdenBreathefukuan extends StatefulWidget {
   const UnburdenBreathefukuan({super.key});
@@ -75,6 +79,7 @@ class _UnburdenBreathefukuan extends State<UnburdenBreathefukuan> {
                                 fontSize: 20,
                                 fontWeight: FontWeight.w400,
                                 color: Color.fromRGBO(91, 56, 41, 1),
+                                decoration: TextDecoration.none,
                               ),
                             ),
                             Container(
@@ -127,6 +132,7 @@ class _UnburdenBreathefukuan extends State<UnburdenBreathefukuan> {
                                       fontSize: 20,
                                       fontWeight: FontWeight.w400,
                                       color: Color.fromRGBO(174, 106, 66, 1),
+                                      decoration: TextDecoration.none,
                                     ),
                                   ),
                                 ),
@@ -136,33 +142,62 @@ class _UnburdenBreathefukuan extends State<UnburdenBreathefukuan> {
                               height: 13,
                               child: DecoratedBox(decoration: BoxDecoration()),
                             ),
-                            Container(
-                              width: 236,
-                              height: 46,
-                              decoration: BoxDecoration(
-                                border: Border.all(
-                                  color: Color.fromRGBO(255, 255, 255, 1),
-                                  width: 2,
-                                ),
-                                borderRadius: BorderRadius.circular(32),
-                              ),
-                              child: DecoratedBox(
+                            GestureDetector(
+                              onTap: () async {
+                                if (Alpradunctice().aceinsideliTable[Alpradunctice()
+                                        .acecenterDex]["gentlepondGood"] >=
+                                    100) {
+                                  int levpaetesNum =
+                                      Alpradunctice().aceinsideliTable[Alpradunctice()
+                                          .acecenterDex]["gentlepondGood"] -
+                                      100;
+                                  trabrehoiceUpd(levpaetesNum);
+
+                                  darapidensUpd(Alpradunctice().aceinsideliTable[Alpradunctice().acecenterDex]["anquilwater"]+1);
+
+
+                                  BotToast.showText(text: "success");
+                                  Navigator.pop(context);
+
+
+                                } else {
+                                  await showDialog(
+                                    context: context,
+                                    builder: (context) {
+                                      return GroundingSelflovemeim();
+                                    },
+                                  );
+                                }
+                              },
+                              child: Container(
+                                width: 236,
+                                height: 46,
                                 decoration: BoxDecoration(
                                   border: Border.all(
-                                    color: Color.fromRGBO(174, 106, 66, 1),
-                                    width: 3,
+                                    color: Color.fromRGBO(255, 255, 255, 1),
+                                    width: 2,
                                   ),
                                   borderRadius: BorderRadius.circular(32),
                                 ),
-                                child: Align(
-                                  alignment: AlignmentDirectional(0, 0),
-                                  child: Text(
-                                    'Sure',
-                                    style: TextStyle(
-                                      fontFamily: 'FredokaOne',
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w400,
+                                child: DecoratedBox(
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
                                       color: Color.fromRGBO(174, 106, 66, 1),
+                                      width: 3,
+                                    ),
+                                    borderRadius: BorderRadius.circular(32),
+                                  ),
+                                  child: Align(
+                                    alignment: AlignmentDirectional(0, 0),
+                                    child: Text(
+                                      'Sure',
+                                      style: TextStyle(
+                                        fontFamily: 'FredokaOne',
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w400,
+                                        color: Color.fromRGBO(174, 106, 66, 1),
+                                        decoration: TextDecoration.none,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -192,16 +227,24 @@ class _UnburdenBreathefukuan extends State<UnburdenBreathefukuan> {
               ],
             ),
           ),
-          SizedBox(height: 24,child: DecoratedBox(decoration: BoxDecoration())),
-          Container(
-            width: 24,
+          SizedBox(
             height: 24,
-            decoration: BoxDecoration(),
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("assets/images/cnvuieqwg.png"),
-                  fit: BoxFit.cover,
+            child: DecoratedBox(decoration: BoxDecoration()),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Container(
+              width: 24,
+              height: 24,
+              decoration: BoxDecoration(),
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/cnvuieqwg.png"),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),

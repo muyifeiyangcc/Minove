@@ -137,10 +137,10 @@ class _TranquilPeacefulsetting extends State<TranquilPeacefulsetting> {
                           (Route<dynamic> route) => false,
                         );
 
-                        FFAppState().rolificIndex = 0;
+                        Alpradunctice().rolificIndex = 0;
 
                         await Future.delayed(const Duration(milliseconds: 800));
-                        FFAppState().acecenterDex = -1;
+                        Alpradunctice().acecenterDex = -1;
                       },
                       child: Container(
                         width: 236,

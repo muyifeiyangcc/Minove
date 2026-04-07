@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:minove/itpeacestorge/soulbalastorge.dart';
 import 'package:minove/pages/softvibe_comfortvibefirst/relief_soothingstart.dart';
@@ -101,34 +99,6 @@ class _CenteringEquanimitydelet extends State<CenteringEquanimitydelet> {
                           try {
                             await thepondLoad();
 
-                            int tsheheaNum = Random().nextInt(9000) + 1000;
-
-                            if (FFAppState().aceinsideliTable[FFAppState()
-                                    .acecenterDex]["baserentylId"] ==
-                                23) {
-                              FFAppState().aceinsideliTable[FFAppState()
-                                      .acecenterDex]["tranathAvatar"] =
-                                  "assets/images/minovelogo.png";
-                              FFAppState().aceinsideliTable[FFAppState()
-                                      .acecenterDex]["softcloudName"] =
-                                  "User$tsheheaNum";
-                              FFAppState().aceinsideliTable[FFAppState()
-                                      .acecenterDex]["gentlepondGood"] =
-                                  0;
-                              FFAppState().aceinsideliTable[FFAppState()
-                                      .acecenterDex]["mindreleaseFL"] =
-                                  [];
-                              FFAppState().aceinsideliTable[FFAppState()
-                                      .acecenterDex]["uilwindFS"] =
-                                  [];
-                              FFAppState().aceinsideliTable[FFAppState()
-                                      .acecenterDex]["softwinddBl"] =
-                                  [];
-                              FFAppState().aceinsideliTable[FFAppState()
-                                      .acecenterDex]["anquilwater"] =
-                                  2;
-                            }
-
                             Navigator.pushAndRemoveUntil(
                               context,
                               MaterialPageRoute(
@@ -138,12 +108,12 @@ class _CenteringEquanimitydelet extends State<CenteringEquanimitydelet> {
                               (Route<dynamic> route) => false,
                             );
 
-                            FFAppState().rolificIndex = 0;
+                            Alpradunctice().rolificIndex = 0;
 
                             await Future.delayed(
                               const Duration(milliseconds: 800),
                             );
-                            FFAppState().acecenterDex = -1;
+                            Alpradunctice().acecenterDex = -1;
                           } catch (e) {
                             return;
                           }

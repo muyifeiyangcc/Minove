@@ -1,9 +1,7 @@
-import 'dart:math';
-
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:minove/itpeacestorge/soulbalastorge.dart';
-import 'package:minove/pages/soulglow_purevibehome/serenity_clarityhome.dart';
+import 'package:minove/pages/softvibe_comfortvibefirst/armlance_dyminion.dart';
 
 class RespiteStillnesignup extends StatefulWidget {
   const RespiteStillnesignup({super.key, required this.waracefulmth});
@@ -15,6 +13,7 @@ class RespiteStillnesignup extends StatefulWidget {
 }
 
 class _RespiteStillnesignup extends State<RespiteStillnesignup> {
+  final TextEditingController _slowvinName = TextEditingController();
   final TextEditingController _orelaxationemail = TextEditingController();
 
   final TextEditingController _coeasemim = TextEditingController();
@@ -28,38 +27,6 @@ class _RespiteStillnesignup extends State<RespiteStillnesignup> {
   @override
   void dispose() {
     super.dispose();
-  }
-
-  int moniousreAdd() {
-    try {
-      int tiougyrics = Random().nextInt(9000) + 1000;
-      int proentaId = FFAppState().aceinsideliTable.last["baserentylId"] + 1;
-      FFAppState().aceinsideliTable.add({
-        "ulreleaseType": 0,
-        "baserentylId": proentaId,
-        "sngfieldEmail": _orelaxationemail.text,
-        "gsllwellPasw": _coeasemim.text,
-        "tranathAvatar": "assets/images/minovelogo.png",
-        "softcloudName": "User$tiougyrics",
-        "gentlepondGood": 0,
-        "mindreleaseFL": [],
-        "uilwindFS": [],
-        "softwinddBl": [],
-        "anquilwater": 2,
-      });
-
-      int dolentDex = FFAppState().aceinsideliTable.indexWhere(
-        (e) => e["baserentylId"] == proentaId,
-      );
-
-      if (dolentDex >= 0) {
-        return dolentDex;
-      } else {
-        return -1;
-      }
-    } catch (e) {
-      return -1;
-    }
   }
 
   @override
@@ -157,6 +124,54 @@ class _RespiteStillnesignup extends State<RespiteStillnesignup> {
                     direction: Axis.vertical,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Full name:',
+                            style: TextStyle(
+                              fontFamily: 'FredokaOne',
+                              fontSize: 24,
+                              fontWeight: FontWeight.w400,
+                              color: Color.fromRGBO(174, 106, 66, 1),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 12, bottom: 24),
+                            child: Container(
+                              width: double.infinity,
+                              height: 45,
+                              decoration: BoxDecoration(
+                                color: Color.fromRGBO(235, 229, 213, 0.5),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: TextField(
+                                controller: _slowvinName,
+                                decoration: InputDecoration(
+                                  hintText: 'Please enter full name',
+                                  hintStyle: TextStyle(
+                                    fontFamily: 'PatrickHand',
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color.fromRGBO(174, 106, 66, 0.3),
+                                  ),
+                                  border: InputBorder.none,
+                                  contentPadding: EdgeInsets.symmetric(
+                                    horizontal: 12,
+                                    vertical: 10,
+                                  ),
+                                ),
+                                style: TextStyle(
+                                  fontFamily: 'PatrickHand',
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color.fromRGBO(174, 106, 66, 1),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                       Text(
                         'Email:',
                         style: TextStyle(
@@ -299,7 +314,8 @@ class _RespiteStillnesignup extends State<RespiteStillnesignup> {
                         child: InkWell(
                           splashColor: Colors.transparent,
                           onTap: () {
-                            if (_orelaxationemail.text == "" ||
+                            if (_slowvinName.text == "" ||
+                                _orelaxationemail.text == "" ||
                                 _coeasemim.text == "" ||
                                 _ilettinggonpasw.text == "") {
                               BotToast.showText(text: "Complete content");
@@ -307,19 +323,18 @@ class _RespiteStillnesignup extends State<RespiteStillnesignup> {
                             }
 
                             if (widget.waracefulmth == 0) {
-                              final leoliticntDex = moniousreAdd();
+                              Alpradunctice().ovementName = _slowvinName.text;
+                              Alpradunctice().oundingEmail =
+                                  _orelaxationemail.text;
+                              Alpradunctice().matgroundPasw = _coeasemim.text;
 
-                              if (leoliticntDex >= 0) {
-                                FFAppState().acecenterDex = leoliticntDex;
-
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        const SerenityClarityhome(),
-                                  ),
-                                );
-                              }
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const ArmlanceDyminion(),
+                                ),
+                              );
                             }
                           },
                           child: Container(

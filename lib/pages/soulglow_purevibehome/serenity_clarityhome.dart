@@ -1,11 +1,13 @@
 import 'dart:math' as math;
 
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:minove/itpeacestorge/soulbalastorge.dart';
 import 'package:minove/pages/lightglow_restglowmine/silence_quietudehistory.dart';
 import 'package:minove/pages/soulglow_purevibehome/easepond_sdpondnav.dart';
 import 'package:minove/pages/soulglow_purevibehome/mindcalm_anchoringlook.dart';
 import 'package:minove/pages/soulglow_purevibehome/sympathy_hearteningsend.dart';
+import 'package:minove/pages/soulglow_purevibehome/unburden_breathefukuan.dart';
 
 class SerenityClarityhome extends StatefulWidget {
   const SerenityClarityhome({super.key});
@@ -41,7 +43,7 @@ class _SerenityClarityhome extends State<SerenityClarityhome> {
         child: Scaffold(
           resizeToAvoidBottomInset: false,
           backgroundColor: Colors.transparent,
-      
+
           body: Stack(
             children: [
               Container(
@@ -85,9 +87,9 @@ class _SerenityClarityhome extends State<SerenityClarityhome> {
                                       color: Color.fromRGBO(174, 106, 66, 1),
                                     ),
                                   ),
-      
+
                                   Text(
-                                    '2',
+                                    '${Alpradunctice().aceinsideliTable[Alpradunctice().acecenterDex]["anquilwater"]}',
                                     style: TextStyle(
                                       fontFamily: 'PatrickHand',
                                       fontSize: 20,
@@ -102,10 +104,30 @@ class _SerenityClarityhome extends State<SerenityClarityhome> {
                           ),
                           Align(
                             alignment: AlignmentDirectional(0.92, 0),
-                            child: Icon(
-                              Icons.add_circle_sharp,
-                              color: Color.fromRGBO(174, 106, 66, 1),
-                              size: 24,
+                            child: InkWell(
+                              splashColor: Colors.transparent,
+                              onTap: () async {
+                                bool purificaIs = await getTulenuoke(context);
+
+                                if (purificaIs) {
+                                  return;
+                                }
+
+                                await showDialog(
+                                  context: context,
+                                  builder: (context) {
+                                    return UnburdenBreathefukuan();
+                                  },
+                                ).then((_) {
+                                  setState(() {});
+                                });
+                              },
+
+                              child: Icon(
+                                Icons.add_circle_sharp,
+                                color: Color.fromRGBO(174, 106, 66, 1),
+                                size: 24,
+                              ),
                             ),
                           ),
                         ],
@@ -114,7 +136,7 @@ class _SerenityClarityhome extends State<SerenityClarityhome> {
                   ),
                 ),
               ),
-      
+
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
@@ -122,10 +144,21 @@ class _SerenityClarityhome extends State<SerenityClarityhome> {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     InkWell(
-                            splashColor: Colors.transparent,
-                            onTap: () {
-                              Navigator.push(context,MaterialPageRoute(builder: (context) => const SilenceQuietudehistory()));
-                            },
+                      splashColor: Colors.transparent,
+                      onTap: () async {
+                        bool purificaIs = await getTulenuoke(context);
+
+                        if (purificaIs) {
+                          return;
+                        }
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                const SilenceQuietudehistory(),
+                          ),
+                        );
+                      },
                       child: Text(
                         'History',
                         style: TextStyle(
@@ -148,45 +181,68 @@ class _SerenityClarityhome extends State<SerenityClarityhome> {
                         InkWell(
                           splashColor: Colors.transparent,
                           onTap: () async {
-                            final ezesoftxf = FFAppState().aceinsideliTable
-                                .where(
-                                  (e) =>
-                                      e["ulreleaseType"] == 1 &&
-                                      e["serenecloudUid"] !=
-                                          FFAppState()
-                                              .aceinsideliTable[FFAppState()
-                                              .acecenterDex]["baserentylId"],
-                                )
-                                .toList();
-                            await thepondLoad();
-      
-                            final penterndRan = math.Random();
-      
-                            // 随机选一个（注意判空）
-                            final thehavenItem = ezesoftxf.isNotEmpty
-                                ? ezesoftxf[penterndRan.nextInt(ezesoftxf.length)]
-                                : null;
-      
-                            await showModalBottomSheet(
-                              isScrollControlled: true,
-                              backgroundColor: Colors.transparent,
-                              enableDrag: false,
-                              context: context,
-                              builder: (context) {
-                                return GestureDetector(
-                                  onTap: () {
-                                    FocusScope.of(context).unfocus();
-                                    FocusManager.instance.primaryFocus?.unfocus();
-                                  },
-                                  child: Padding(
-                                    padding: MediaQuery.viewInsetsOf(context),
-                                    child: MindcalmAnchoringlook(
-                                      ecloudWz: thehavenItem,
+                            bool purificaIs = await getTulenuoke(context);
+
+                            if (purificaIs) {
+                              return;
+                            }
+
+                            if (Alpradunctice().aceinsideliTable[Alpradunctice()
+                                    .acecenterDex]["anquilwater"] >
+                                0) {
+                              final ezesoftxf = Alpradunctice().aceinsideliTable
+                                  .where(
+                                    (e) =>
+                                        e["ulreleaseType"] == 1 &&
+                                        e["serenecloudUid"] !=
+                                            Alpradunctice()
+                                                .aceinsideliTable[Alpradunctice()
+                                                .acecenterDex]["baserentylId"],
+                                  )
+                                  .toList();
+                              await thepondLoad();
+
+                              final penterndRan = math.Random();
+
+                              final thehavenItem = ezesoftxf.isNotEmpty
+                                  ? ezesoftxf[penterndRan.nextInt(
+                                      ezesoftxf.length,
+                                    )]
+                                  : null;
+
+                              darapidensUpd(
+                                Alpradunctice().aceinsideliTable[Alpradunctice()
+                                        .acecenterDex]["anquilwater"] -
+                                    1,
+                              );
+                              setState(() {});
+
+                              await showModalBottomSheet(
+                                isScrollControlled: true,
+                                backgroundColor: Colors.transparent,
+                                enableDrag: false,
+                                context: context,
+                                builder: (context) {
+                                  return GestureDetector(
+                                    onTap: () {
+                                      FocusScope.of(context).unfocus();
+                                      FocusManager.instance.primaryFocus
+                                          ?.unfocus();
+                                    },
+                                    child: Padding(
+                                      padding: MediaQuery.viewInsetsOf(context),
+                                      child: MindcalmAnchoringlook(
+                                        ecloudWz: thehavenItem,
+                                      ),
                                     ),
-                                  ),
-                                );
-                              },
-                            );
+                                  );
+                                },
+                              );
+                            } else {
+                              BotToast.showText(
+                                text: "Insufficient number of attempts",
+                              );
+                            }
                           },
                           child: Container(
                             width: 154,
@@ -206,7 +262,9 @@ class _SerenityClarityhome extends State<SerenityClarityhome> {
                                 ),
                                 borderRadius: BorderRadius.circular(32),
                                 image: DecorationImage(
-                                  image: AssetImage("assets/images/cxzincig.png"),
+                                  image: AssetImage(
+                                    "assets/images/cxzincig.png",
+                                  ),
                                 ),
                               ),
                               child: Stack(
@@ -243,10 +301,16 @@ class _SerenityClarityhome extends State<SerenityClarityhome> {
                             ),
                           ),
                         ),
-      
+
                         InkWell(
                           splashColor: Colors.transparent,
                           onTap: () async {
+                            bool purificaIs = await getTulenuoke(context);
+
+                            if (purificaIs) {
+                              return;
+                            }
+                            
                             await showModalBottomSheet(
                               isScrollControlled: true,
                               backgroundColor: Colors.transparent,
@@ -256,7 +320,8 @@ class _SerenityClarityhome extends State<SerenityClarityhome> {
                                 return GestureDetector(
                                   onTap: () {
                                     FocusScope.of(context).unfocus();
-                                    FocusManager.instance.primaryFocus?.unfocus();
+                                    FocusManager.instance.primaryFocus
+                                        ?.unfocus();
                                   },
                                   child: Padding(
                                     padding: MediaQuery.viewInsetsOf(context),
@@ -284,7 +349,9 @@ class _SerenityClarityhome extends State<SerenityClarityhome> {
                                 ),
                                 borderRadius: BorderRadius.circular(32),
                                 image: DecorationImage(
-                                  image: AssetImage("assets/images/cxzincig.png"),
+                                  image: AssetImage(
+                                    "assets/images/cxzincig.png",
+                                  ),
                                 ),
                               ),
                               child: Stack(
@@ -332,7 +399,7 @@ class _SerenityClarityhome extends State<SerenityClarityhome> {
                   ],
                 ),
               ),
-      
+
               easepondSdpondNav(context),
             ],
           ),

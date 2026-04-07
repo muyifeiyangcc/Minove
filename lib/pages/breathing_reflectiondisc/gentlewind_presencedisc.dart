@@ -25,9 +25,9 @@ class _GentlewindPresencedisc extends State<GentlewindPresencedisc> {
 
   dynamic getTentorian() {
     try {
-      return FFAppState().aceinsideliTable
+      return Alpradunctice().aceinsideliTable
           .where((e) => e["ulreleaseType"] == 3
-          && !FFAppState().aceinsideliTable[FFAppState().acecenterDex]["softwinddBl"].contains(e["erenevibeUid"])
+          && !Alpradunctice().aceinsideliTable[Alpradunctice().acecenterDex]["softwinddBl"].contains(e["erenevibeUid"])
           )
           .toList()
           .reversed
@@ -67,7 +67,13 @@ class _GentlewindPresencedisc extends State<GentlewindPresencedisc> {
 
               InkWell(
                 splashColor: Colors.transparent,
-                onTap: () {
+                onTap: () async {
+
+                   bool purificaIs = await getTulenuoke(context);
+
+                            if (purificaIs) {
+                              return;
+                            }
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -270,8 +276,8 @@ class _GentlewindPresencedisc extends State<GentlewindPresencedisc> {
                                                   image: AssetImage(
                                                     fulgentList[index]["sepeoiceLike"]
                                                               .contains(
-                                                                FFAppState()
-                                                                    .aceinsideliTable[FFAppState()
+                                                                Alpradunctice()
+                                                                    .aceinsideliTable[Alpradunctice()
                                                                     .acecenterDex]["baserentylId"],
                                                               )
                                                           ? "assets/images/iubwu_oribund.png"

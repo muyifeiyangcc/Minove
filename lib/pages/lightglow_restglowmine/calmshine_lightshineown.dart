@@ -1,3 +1,4 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:minove/itpeacestorge/soulbalastorge.dart';
@@ -37,10 +38,10 @@ class _CalmshineLightshineown extends State<CalmshineLightshineown> {
 
   int eologismAdd() {
     try {
-      final atentlogId = FFAppState()
-          .aceinsideliTable[FFAppState().acecenterDex]["baserentylId"];
+      final atentlogId = Alpradunctice()
+          .aceinsideliTable[Alpradunctice().acecenterDex]["baserentylId"];
 
-      final eticuagn = FFAppState().aceinsideliTable
+      final eticuagn = Alpradunctice().aceinsideliTable
           .where(
             (e) =>
                 e["ulreleaseType"] == 5 &&
@@ -50,7 +51,7 @@ class _CalmshineLightshineown extends State<CalmshineLightshineown> {
           .toList();
       int lousetoastId;
       if (eticuagn.isEmpty) {
-        lousetoastId = FFAppState().aceinsideliTable.last["baserentylId"] + 1;
+        lousetoastId = Alpradunctice().aceinsideliTable.last["baserentylId"] + 1;
         final lmcloudxf = {
           "ulreleaseType": 5,
           "baserentylId": lousetoastId,
@@ -58,9 +59,9 @@ class _CalmshineLightshineown extends State<CalmshineLightshineown> {
           "meiheriterLast": "",
           "heritougeTime": DateFormat('hh:mm').format(DateTime.now()),
         };
-        FFAppState().aceinsideliTable.add(lmcloudxf);
-        FFAppState().aceinsideliTable = List.from(
-          FFAppState().aceinsideliTable,
+        Alpradunctice().aceinsideliTable.add(lmcloudxf);
+        Alpradunctice().aceinsideliTable = List.from(
+          Alpradunctice().aceinsideliTable,
         );
       } else {
         lousetoastId = eticuagn.first["baserentylId"];
@@ -178,6 +179,13 @@ class _CalmshineLightshineown extends State<CalmshineLightshineown> {
                                     return InkWell(
                                       splashColor: Colors.transparent,
                                       onTap: () async {
+                                        bool purificaIs = await getTulenuoke(
+                                          context,
+                                        );
+
+                                        if (purificaIs) {
+                                          return;
+                                        }
                                         await showDialog(
                                           context: context,
                                           builder: (context) {
@@ -514,7 +522,7 @@ class _CalmshineLightshineown extends State<CalmshineLightshineown> {
                                                         ),
                                                       ),
                                                       Text(
-                                                        '*${FFAppState().aceinsideliTable[FFAppState().acecenterDex]["gentlepondGood"]}',
+                                                        '*${Alpradunctice().aceinsideliTable[Alpradunctice().acecenterDex]["gentlepondGood"]}',
                                                         style: TextStyle(
                                                           fontFamily:
                                                               'FredokaOne',
@@ -546,21 +554,48 @@ class _CalmshineLightshineown extends State<CalmshineLightshineown> {
                                             children: [
                                               InkWell(
                                                 splashColor: Colors.transparent,
-                                                onTap: () {
-                                                  final oisomeid =
-                                                      eologismAdd();
-                                                  Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          CarewaveHeartcalmchat(
-                                                            xtdiciousId:
-                                                                oisomeid,
-                                                            thargicu:
-                                                                uerileroInfo,
-                                                          ),
-                                                    ),
-                                                  );
+                                                onTap: () async {
+                                                  bool purificaIs =
+                                                      await getTulenuoke(
+                                                        context,
+                                                      );
+
+                                                  if (purificaIs) {
+                                                    return;
+                                                  }
+
+                                                  if (uerileroInfo["uilwindFS"]
+                                                          .contains(
+                                                            Alpradunctice()
+                                                                .aceinsideliTable[Alpradunctice()
+                                                                .acecenterDex]["baserentylId"],
+                                                          ) &&
+                                                      Alpradunctice()
+                                                          .aceinsideliTable[Alpradunctice()
+                                                              .acecenterDex]["uilwindFS"]
+                                                          .contains(
+                                                            widget.uantaintiUid,
+                                                          )) {
+                                                    final oisomeid =
+                                                        eologismAdd();
+                                                    Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            CarewaveHeartcalmchat(
+                                                              xtdiciousId:
+                                                                  oisomeid,
+                                                              thargicu:
+                                                                  uerileroInfo,
+                                                            ),
+                                                      ),
+                                                    );
+                                                  } else {
+                                                    BotToast.showText(
+                                                      text:
+                                                          "You need to follow each other to chat.",
+                                                    );
+                                                  }
                                                 },
                                                 child: Container(
                                                   width: 80,
@@ -636,7 +671,15 @@ class _CalmshineLightshineown extends State<CalmshineLightshineown> {
                                                 child: InkWell(
                                                   splashColor:
                                                       Colors.transparent,
-                                                  onTap: () {
+                                                  onTap: () async {
+                                                    bool purificaIs =
+                                                        await getTulenuoke(
+                                                          context,
+                                                        );
+
+                                                    if (purificaIs) {
+                                                      return;
+                                                    }
                                                     arhiatusUpd(
                                                       widget.uantaintiUid,
                                                     );
@@ -685,8 +728,8 @@ class _CalmshineLightshineown extends State<CalmshineLightshineown> {
                                                         child: Text(
                                                           uerileroInfo["uilwindFS"]
                                                                   .contains(
-                                                                    FFAppState()
-                                                                        .aceinsideliTable[FFAppState()
+                                                                    Alpradunctice()
+                                                                        .aceinsideliTable[Alpradunctice()
                                                                         .acecenterDex]["baserentylId"],
                                                                   )
                                                               ? "Followed"
@@ -952,8 +995,8 @@ class _CalmshineLightshineown extends State<CalmshineLightshineown> {
                                                             image: DecorationImage(
                                                               image: AssetImage(
                                                                 agmireentList[index]["sepeoiceLike"].contains(
-                                                                      FFAppState()
-                                                                          .aceinsideliTable[FFAppState()
+                                                                      Alpradunctice()
+                                                                          .aceinsideliTable[Alpradunctice()
                                                                           .acecenterDex]["baserentylId"],
                                                                     )
                                                                     ? "assets/images/iubwu_oribund.png"

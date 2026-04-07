@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:minove/itpeacestorge/soulbalastorge.dart';
 import 'package:minove/pages/softvibe_comfortvibefirst/healing_releaselogin.dart';
 import 'package:minove/pages/softvibe_comfortvibefirst/lihinmpid_gubrious.dart';
+import 'package:minove/pages/softvibe_comfortvibefirst/sissonback_sotpenhe.dart';
 import 'package:minove/pages/soulglow_purevibehome/easepond_sdpondnav.dart';
 import 'package:minove/pages/soulglow_purevibehome/serenity_clarityhome.dart';
 
@@ -14,10 +15,11 @@ class ReliefSoothingstart extends StatefulWidget {
 }
 
 class _ReliefSoothingstart extends State<ReliefSoothingstart> {
-  bool forsolacet = true;
+  bool forsolacet = false;
   @override
   void initState() {
     super.initState();
+
   }
 
   @override
@@ -65,7 +67,25 @@ class _ReliefSoothingstart extends State<ReliefSoothingstart> {
 
               InkWell(
                 splashColor: Colors.transparent,
-                onTap: () {
+                onTap: () async {
+                  if (!forsolacet) {
+                    BotToast.showText(
+                      text: "Please check the agreement first.",
+                    );
+                    return;
+                  }
+
+                  if (Alpradunctice().taxvqasdCheck == 0) {
+                    await showModalBottomSheet(
+                      isDismissible: true,
+                      backgroundColor: Colors.transparent,
+                      context: context,
+                      builder: (context) {
+                        return SissonbackSotpenhe();
+                      },
+                    );
+                    return;
+                  }
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -113,24 +133,41 @@ class _ReliefSoothingstart extends State<ReliefSoothingstart> {
               InkWell(
                 splashColor: Colors.transparent,
                 onTap: () async {
-                  try{
-                    await thepondLoad();
-                    final lucidobriqDex = FFAppState().aceinsideliTable.indexWhere((e)=>e["baserentylId"] == 23);
+                  if (!forsolacet) {
+                    BotToast.showText(
+                      text: "Please check the agreement first.",
+                    );
+                    return;
+                  }
 
-                    if(lucidobriqDex!=-1){
-                      FFAppState().acecenterDex = lucidobriqDex;
-                         Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        const SerenityClarityhome(),
-                                  ),
-                                );
-                    }else{
+                  if (Alpradunctice().taxvqasdCheck == 0) {
+                    await showModalBottomSheet(
+                      isDismissible: true,
+                      backgroundColor: Colors.transparent,
+                      context: context,
+                      builder: (context) {
+                        return SissonbackSotpenhe();
+                      },
+                    );
+                    return;
+                  }
+                  try {
+                    await thepondLoad();
+                    final lucidobriqDex = Alpradunctice().aceinsideliTable
+                        .indexWhere((e) => e["baserentylId"] == 23);
+
+                    if (lucidobriqDex != -1) {
+                      Alpradunctice().acecenterDex = lucidobriqDex;
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SerenityClarityhome(),
+                        ),
+                      );
+                    } else {
                       BotToast.showText(text: "Please try again later.");
                     }
-
-                  }catch(e){
+                  } catch (e) {
                     return;
                   }
                 },

@@ -213,7 +213,13 @@ class _HealingReleaselogin extends State<HealingReleaselogin> {
                         child: InkWell(
                           splashColor: Colors.transparent,
                           onTap: () {
-                            Navigator.push(context,MaterialPageRoute(builder: (context) => const RespiteStillnesignup(waracefulmth: 1,)));
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const RespiteStillnesignup(waracefulmth: 1),
+                              ),
+                            );
                           },
                           child: Text(
                             'FORGOT?',
@@ -236,7 +242,13 @@ class _HealingReleaselogin extends State<HealingReleaselogin> {
                         child: InkWell(
                           splashColor: Colors.transparent,
                           onTap: () {
-                            Navigator.push(context,MaterialPageRoute(builder: (context) => const RespiteStillnesignup(waracefulmth: 0,)));
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const RespiteStillnesignup(waracefulmth: 0),
+                              ),
+                            );
                           },
                           child: Text(
                             "Don't have an account? Sign up",
@@ -260,7 +272,7 @@ class _HealingReleaselogin extends State<HealingReleaselogin> {
                           onTap: () {
                             if (_gratitudeyoux.text != "" &&
                                 _reprievemim.text != "") {
-                              final serentDex = FFAppState().aceinsideliTable
+                              final serentDex = Alpradunctice().aceinsideliTable
                                   .indexWhere(
                                     (e) =>
                                         e["ulreleaseType"] == 0 &&
@@ -270,8 +282,8 @@ class _HealingReleaselogin extends State<HealingReleaselogin> {
                                   );
 
                               if (serentDex != -1) {
-                                FFAppState().acecenterDex = serentDex;
-
+                                Alpradunctice().acecenterDex = serentDex;
+                                Alpradunctice().rolificIndex = 0;
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(

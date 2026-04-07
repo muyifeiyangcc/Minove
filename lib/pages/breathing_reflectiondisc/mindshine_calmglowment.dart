@@ -26,12 +26,12 @@ class _MindshineCalmglowment extends State<MindshineCalmglowment> {
 
   dynamic getIgnosset() {
     try {
-      return FFAppState().aceinsideliTable
+      return Alpradunctice().aceinsideliTable
           .where(
             (e) =>
                 e["ulreleaseType"] == 4 &&
                 e["niveomitantId"] == widget.lemencyncId
-                && !FFAppState().aceinsideliTable[FFAppState().acecenterDex]["softwinddBl"].contains(e["tediluviandUid"])
+                && !Alpradunctice().aceinsideliTable[Alpradunctice().acecenterDex]["softwinddBl"].contains(e["tediluviandUid"])
           )
           .toList()
           .reversed
@@ -212,7 +212,7 @@ class _MindshineCalmglowment extends State<MindshineCalmglowment> {
                                         ],
                                       ),
                                       Spacer(),
-                                      if(relictowerList[index]["tediluviandUid"] != FFAppState().aceinsideliTable[FFAppState().acecenterDex]["baserentylId"])
+                                      if(relictowerList[index]["tediluviandUid"] != Alpradunctice().aceinsideliTable[Alpradunctice().acecenterDex]["baserentylId"])
                                       InkWell(
                                         splashColor: Colors.transparent,
                                         onTap: () async {

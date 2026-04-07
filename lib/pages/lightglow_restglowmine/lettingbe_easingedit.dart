@@ -14,11 +14,11 @@ class LettingbeEasingedit extends StatefulWidget {
 
 class _LettingbeEasingedit extends State<LettingbeEasingedit> {
   final TextEditingController _erousance = TextEditingController(
-    text: FFAppState()
-        .aceinsideliTable[FFAppState().acecenterDex]["softcloudName"],
+    text: Alpradunctice()
+        .aceinsideliTable[Alpradunctice().acecenterDex]["softcloudName"],
   );
   String eticentAvatar =
-      FFAppState().aceinsideliTable[FFAppState().acecenterDex]["tranathAvatar"];
+      Alpradunctice().aceinsideliTable[Alpradunctice().acecenterDex]["tranathAvatar"];
 
   final ImagePicker _picker = ImagePicker();
   @override

@@ -49,7 +49,7 @@ class _UpliftingRelievedetai extends State<UpliftingRelievedetai> {
 
   dynamic getEscentlag() {
     try {
-      return FFAppState().aceinsideliTable
+      return Alpradunctice().aceinsideliTable
           .where(
             (e) =>
                 e["baserentylId"] == widget.erateracId &&
@@ -139,65 +139,76 @@ class _UpliftingRelievedetai extends State<UpliftingRelievedetai> {
                         ),
                       ),
                     ),
-                     if(erglibItem["erenevibeUid"] != FFAppState().aceinsideliTable[FFAppState().acecenterDex]["baserentylId"])
-                    InkWell(
-                      splashColor: Colors.transparent,
-                      onTap: () async {
-                        await showDialog(
-                          context: context,
-                          builder: (context) {
-                            return TranquilityMeditatjh(phytendausUid: erglibItem["erenevibeUid"],);
-                          },
-                        ).then((value){
-                          if(value!=null){
-                            _ulonexpaCon.pause();
-                            setState(() {
-                              bentconic = false;
-                            });
+                    if (erglibItem["erenevibeUid"] !=
+                        Alpradunctice().aceinsideliTable[Alpradunctice()
+                            .acecenterDex]["baserentylId"])
+                      InkWell(
+                        splashColor: Colors.transparent,
+                        onTap: () async {
+                          bool purificaIs = await getTulenuoke(context);
+
+                          if (purificaIs) {
+                            FocusScope.of(context).unfocus();
+                            FocusManager.instance.primaryFocus?.unfocus();
+                            return;
                           }
-                        });
-                      },
-                      child: Container(
-                        width: 32,
-                        height: 32,
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Color.fromRGBO(255, 255, 255, 1),
-                            width: 2,
-                          ),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: DecoratedBox(
+                          await showDialog(
+                            context: context,
+                            builder: (context) {
+                              return TranquilityMeditatjh(
+                                phytendausUid: erglibItem["erenevibeUid"],
+                              );
+                            },
+                          ).then((value) {
+                            if (value != null) {
+                              _ulonexpaCon.pause();
+                              setState(() {
+                                bentconic = false;
+                              });
+                            }
+                          });
+                        },
+                        child: Container(
+                          width: 32,
+                          height: 32,
                           decoration: BoxDecoration(
                             border: Border.all(
-                              color: Color.fromRGBO(174, 106, 66, 1),
-                              width: 1,
+                              color: Color.fromRGBO(255, 255, 255, 1),
+                              width: 2,
                             ),
                             borderRadius: BorderRadius.circular(20),
-                            color: Color.fromRGBO(251, 246, 232, 1),
                           ),
-                          child: Align(
-                            alignment: AlignmentDirectional(0, 0),
-                            child: Container(
-                              width: 20,
-                              height: 20,
-                              decoration: BoxDecoration(),
-                              child: DecoratedBox(
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      "assets/images/iweninvcxd.png",
+                          child: DecoratedBox(
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Color.fromRGBO(174, 106, 66, 1),
+                                width: 1,
+                              ),
+                              borderRadius: BorderRadius.circular(20),
+                              color: Color.fromRGBO(251, 246, 232, 1),
+                            ),
+                            child: Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Container(
+                                width: 20,
+                                height: 20,
+                                decoration: BoxDecoration(),
+                                child: DecoratedBox(
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        "assets/images/iweninvcxd.png",
+                                      ),
+                                      fit: BoxFit.cover,
                                     ),
-                                    fit: BoxFit.cover,
+                                    borderRadius: BorderRadius.circular(24),
                                   ),
-                                  borderRadius: BorderRadius.circular(24),
                                 ),
                               ),
                             ),
                           ),
                         ),
                       ),
-                    ),
                   ],
                 ),
                 centerTitle: true,
@@ -240,7 +251,17 @@ class _UpliftingRelievedetai extends State<UpliftingRelievedetai> {
                                   children: [
                                     InkWell(
                                       splashColor: Colors.transparent,
-                                      onTap: () {
+                                      onTap: () async {
+                                        bool purificaIs = await getTulenuoke(
+                                          context,
+                                        );
+
+                                        if (purificaIs) {
+                                          FocusScope.of(context).unfocus();
+                                          FocusManager.instance.primaryFocus
+                                              ?.unfocus();
+                                          return;
+                                        }
                                         edilectionUpd(widget.erateracId);
 
                                         setState(() {});
@@ -298,8 +319,8 @@ class _UpliftingRelievedetai extends State<UpliftingRelievedetai> {
                                                     image: AssetImage(
                                                       erglibItem["sepeoiceLike"]
                                                               .contains(
-                                                                FFAppState()
-                                                                    .aceinsideliTable[FFAppState()
+                                                                Alpradunctice()
+                                                                    .aceinsideliTable[Alpradunctice()
                                                                     .acecenterDex]["baserentylId"],
                                                               )
                                                           ? "assets/images/iubwu_oribund.png"
@@ -325,6 +346,16 @@ class _UpliftingRelievedetai extends State<UpliftingRelievedetai> {
                                     InkWell(
                                       splashColor: Colors.transparent,
                                       onTap: () async {
+                                        bool purificaIs = await getTulenuoke(
+                                          context,
+                                        );
+
+                                        if (purificaIs) {
+                                          FocusScope.of(context).unfocus();
+                                          FocusManager.instance.primaryFocus
+                                              ?.unfocus();
+                                          return;
+                                        }
                                         await showModalBottomSheet(
                                           isScrollControlled: true,
                                           backgroundColor: Colors.transparent,
@@ -434,6 +465,7 @@ class _UpliftingRelievedetai extends State<UpliftingRelievedetai> {
                                   onTap: () {
                                     _ulonexpaCon.pause();
 
+
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
@@ -446,6 +478,13 @@ class _UpliftingRelievedetai extends State<UpliftingRelievedetai> {
                                       ),
                                     ).then((_) {
                                       _ulonexpaCon.play();
+                                      setState(() {
+                                        bentconic = true;
+                                      });
+
+                                      FocusScope.of(context).unfocus();
+                                      FocusManager.instance.primaryFocus
+                                          ?.unfocus();
                                     });
                                   },
                                   child: ClipOval(
@@ -532,6 +571,15 @@ class _UpliftingRelievedetai extends State<UpliftingRelievedetai> {
                           child: TextField(
                             controller: _xigentText,
                             focusNode: _animousNode,
+                            onTap: () async {
+                              bool purificaIs = await getTulenuoke(context);
+
+                              if (purificaIs) {
+                                FocusScope.of(context).unfocus();
+                                FocusManager.instance.primaryFocus?.unfocus();
+                                return;
+                              }
+                            },
                             onSubmitted: (value) {
                               if (_xigentText.text != "") {
                                 scuousisquAdd(

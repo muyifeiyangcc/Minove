@@ -23,12 +23,12 @@ class _SilenceQuietudehistory extends State<SilenceQuietudehistory> {
 
   dynamic getUclouddHistor() {
     try {
-      return FFAppState().aceinsideliTable
+      return Alpradunctice().aceinsideliTable
           .where(
             (e) =>
                 e["ulreleaseType"] == 1 &&
                 e["serenecloudUid"] ==
-                    FFAppState().aceinsideliTable[FFAppState()
+                    Alpradunctice().aceinsideliTable[Alpradunctice()
                         .acecenterDex]["baserentylId"],
           )
           .toList();
@@ -39,10 +39,10 @@ class _SilenceQuietudehistory extends State<SilenceQuietudehistory> {
 
   dynamic getBreeresRelpay(int sogenotId) {
     try {
-      return FFAppState().aceinsideliTable
+      return Alpradunctice().aceinsideliTable
           .where(
             (e) => e["ulreleaseType"] == 2 && e["tlebloomReplyId"] == sogenotId
-            && !FFAppState().aceinsideliTable[FFAppState().acecenterDex]["softwinddBl"].contains(e["serenecloudUid"])
+            && !Alpradunctice().aceinsideliTable[Alpradunctice().acecenterDex]["softwinddBl"].contains(e["serenecloudUid"])
           )
           .toList();
     } catch (e) {

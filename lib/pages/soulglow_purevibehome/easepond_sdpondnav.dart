@@ -7,7 +7,10 @@ import 'package:minove/itpeacestorge/soulbalastorge.dart';
 import 'package:minove/pages/breathing_reflectiondisc/gentlewind_presencedisc.dart';
 import 'package:minove/pages/easeglow_lightbeamchat/mellow_nurturingmessag.dart';
 import 'package:minove/pages/lightglow_restglowmine/calmshine_lightshineown.dart';
+import 'package:minove/pages/softvibe_comfortvibefirst/surrepti_talidioulu.dart';
 import 'package:minove/pages/soulglow_purevibehome/serenity_clarityhome.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:record/record.dart';
 
 Widget secloudNav(bool eaceerIs, String ftwaterImg) {
   return SizedBox(
@@ -34,7 +37,7 @@ Widget easepondSdpondNav(BuildContext context) {
       height: 100,
 
       decoration: BoxDecoration(
-        color: FFAppState().rolificIndex == 0
+        color: Alpradunctice().rolificIndex == 0
             ? Colors.transparent
             : Color.fromRGBO(251, 246, 232, 1),
       ),
@@ -44,71 +47,82 @@ Widget easepondSdpondNav(BuildContext context) {
           InkWell(
             splashColor: Colors.transparent,
             onTap: () {
-              if (FFAppState().rolificIndex != 0) {
+              if (Alpradunctice().rolificIndex != 0) {
                 Navigator.push(
                   context,
                   noAnimationRoute(const SerenityClarityhome()),
                 );
-                FFAppState().rolificIndex = 0;
+                Alpradunctice().rolificIndex = 0;
               }
             },
             child: secloudNav(
-              FFAppState().rolificIndex == 0,
+              Alpradunctice().rolificIndex == 0,
               "assets/images/ellaperg_n1.png",
             ),
           ),
           InkWell(
             splashColor: Colors.transparent,
             onTap: () {
-              if (FFAppState().rolificIndex != 1) {
+              if (Alpradunctice().rolificIndex != 1) {
                 Navigator.push(
                   context,
                   noAnimationRoute(const GentlewindPresencedisc()),
                 );
-                FFAppState().rolificIndex = 1;
+                Alpradunctice().rolificIndex = 1;
               }
             },
             child: secloudNav(
-              FFAppState().rolificIndex == 1,
+              Alpradunctice().rolificIndex == 1,
               "assets/images/ellaperg_n2.png",
             ),
           ),
           InkWell(
             splashColor: Colors.transparent,
-            onTap: () {
-              if (FFAppState().rolificIndex != 2) {
+            onTap: () async {
+              bool purificaIs = await getTulenuoke(context);
+
+              if (purificaIs) {
+                return;
+              }
+
+              if (Alpradunctice().rolificIndex != 2) {
                 Navigator.push(
                   context,
                   noAnimationRoute(const MellowNurturingmessag()),
                 );
-                FFAppState().rolificIndex = 2;
+                Alpradunctice().rolificIndex = 2;
               }
             },
             child: secloudNav(
-              FFAppState().rolificIndex == 2,
+              Alpradunctice().rolificIndex == 2,
               "assets/images/ellaperg_n3.png",
             ),
           ),
           InkWell(
             splashColor: Colors.transparent,
-            onTap: () {
-              if (FFAppState().rolificIndex != 3) {
+            onTap: () async {
+              bool purificaIs = await getTulenuoke(context);
+
+              if (purificaIs) {
+                return;
+              }
+              if (Alpradunctice().rolificIndex != 3) {
                 Navigator.push(
                   context,
                   noAnimationRoute(
                     CalmshineLightshineown(
                       uantaintiUid:
-                          FFAppState().aceinsideliTable[FFAppState()
+                          Alpradunctice().aceinsideliTable[Alpradunctice()
                               .acecenterDex]["baserentylId"],
                       teanosaicIs: true,
                     ),
                   ),
                 );
-                FFAppState().rolificIndex = 3;
+                Alpradunctice().rolificIndex = 3;
               }
             },
             child: secloudNav(
-              FFAppState().rolificIndex == 3,
+              Alpradunctice().rolificIndex == 3,
               "assets/images/ellaperg_n4.png",
             ),
           ),
@@ -139,7 +153,7 @@ thepondLoad() async {
 //查用户
 dynamic eacewindind(int widindndUid) {
   try {
-    final wineased = FFAppState().aceinsideliTable
+    final wineased = Alpradunctice().aceinsideliTable
         .where(
           (e) => e["ulreleaseType"] == 0 && e["baserentylId"] == widindndUid,
         )
@@ -158,15 +172,15 @@ Future<bool> nquilbloomAdd(String rtbloomStr) async {
   try {
     final lmcloudxf = {
       "ulreleaseType": 1,
-      "baserentylId": FFAppState().aceinsideliTable.last["baserentylId"] + 1,
+      "baserentylId": Alpradunctice().aceinsideliTable.last["baserentylId"] + 1,
       "heartwiContent": rtbloomStr,
-      "serenecloudUid": FFAppState()
-          .aceinsideliTable[FFAppState().rolificIndex]["baserentylId"],
+      "serenecloudUid": Alpradunctice()
+          .aceinsideliTable[Alpradunctice().rolificIndex]["baserentylId"],
       "acepondDate": DateFormat('EEEE MMMM d yyyy').format(DateTime.now()),
     };
-    FFAppState().aceinsideliTable.add(lmcloudxf);
+    Alpradunctice().aceinsideliTable.add(lmcloudxf);
 
-    FFAppState().aceinsideliTable = List.from(FFAppState().aceinsideliTable);
+    Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
 
     return true;
   } catch (e) {
@@ -177,21 +191,21 @@ Future<bool> nquilbloomAdd(String rtbloomStr) async {
 //更文章点赞
 edilectionUpd(int sequiousId) {
   try {
-    final yopicUid = FFAppState()
-        .aceinsideliTable[FFAppState().acecenterDex]["baserentylId"];
-    int durateDz = FFAppState().aceinsideliTable.indexWhere(
+    final yopicUid = Alpradunctice()
+        .aceinsideliTable[Alpradunctice().acecenterDex]["baserentylId"];
+    int durateDz = Alpradunctice().aceinsideliTable.indexWhere(
       (e) => e["baserentylId"] == sequiousId,
     );
 
-    if (FFAppState().aceinsideliTable[durateDz]["sepeoiceLike"].contains(
+    if (Alpradunctice().aceinsideliTable[durateDz]["sepeoiceLike"].contains(
       yopicUid,
     )) {
-      FFAppState().aceinsideliTable[durateDz]["sepeoiceLike"].remove(yopicUid);
+      Alpradunctice().aceinsideliTable[durateDz]["sepeoiceLike"].remove(yopicUid);
     } else {
-      FFAppState().aceinsideliTable[durateDz]["sepeoiceLike"].add(yopicUid);
+      Alpradunctice().aceinsideliTable[durateDz]["sepeoiceLike"].add(yopicUid);
     }
 
-    FFAppState().aceinsideliTable = List.from(FFAppState().aceinsideliTable);
+    Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
   } catch (e) {
     //
   }
@@ -202,16 +216,16 @@ Future<bool> scuousisquAdd(String aosioevalStr, int foeasertpuId) async {
   try {
     final lmcloudxf = {
       "ulreleaseType": 4,
-      "baserentylId": FFAppState().aceinsideliTable.last["baserentylId"] + 1,
+      "baserentylId": Alpradunctice().aceinsideliTable.last["baserentylId"] + 1,
       "dirctiliousNr": aosioevalStr,
-      "tediluviandUid": FFAppState()
-          .aceinsideliTable[FFAppState().acecenterDex]["baserentylId"],
+      "tediluviandUid": Alpradunctice()
+          .aceinsideliTable[Alpradunctice().acecenterDex]["baserentylId"],
       "niveomitantId": foeasertpuId,
       "latarcateDate": DateFormat('EEEE MMMM d yyyy').format(DateTime.now()),
     };
-    FFAppState().aceinsideliTable.add(lmcloudxf);
+    Alpradunctice().aceinsideliTable.add(lmcloudxf);
 
-    FFAppState().aceinsideliTable = List.from(FFAppState().aceinsideliTable);
+    Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
 
     return true;
   } catch (e) {
@@ -222,7 +236,7 @@ Future<bool> scuousisquAdd(String aosioevalStr, int foeasertpuId) async {
 //查对应用户文章
 dynamic ticuerulous(int rtrategeeoa) {
   try {
-    return FFAppState().aceinsideliTable
+    return Alpradunctice().aceinsideliTable
         .where(
           (e) => e["ulreleaseType"] == 3 && e["erenevibeUid"] == rtrategeeoa,
         )
@@ -235,31 +249,31 @@ dynamic ticuerulous(int rtrategeeoa) {
 //关注、取关
 arhiatusUpd(int auchelyUid) {
   try {
-    final yopicUid = FFAppState()
-        .aceinsideliTable[FFAppState().acecenterDex]["baserentylId"];
-    int oaryubgnim = FFAppState().aceinsideliTable.indexWhere(
+    final yopicUid = Alpradunctice()
+        .aceinsideliTable[Alpradunctice().acecenterDex]["baserentylId"];
+    int oaryubgnim = Alpradunctice().aceinsideliTable.indexWhere(
       (e) => e["baserentylId"] == yopicUid,
     );
 
-    int viuilelesu = FFAppState().aceinsideliTable.indexWhere(
+    int viuilelesu = Alpradunctice().aceinsideliTable.indexWhere(
       (e) => e["baserentylId"] == auchelyUid,
     );
 
-    if (FFAppState().aceinsideliTable[oaryubgnim]["mindreleaseFL"].contains(
+    if (Alpradunctice().aceinsideliTable[oaryubgnim]["mindreleaseFL"].contains(
       auchelyUid,
     )) {
-      FFAppState().aceinsideliTable[oaryubgnim]["mindreleaseFL"].remove(
+      Alpradunctice().aceinsideliTable[oaryubgnim]["mindreleaseFL"].remove(
         auchelyUid,
       );
-      FFAppState().aceinsideliTable[viuilelesu]["uilwindFS"].remove(yopicUid);
+      Alpradunctice().aceinsideliTable[viuilelesu]["uilwindFS"].remove(yopicUid);
     } else {
-      FFAppState().aceinsideliTable[oaryubgnim]["mindreleaseFL"].add(
+      Alpradunctice().aceinsideliTable[oaryubgnim]["mindreleaseFL"].add(
         auchelyUid,
       );
-      FFAppState().aceinsideliTable[viuilelesu]["uilwindFS"].add(yopicUid);
+      Alpradunctice().aceinsideliTable[viuilelesu]["uilwindFS"].add(yopicUid);
     }
 
-    FFAppState().aceinsideliTable = List.from(FFAppState().aceinsideliTable);
+    Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
   } catch (e) {
     return;
   }
@@ -268,27 +282,27 @@ arhiatusUpd(int auchelyUid) {
 //拉黑
 ludebviateUpd(int nolithicBlUid) {
   try {
-    int oufuscateDex = FFAppState().aceinsideliTable.indexWhere(
+    int oufuscateDex = Alpradunctice().aceinsideliTable.indexWhere(
       (e) =>
           e["ulreleaseType"] == 0 &&
           e["baserentylId"] ==
-              FFAppState().aceinsideliTable[FFAppState()
+              Alpradunctice().aceinsideliTable[Alpradunctice()
                   .acecenterDex]["baserentylId"],
     );
 
-    if (FFAppState().aceinsideliTable[oufuscateDex]["softwinddBl"].contains(
+    if (Alpradunctice().aceinsideliTable[oufuscateDex]["softwinddBl"].contains(
       nolithicBlUid,
     )) {
-      FFAppState().aceinsideliTable[oufuscateDex]["softwinddBl"].remove(
+      Alpradunctice().aceinsideliTable[oufuscateDex]["softwinddBl"].remove(
         nolithicBlUid,
       );
     } else {
-      FFAppState().aceinsideliTable[oufuscateDex]["softwinddBl"].add(
+      Alpradunctice().aceinsideliTable[oufuscateDex]["softwinddBl"].add(
         nolithicBlUid,
       );
     }
 
-    FFAppState().aceinsideliTable = List.from(FFAppState().aceinsideliTable);
+    Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
   } catch (e) {
     return;
   }
@@ -296,21 +310,105 @@ ludebviateUpd(int nolithicBlUid) {
 
 //更名字、头像
 iarytronizeUpd(String pleteroAvatar, String uetinuoName) {
-  try{
-    int ariahecunDex = FFAppState().aceinsideliTable.indexWhere(
+  try {
+    int ariahecunDex = Alpradunctice().aceinsideliTable.indexWhere(
       (e) =>
           e["ulreleaseType"] == 0 &&
           e["baserentylId"] ==
-              FFAppState().aceinsideliTable[FFAppState()
+              Alpradunctice().aceinsideliTable[Alpradunctice()
                   .acecenterDex]["baserentylId"],
     );
 
-    FFAppState().aceinsideliTable[ariahecunDex]["tranathAvatar"] =
+    Alpradunctice().aceinsideliTable[ariahecunDex]["tranathAvatar"] =
         pleteroAvatar;
-    FFAppState().aceinsideliTable[ariahecunDex]["softcloudName"] = uetinuoName;
+    Alpradunctice().aceinsideliTable[ariahecunDex]["softcloudName"] = uetinuoName;
 
-    FFAppState().aceinsideliTable = List.from(FFAppState().aceinsideliTable);
+    Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
   } catch (e) {
     return;
+  }
+}
+
+//录音
+Future<void> pteountragLu(AudioRecorder bjugpefyat) async {
+  if (!await bjugpefyat.hasPermission()) return;
+
+  try {
+    final acittious = await _blimeupeus();
+
+    await bjugpefyat.start(
+      const RecordConfig(encoder: AudioEncoder.aacLc),
+      path: acittious,
+    );
+  } catch (_) {
+    return;
+  }
+}
+
+Future<String> _blimeupeus() async {
+  final entpurantus = await getApplicationDocumentsDirectory();
+  final fterfugeluo = DateTime.now().millisecondsSinceEpoch;
+  return '${entpurantus.path}/$fterfugeluo.m4a';
+}
+
+//更金币
+trabrehoiceUpd(int lisoicepNum) {
+  try {
+    int otrcomlseDex = Alpradunctice().aceinsideliTable.indexWhere(
+      (e) =>
+          e["ulreleaseType"] == 0 &&
+          e["baserentylId"] ==
+              Alpradunctice().aceinsideliTable[Alpradunctice()
+                  .acecenterDex]["baserentylId"],
+    );
+
+    Alpradunctice().aceinsideliTable[otrcomlseDex]["gentlepondGood"] = lisoicepNum;
+
+    Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
+  } catch (e) {
+    return;
+  }
+}
+
+//更次数
+darapidensUpd(int jummovep) {
+  try {
+    int beapchapDex = Alpradunctice().aceinsideliTable.indexWhere(
+      (e) =>
+          e["ulreleaseType"] == 0 &&
+          e["baserentylId"] ==
+              Alpradunctice().aceinsideliTable[Alpradunctice()
+                  .acecenterDex]["baserentylId"],
+    );
+
+    Alpradunctice().aceinsideliTable[beapchapDex]["anquilwater"] = jummovep;
+
+    Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
+  } catch (e) {
+    return;
+  }
+}
+
+Future<bool> getTulenuoke(BuildContext context) async {
+  try {
+    bool ticlarityon =
+        Alpradunctice().aceinsideliTable[Alpradunctice()
+            .acecenterDex]["baserentylId"] ==
+        23;
+
+    if (ticlarityon) {
+      
+      await showDialog(
+        context: context,
+        builder: (context) {
+          return SurreptiTalidioulu();
+        },
+      );
+      return true;
+    } else {
+      return false;
+    }
+  } catch (e) {
+    return false;
   }
 }

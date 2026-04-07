@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 
-class FFAppState extends ChangeNotifier {
-  static FFAppState _instance = FFAppState._internal();
+class Alpradunctice extends ChangeNotifier {
+  static Alpradunctice _instance = Alpradunctice._internal();
 
-  factory FFAppState() {
+  factory Alpradunctice() {
     return _instance;
   }
 
-  FFAppState._internal();
+  Alpradunctice._internal();
 
   static void reset() {
-    _instance = FFAppState._internal();
+    _instance = Alpradunctice._internal();
   }
 
   Future initializePersistedState() async {
@@ -32,6 +32,9 @@ class FFAppState extends ChangeNotifier {
     _safeInit(() {
       _acecenterDex = prefs.getInt('ff_acecenterDex') ?? _acecenterDex;
     });
+    _safeInit(() {
+      _taxvqasdCheck = prefs.getInt('ff_taxvqasdCheck') ?? _taxvqasdCheck;
+    });
   }
 
   void update(VoidCallback callback) {
@@ -46,13 +49,13 @@ class FFAppState extends ChangeNotifier {
     {
       "ulreleaseType": 0,
       "baserentylId": 1,
-      "sngfieldEmail": "parker@gmail.com",
-      "gsllwellPasw": "123456",
+      "sngfieldEmail": "test@gmail.com",
+      "gsllwellPasw": "123123",
       "tranathAvatar": "assets/images/xhciuwq_m1.png",
       "softcloudName": "Parker",
       "gentlepondGood": 0,
-      "mindreleaseFL": [],
-      "uilwindFS": [],
+      "mindreleaseFL": [2],
+      "uilwindFS": [2],
       "softwinddBl": [],
       "anquilwater": 2,
     },
@@ -64,8 +67,8 @@ class FFAppState extends ChangeNotifier {
       "tranathAvatar": "assets/images/xhciuwq_m2.png",
       "softcloudName": "Perry",
       "gentlepondGood": 0,
-      "mindreleaseFL": [],
-      "uilwindFS": [],
+      "mindreleaseFL": [1],
+      "uilwindFS": [1],
       "softwinddBl": [],
       "anquilwater": 2,
     },
@@ -276,7 +279,7 @@ class FFAppState extends ChangeNotifier {
       "mindreleaseFL": [],
       "uilwindFS": [],
       "softwinddBl": [],
-      "anquilwater": 2,
+      "anquilwater": 0,
     },
   ];
 
@@ -296,19 +299,71 @@ class FFAppState extends ChangeNotifier {
     prefs.setInt('ff_acecenterDex', value);
   }
 
+  int _taxvqasdCheck = 0;
+  int get taxvqasdCheck => _taxvqasdCheck;
+  set taxvqasdCheck(int value) {
+    _taxvqasdCheck = value;
+    prefs.setInt('ff_taxvqasdCheck', value);
+  }
+
   int rolificIndex = 0;
 
+  //signup
+  String oundingEmail = "";
+  String ovementName = "";
+  String matgroundPasw = "";
+
   static final List<Map<String, dynamic>> centiousList = [
-    {"tidianragopr": 400, "pchuonsdendo": 0.99, "alcitrantke": "coin_400"},
-    {"tidianragopr": 800, "pchuonsdendo": 1.99, "alcitrantke": "coin_800"},
-    {"tidianragopr": 1780, "pchuonsdendo": 3.99, "alcitrantke": "coin_1780"},
-    {"tidianragopr": 2450, "pchuonsdendo": 4.99, "alcitrantke": "coin_2450"},
-    {"tidianragopr": 4450, "pchuonsdendo": 8.99, "alcitrantke": "coin_4450"},
-    {"tidianragopr": 4900, "pchuonsdendo": 9.99, "alcitrantke": "coin_4900"},
-    {"tidianragopr": 9800, "pchuonsdendo": 19.99, "alcitrantke": "coin_9800"},
-    {"tidianragopr": 24500, "pchuonsdendo": 49.99, "alcitrantke": "coin_24500"},
-    {"tidianragopr": 34500, "pchuonsdendo": 69.99, "alcitrantke": "coin_34500"},
-    {"tidianragopr": 49000, "pchuonsdendo": 99.99, "alcitrantke": "coin_49000"},
+    {
+      "tidianragopr": 400,
+      "pchuonsdendo": 0.99,
+      "alcitrantke": "zwcljdloioxdstkf",
+    },
+    {
+      "tidianragopr": 800,
+      "pchuonsdendo": 1.99,
+      "alcitrantke": "rhlisdujybupmabz",
+    },
+    {
+      "tidianragopr": 1780,
+      "pchuonsdendo": 3.99,
+      "alcitrantke": "zfndkwhltcgyrosp",
+    },
+    {
+      "tidianragopr": 2450,
+      "pchuonsdendo": 4.99,
+      "alcitrantke": "waxjlfgqqdvavdld",
+    },
+    {
+      "tidianragopr": 4450,
+      "pchuonsdendo": 8.99,
+      "alcitrantke": "mtxolpvguhsecrad",
+    },
+    {
+      "tidianragopr": 4900,
+      "pchuonsdendo": 9.99,
+      "alcitrantke": "lrqnyrskjuwiohau",
+    },
+    {
+      "tidianragopr": 9800,
+      "pchuonsdendo": 19.99,
+      "alcitrantke": "klhmpkrcfaiarznc",
+    },
+    {
+      "tidianragopr": 24500,
+      "pchuonsdendo": 49.99,
+      "alcitrantke": "vipsghcjbemssqdx",
+    },
+    {
+      "tidianragopr": 34500,
+      "pchuonsdendo": 69.99,
+      "alcitrantke": "byhqwtrsnlkxodue",
+    },
+    {
+      "tidianragopr": 49000,
+      "pchuonsdendo": 99.99,
+      "alcitrantke": "iwcpxhsdbguloxwl",
+    },
   ];
 }
 

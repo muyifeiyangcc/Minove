@@ -1,7 +1,11 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:loading_indicator/loading_indicator.dart';
 import 'package:minove/itpeacestorge/soulbalastorge.dart';
 import 'package:minove/pages/lightglow_restglowmine/tranquility_meditatjh.dart';
+import 'package:minove/pages/soulglow_purevibehome/easepond_sdpondnav.dart';
+import 'package:record/record.dart';
 
 class CarewaveHeartcalmchat extends StatefulWidget {
   const CarewaveHeartcalmchat({
@@ -20,6 +24,11 @@ class CarewaveHeartcalmchat extends StatefulWidget {
 class _CarewaveHeartcalmchat extends State<CarewaveHeartcalmchat> {
   final TextEditingController _chrymosergm = TextEditingController();
   bool acationShow = false;
+  bool olithiclyShow = false;
+  AudioRecorder? licitgerd;
+  DateTime? saheStart;
+  final celylany = AudioPlayer();
+
   @override
   void initState() {
     super.initState();
@@ -27,12 +36,13 @@ class _CarewaveHeartcalmchat extends State<CarewaveHeartcalmchat> {
 
   @override
   void dispose() {
+    celylany.dispose();
     super.dispose();
   }
 
   dynamic getDlinanifest() {
     try {
-      return FFAppState().aceinsideliTable
+      return Alpradunctice().aceinsideliTable
           .where(
             (e) =>
                 e["ulreleaseType"] == 6 &&
@@ -48,28 +58,28 @@ class _CarewaveHeartcalmchat extends State<CarewaveHeartcalmchat> {
     try {
       final sicalretris = {
         "ulreleaseType": 6,
-        "baserentylId": FFAppState().aceinsideliTable.last["baserentylId"] + 1,
+        "baserentylId": Alpradunctice().aceinsideliTable.last["baserentylId"] + 1,
         "stemiousText": etaphytxt,
         "varicateVioce": ificentvoi,
         "pensityLong": fariouslong,
-        "agmaticUid": FFAppState()
-            .aceinsideliTable[FFAppState().acecenterDex]["baserentylId"],
+        "agmaticUid": Alpradunctice()
+            .aceinsideliTable[Alpradunctice().acecenterDex]["baserentylId"],
         "erfunctoryId": widget.xtdiciousId,
       };
-      FFAppState().aceinsideliTable.add(sicalretris);
+      Alpradunctice().aceinsideliTable.add(sicalretris);
 
-      int creantDex = FFAppState().aceinsideliTable.indexWhere(
+      int creantDex = Alpradunctice().aceinsideliTable.indexWhere(
         (e) =>
             e["ulreleaseType"] == 5 && e["baserentylId"] == widget.xtdiciousId,
       );
 
-      FFAppState().aceinsideliTable[creantDex]["meiheriterLast"] =
+      Alpradunctice().aceinsideliTable[creantDex]["meiheriterLast"] =
           etaphytxt == "" ? "[voice]" : etaphytxt;
-      FFAppState().aceinsideliTable[creantDex]["heritougeTime"] = DateFormat(
+      Alpradunctice().aceinsideliTable[creantDex]["heritougeTime"] = DateFormat(
         'hh:mm',
       ).format(DateTime.now());
 
-      FFAppState().aceinsideliTable = List.from(FFAppState().aceinsideliTable);
+      Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
     } catch (e) {
       return;
     }
@@ -251,41 +261,104 @@ class _CarewaveHeartcalmchat extends State<CarewaveHeartcalmchat> {
                           itemCount: tinetarciou.length,
                           itemBuilder: (context, index) {
                             if (tinetarciou[index]["agmaticUid"] ==
-                                FFAppState().aceinsideliTable[FFAppState()
+                                Alpradunctice().aceinsideliTable[Alpradunctice()
                                     .acecenterDex]["baserentylId"]) {
+                              if (tinetarciou[index]["stemiousText"] != "") {
+                                return Align(
+                                  alignment: Alignment.centerRight,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(bottom: 16),
+                                    child: DecoratedBox(
+                                      decoration: BoxDecoration(
+                                        color: Color.fromRGBO(174, 106, 66, 1),
+                                        borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(20),
+                                          topRight: Radius.circular(0),
+                                          bottomLeft: Radius.circular(20),
+                                          bottomRight: Radius.circular(20),
+                                        ),
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                          24,
+                                          12,
+                                          16,
+                                          12,
+                                        ),
+                                        child: Text(
+                                          tinetarciou[index]["stemiousText"],
+                                          style: TextStyle(
+                                            fontFamily: 'PatrickHand',
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w400,
+                                            color: Color.fromRGBO(
+                                              255,
+                                              255,
+                                              255,
+                                              1,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              }
+
                               return Align(
                                 alignment: Alignment.centerRight,
                                 child: Padding(
                                   padding: const EdgeInsets.only(bottom: 16),
-                                  child: DecoratedBox(
-                                    decoration: BoxDecoration(
-                                      color: Color.fromRGBO(174, 106, 66, 1),
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(20),
-                                        topRight: Radius.circular(0),
-                                        bottomLeft: Radius.circular(20),
-                                        bottomRight: Radius.circular(20),
+                                  child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    onTap: () async {
+                                      await celylany.play(
+                                        DeviceFileSource(
+                                          tinetarciou[index]["varicateVioce"],
+                                        ),
+                                      );
+                                    },
+                                    child: DecoratedBox(
+                                      decoration: BoxDecoration(
+                                        color: Color.fromRGBO(174, 106, 66, 1),
+                                        borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(20),
+                                          topRight: Radius.circular(0),
+                                          bottomLeft: Radius.circular(20),
+                                          bottomRight: Radius.circular(20),
+                                        ),
                                       ),
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.fromLTRB(
-                                        24,
-                                        12,
-                                        16,
-                                        12,
-                                      ),
-                                      child: Text(
-                                        tinetarciou[index]["stemiousText"],
-                                        style: TextStyle(
-                                          fontFamily: 'PatrickHand',
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400,
-                                          color: Color.fromRGBO(
-                                            255,
-                                            255,
-                                            255,
-                                            1,
-                                          ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                          24,
+                                          11,
+                                          16,
+                                          11,
+                                        ),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.min,
+                                          spacing: 12,
+                                          children: [
+                                            Image.asset(
+                                              "assets/images/izcgquw_cnvzxc.png",
+                                              width: 24,
+                                              height: 24,
+                                            ),
+                                            Text(
+                                              tinetarciou[index]["pensityLong"],
+                                              style: TextStyle(
+                                                fontFamily: 'PatrickHand',
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w400,
+                                                color: Color.fromRGBO(
+                                                  255,
+                                                  255,
+                                                  255,
+                                                  1,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
                                         ),
                                       ),
                                     ),
@@ -504,25 +577,79 @@ class _CarewaveHeartcalmchat extends State<CarewaveHeartcalmchat> {
                       Column(
                         children: [
                           SizedBox(
-                            height: 40,
+                            height: 20,
                             child: DecoratedBox(decoration: BoxDecoration()),
                           ),
                           if (acationShow)
                             Padding(
                               padding: const EdgeInsets.only(bottom: 40),
-                              child: Container(
-                                width: 68,
-                                height: 68,
-                                decoration: BoxDecoration(),
-                                child: DecoratedBox(
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      image: AssetImage(
-                                        "assets/images/xzucibuqs.png",
+                              child: GestureDetector(
+                                onLongPressStart: (_) async {
+                                  setState(() {
+                                    olithiclyShow = true;
+                                  });
+
+                                  saheStart = DateTime.now();
+
+                                  licitgerd = AudioRecorder();
+                                  pteountragLu(licitgerd!);
+                                },
+                                onLongPressEnd: (_) async {
+                                  setState(() {
+                                    olithiclyShow = false;
+                                  });
+
+                                  final laartiy = await licitgerd?.stop();
+                                  DateTime ibundity = DateTime.now();
+
+                                  int anietis = ibundity
+                                      .difference(saheStart!)
+                                      .inSeconds;
+
+                                  if (anietis > 0) {
+                                    sciviousAdd("", laartiy!, "${anietis}s");
+                                  }
+
+                                  setState(() {});
+                                },
+                                child: SizedBox(
+                                  width: 90,
+                                  height: 90,
+                                  child: Stack(
+                                    alignment: Alignment(0, 0),
+                                    children: [
+                                      if (olithiclyShow)
+                                        SizedBox(
+                                          width: 90,
+                                          height: 90,
+                                          child: LoadingIndicator(
+                                            indicatorType: Indicator
+                                                .ballScaleRippleMultiple,
+                                            colors: const [
+                                              Color.fromRGBO(174, 106, 66, 1),
+                                            ],
+                                            strokeWidth: 1,
+                                          ),
+                                        ),
+                                      Container(
+                                        width: 68,
+                                        height: 68,
+                                        decoration: BoxDecoration(),
+                                        child: DecoratedBox(
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage(
+                                                "assets/images/xzucibuqs.png",
+                                              ),
+                                              fit: BoxFit.cover,
+                                            ),
+                                            borderRadius: BorderRadius.circular(
+                                              24,
+                                            ),
+                                          ),
+                                        ),
                                       ),
-                                      fit: BoxFit.cover,
-                                    ),
-                                    borderRadius: BorderRadius.circular(24),
+                                    ],
                                   ),
                                 ),
                               ),

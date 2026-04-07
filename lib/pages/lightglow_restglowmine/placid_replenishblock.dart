@@ -23,12 +23,12 @@ class _PlacidReplenishblock extends State<PlacidReplenishblock> {
 
   dynamic getFicisbstrep() {
     try {
-      return FFAppState().aceinsideliTable
+      return Alpradunctice().aceinsideliTable
           .where(
             (e) =>
                 e["ulreleaseType"] == 0 &&
-                FFAppState()
-                    .aceinsideliTable[FFAppState().acecenterDex]["softwinddBl"]
+                Alpradunctice()
+                    .aceinsideliTable[Alpradunctice().acecenterDex]["softwinddBl"]
                     .contains(e["baserentylId"]),
           )
           .toList();

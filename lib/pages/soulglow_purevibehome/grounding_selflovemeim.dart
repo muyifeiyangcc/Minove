@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:minove/pages/lightglow_restglowmine/comforting_restfulwallet.dart';
 
 class GroundingSelflovemeim extends StatefulWidget {
   const GroundingSelflovemeim({super.key});
@@ -75,6 +76,7 @@ class _GroundingSelflovemeim extends State<GroundingSelflovemeim> {
                                 fontSize: 20,
                                 fontWeight: FontWeight.w400,
                                 color: Color.fromRGBO(91, 56, 41, 1),
+                                decoration: TextDecoration.none,
                               ),
                             ),
                             Container(
@@ -95,9 +97,7 @@ class _GroundingSelflovemeim extends State<GroundingSelflovemeim> {
 
                             SizedBox(
                               width: 40,
-                              child: DecoratedBox(
-                                decoration: BoxDecoration(),
-                              ),
+                              child: DecoratedBox(decoration: BoxDecoration()),
                             ),
                             Container(
                               width: 90,
@@ -119,33 +119,46 @@ class _GroundingSelflovemeim extends State<GroundingSelflovemeim> {
                               height: 13,
                               child: DecoratedBox(decoration: BoxDecoration()),
                             ),
-                            Container(
-                              width: 236,
-                              height: 46,
-                              decoration: BoxDecoration(
-                                border: Border.all(
-                                  color: Color.fromRGBO(255, 255, 255, 1),
-                                  width: 2,
-                                ),
-                                borderRadius: BorderRadius.circular(32),
-                              ),
-                              child: DecoratedBox(
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.pop(context);
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        const ComfortingRestfulwallet(),
+                                  ),
+                                );
+                              },
+                              child: Container(
+                                width: 236,
+                                height: 46,
                                 decoration: BoxDecoration(
                                   border: Border.all(
-                                    color: Color.fromRGBO(174, 106, 66, 1),
-                                    width: 3,
+                                    color: Color.fromRGBO(255, 255, 255, 1),
+                                    width: 2,
                                   ),
                                   borderRadius: BorderRadius.circular(32),
                                 ),
-                                child: Align(
-                                  alignment: AlignmentDirectional(0, 0),
-                                  child: Text(
-                                    'Buy',
-                                    style: TextStyle(
-                                      fontFamily: 'FredokaOne',
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w400,
+                                child: DecoratedBox(
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
                                       color: Color.fromRGBO(174, 106, 66, 1),
+                                      width: 3,
+                                    ),
+                                    borderRadius: BorderRadius.circular(32),
+                                  ),
+                                  child: Align(
+                                    alignment: AlignmentDirectional(0, 0),
+                                    child: Text(
+                                      'Buy',
+                                      style: TextStyle(
+                                        fontFamily: 'FredokaOne',
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w400,
+                                        color: Color.fromRGBO(174, 106, 66, 1),
+                                        decoration: TextDecoration.none,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -175,16 +188,24 @@ class _GroundingSelflovemeim extends State<GroundingSelflovemeim> {
               ],
             ),
           ),
-          SizedBox(height: 24,child: DecoratedBox(decoration: BoxDecoration())),
-          Container(
-            width: 24,
+          SizedBox(
             height: 24,
-            decoration: BoxDecoration(),
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("assets/images/cnvuieqwg.png"),
-                  fit: BoxFit.cover,
+            child: DecoratedBox(decoration: BoxDecoration()),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Container(
+              width: 24,
+              height: 24,
+              decoration: BoxDecoration(),
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/cnvuieqwg.png"),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),

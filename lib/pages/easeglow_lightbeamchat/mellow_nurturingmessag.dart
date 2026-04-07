@@ -24,14 +24,16 @@ class _MellowNurturingmessag extends State<MellowNurturingmessag> {
   //获取聊天集合
   dynamic getLebeian() {
     try {
-      return FFAppState().aceinsideliTable
+      return Alpradunctice().aceinsideliTable
           .where(
             (e) =>
                 e["ulreleaseType"] == 5 &&
                 e["lowerherithu"].contains(
-                  FFAppState().aceinsideliTable[FFAppState()
+                  Alpradunctice().aceinsideliTable[Alpradunctice()
                       .acecenterDex]["baserentylId"],
-                ),
+                )
+                && !Alpradunctice().aceinsideliTable[Alpradunctice().acecenterDex]["softwinddBl"].contains(e["lowerherithu"][0])
+                && !Alpradunctice().aceinsideliTable[Alpradunctice().acecenterDex]["softwinddBl"].contains(e["lowerherithu"][1])
           )
           .toList();
     } catch (e) {
@@ -117,7 +119,7 @@ class _MellowNurturingmessag extends State<MellowNurturingmessag> {
                             .where(
                               (e) =>
                                   e !=
-                                  FFAppState().aceinsideliTable[FFAppState()
+                                  Alpradunctice().aceinsideliTable[Alpradunctice()
                                       .acecenterDex]["baserentylId"],
                             )
                             .first;

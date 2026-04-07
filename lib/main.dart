@@ -1,13 +1,14 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:minove/itpeacestorge/soulbalastorge.dart';
 import 'package:minove/pages/softvibe_comfortvibefirst/relief_soothingstart.dart';
 import 'package:minove/pages/soulglow_purevibehome/serenity_clarityhome.dart';
 
 void main() async {
-   WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
 
-  await FFAppState().initializePersistedState();
+  await Alpradunctice().initializePersistedState();
   runApp(const MainApp());
 }
 
@@ -16,17 +17,16 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      home:  Builder(
-          builder: (context) {
-            if(FFAppState().acecenterDex == -1){
-              return ReliefSoothingstart();
-            }else{
-              return SerenityClarityhome();
-            }
-            
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+    return MaterialApp(
+      home: Builder(
+        builder: (context) {
+          if (Alpradunctice().acecenterDex == -1) {
+            return ReliefSoothingstart();
+          } else {
+            return SerenityClarityhome();
           }
-     
+        },
       ),
       builder: BotToastInit(),
     );

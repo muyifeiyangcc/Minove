@@ -1,4 +1,12 @@
+import 'dart:io';
+
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:minove/pages/soulglow_purevibehome/easepond_sdpondnav.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:video_thumbnail/video_thumbnail.dart';
 
 class SteadyToleranceuplo extends StatefulWidget {
   const SteadyToleranceuplo({super.key});
@@ -8,7 +16,9 @@ class SteadyToleranceuplo extends StatefulWidget {
 }
 
 class _SteadyToleranceuplo extends State<SteadyToleranceuplo> {
-  final TextEditingController _betundrargm = TextEditingController();
+  final TextEditingController _thlidyeric = TextEditingController();
+  final ImagePicker _picker = ImagePicker();
+  String? strkpsupImg;
   @override
   void initState() {
     super.initState();
@@ -17,6 +27,39 @@ class _SteadyToleranceuplo extends State<SteadyToleranceuplo> {
   @override
   void dispose() {
     super.dispose();
+  }
+
+  Future<String?> liftakaeshi() async {
+    try {
+      if (!await Permission.photos.request().isGranted) {
+        return null;
+      }
+
+      final XFile? sflowstpiritu = await _picker.pickVideo(
+        source: ImageSource.gallery,
+        maxDuration: const Duration(minutes: 5),
+      );
+
+      if (sflowstpiritu != null) {
+        final Directory yastleflowa = await getTemporaryDirectory();
+        final String sitionflow =
+            '${yastleflowa.path}/thumb_${DateTime.now().millisecondsSinceEpoch}.png';
+        final String? mindanch = await VideoThumbnail.thumbnailFile(
+          video: sflowstpiritu.path,
+          thumbnailPath: sitionflow,
+          imageFormat: ImageFormat.PNG,
+          maxWidth: 116,
+          quality: 80,
+        );
+
+        if (mindanch != null) {
+          return mindanch;
+        }
+      }
+      return null;
+    } catch (e) {
+      return null;
+    }
   }
 
   @override
@@ -137,7 +180,7 @@ class _SteadyToleranceuplo extends State<SteadyToleranceuplo> {
                         ),
                         child: TextField(
                           maxLines: 3,
-                          controller: _betundrargm,
+                          controller: _thlidyeric,
                           decoration: InputDecoration(
                             hintText: 'Want to say',
                             hintStyle: TextStyle(
@@ -178,35 +221,59 @@ class _SteadyToleranceuplo extends State<SteadyToleranceuplo> {
                         height: 12,
                         child: DecoratedBox(decoration: BoxDecoration()),
                       ),
-                      Container(
-                        width: 116,
-                        height: 149,
-                        decoration: BoxDecoration(),
-                        child: DecoratedBox(
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Color.fromRGBO(174, 106, 66, 1),
-                              width: 2,
-                            ),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Align(
-                            alignment: AlignmentDirectional(0, 0),
-                            child: Container(
-                              width: 24,
-                              height: 24,
-                              decoration: BoxDecoration(),
-                              child: DecoratedBox(
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      "assets/images/ewuicbuiad.png",
-                                    ),
-                                    fit: BoxFit.cover,
-                                  ),
-                                  borderRadius: BorderRadius.circular(24),
-                                ),
+
+                      InkWell(
+                        splashColor: Colors.transparent,
+                        onTap: () async {
+                          strkpsupImg = await liftakaeshi();
+
+                          setState(() {});
+                        },
+
+                        child: Container(
+                          width: 116,
+                          height: 149,
+                          decoration: BoxDecoration(),
+                          child: DecoratedBox(
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Color.fromRGBO(174, 106, 66, 1),
+                                width: 2,
                               ),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Stack(
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(0, 0),
+                                  child: Container(
+                                    width: 24,
+                                    height: 24,
+                                    decoration: BoxDecoration(),
+                                    child: DecoratedBox(
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          image: AssetImage(
+                                            "assets/images/ewuicbuiad.png",
+                                          ),
+                                          fit: BoxFit.cover,
+                                        ),
+                                        borderRadius: BorderRadius.circular(24),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                if (strkpsupImg != null)
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(20),
+                                    child: Image.file(
+                                      File(strkpsupImg!),
+                                      fit: BoxFit.cover,
+                                      width: double.infinity,
+                                      height: double.infinity,
+                                    ),
+                                  ),
+                              ],
                             ),
                           ),
                         ),
@@ -218,33 +285,45 @@ class _SteadyToleranceuplo extends State<SteadyToleranceuplo> {
                       ),
                       Align(
                         alignment: AlignmentDirectional(0, 0),
-                        child: Container(
-                          width: 236,
-                          height: 49,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Color.fromRGBO(255, 255, 255, 1),
-                              width: 2,
-                            ),
-                            borderRadius: BorderRadius.circular(32),
-                          ),
-                          child: DecoratedBox(
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          onTap: () async {
+                            if(strkpsupImg!=null && _thlidyeric.text !=""){
+                              await thepondLoad();
+                              BotToast.showText(text: "success");
+                              Navigator.pop(context);
+                            }else{
+                              BotToast.showText(text: "Please improve the content.");
+                            }
+                          },
+                          child: Container(
+                            width: 236,
+                            height: 49,
                             decoration: BoxDecoration(
                               border: Border.all(
-                                color: Color.fromRGBO(174, 106, 66, 1),
-                                width: 3,
+                                color: Color.fromRGBO(255, 255, 255, 1),
+                                width: 2,
                               ),
                               borderRadius: BorderRadius.circular(32),
                             ),
-                            child: Align(
-                              alignment: AlignmentDirectional(0, 0),
-                              child: Text(
-                                'Upload',
-                                style: TextStyle(
-                                  fontFamily: 'FredokaOne',
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w400,
+                            child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                border: Border.all(
                                   color: Color.fromRGBO(174, 106, 66, 1),
+                                  width: 3,
+                                ),
+                                borderRadius: BorderRadius.circular(32),
+                              ),
+                              child: Align(
+                                alignment: AlignmentDirectional(0, 0),
+                                child: Text(
+                                  'Upload',
+                                  style: TextStyle(
+                                    fontFamily: 'FredokaOne',
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w400,
+                                    color: Color.fromRGBO(174, 106, 66, 1),
+                                  ),
                                 ),
                               ),
                             ),
