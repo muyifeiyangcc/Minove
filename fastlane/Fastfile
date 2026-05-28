@@ -1,0 +1,153 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+
+
+username = ENV["FASTLANE_USER"]
+asc_key_id = ENV["ASC_KEY_ID"]
+asc_issuer_id = ENV["ASC_ISSUER_ID"]
+asc_key_content = ENV["ASC_KEY_CONTENT"]
+
+team_id = ENV["TEAM_ID"]
+scheme = ENV["SCHEME"]
+bundle_id = ENV["BUNDLE_ID"]
+app_name = ENV["APP_NAME"]
+export_method = ENV["EXPORT_METHOD"]
+
+pgy_api_key = ENV["pgy_api_key"]
+
+
+platform :ios do
+
+  before_all do |lane, options|
+
+    UI.header "Step: before_all"
+    UI.header "options = '#{options}'"
+
+    UI.important "username = #{username}"
+  	UI.important "asc_key_id = #{asc_key_id}"
+  	UI.important "asc_issuer_id = #{asc_issuer_id}"
+  	UI.important "asc_key_content = #{asc_key_content}"
+
+  	UI.important "bundle_id = #{bundle_id}"
+  	UI.important "app_name = #{app_name}"
+  	UI.important "export_method = #{export_method}"
+  	UI.important "match_type = #{export_method.gsub("-", "")}"
+  	UI.important "pgy_api_key = #{pgy_api_key}"
+
+	  UI.important "is_ci = #{is_ci}"
+
+    setup_circle_ci
+  end
+
+  lane :release do
+    on_match
+    prepare_gym
+    # gym(
+    #   export_method: export_method,
+    #   # output_directory: "./build",
+    #   # buildlog_path: "./build",
+    #   clean: true,
+    #   silent: true,
+    #   )
+    # deliver(
+    #   skip_metadata: true,
+    #   skip_screenshots: true,
+    #   submit_for_review: false
+    # ) if export_method == "app-store"
+    # pgyer(api_key: pgy_api_key) if export_method == "ad-hoc"
+  end
+
+  lane :on_match do
+
+    app_store_connect_api_key(
+      key_id: ENV["ASC_KEY_ID"],
+      issuer_id: ENV["ASC_ISSUER_ID"],
+      # key_content: ENV["ASC_KEY_CONTENT"],
+      # 或者使用key_filepath指向一个文件
+      key_filepath: "AuthKey_#{ENV["ASC_KEY_ID"]}.p8",
+      in_house: false # 如果是企业账号，设为true
+    )
+
+  	# produce( # Alias for the create_app_online action
+    #   username: username,
+    #   app_identifier: bundle_id,
+    #   # app_name: app_name,
+    #   skip_itc: true,
+    #   enable_services: {
+    #     push_notification: "on",
+    #   }
+    #   )
+
+    # match_nuke(
+    #   type: "development",
+    #   )
+
+    # CI 中执行 match 创建新证书上传到 git 报错 Author identity unknown，需要指定 Git 用户身份
+    # sh "git config --global user.email 'ci@example.com'"
+    # sh "git config --global user.name 'CI Bot'"
+
+    # register_devices(
+    #   devices: {
+    #     "iPhone" => "00008110-00066DE92E00402E",
+    #   }
+    # )
+
+  	match(
+        git_branch: username,
+        username: username,
+        type: "appstore",
+        app_identifier: [bundle_id],
+        force_for_new_devices: true,
+        readonly: false,
+        )
+
+    match_result = match(
+        git_branch: username,
+        username: username,
+        type: export_method.gsub("-", ""),
+        app_identifier: [bundle_id],
+        readonly: false,
+        )
+    puts match_result
+    UI.important("✅ match_result: #{match_result}")
+    profiles = lane_context[SharedValues::MATCH_PROVISIONING_PROFILE_MAPPING]
+	  UI.important("profiles = #{profiles}")
+
+  end
+
+  lane :prepare_gym do
+
+    team_id = ENV["sigh_#{bundle_id}_development_team-id"]
+    UI.important("Team ID: #{team_id}")
+
+    profile_name = ENV["sigh_#{bundle_id}_development_profile-name"]
+	  UI.important "profile_name = #{profile_name}"
+
+    update_code_signing_settings(
+      path: "ios/Runner.xcodeproj",
+      use_automatic_signing: false,
+      team_id: "989CM2LH2W",
+      targets: ["Runner"],
+      code_sign_identity: "Apple Distribution",
+      profile_name: "match AppStore com.hopevibe.minove",
+    )
+    
+
+  end
+
+end

@@ -1,0 +1,65 @@
+version: 2.1
+
+orbs:
+  flutter: circleci/flutter@3.0.0
+
+jobs:
+  build-flutter-ios:
+    macos:
+      xcode: "26.1"
+    resource_class: m4pro.medium
+
+    steps:
+      - checkout
+
+      - run:
+          name: Set Git
+          command: |
+            git config --global user.email "ci@example.com"
+            git config --global user.name "CI Bot"
+
+      - run:
+          name: Install Ruby
+          command: |
+            brew install rbenv ruby-build
+            eval "$(rbenv init -)"
+            rbenv install 3.3.6 --skip-existing
+            rbenv global 3.3.6
+
+      - run:
+          name: Install Bundler
+          command: |
+            gem install bundler
+            bundle config set path 'vendor/bundle'
+            bundle install
+
+      - run:
+          name: Run Fastlane
+          command: bundle exec fastlane release
+
+      - flutter/install_sdk_and_pub:
+          channel: stable
+          version: 3.32.6
+
+      - run:
+          name: Flutter Build
+          command: |
+            gem install cocoapods
+            flutter --version
+            pod --version
+            xcodebuild -version
+            flutter build ipa --release --obfuscate --split-debug-info=debug-info --export-options-plist=build.plist
+            cd build/ios/ipa
+            zip ipa.zip *.ipa
+
+      - store_artifacts:
+          path: build/ios/ipa
+workflows:
+  version: 2
+  build-flutter-ios:
+    jobs:
+      - build-flutter-ios:
+          filters:
+            branches:
+              only:
+                - main

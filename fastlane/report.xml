@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.000159">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="01: is_ci" time="5.9e-05">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="02: setup_circle_ci" time="0.000186">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="03: Switch to ios on_match lane" time="0.003664">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="04: app_store_connect_api_key" time="0.008036">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="05: match_nuke" time="53.573885">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: git config --global user.email &apos;ci@example.com&apos;" time="0.04326">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: git config --global user.name &apos;CI Bot&apos;" time="0.016154">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: register_devices" time="1.173969">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: match" time="13.998307">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: match" time="19.960282">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="11: Switch to ios prepare_gym lane" time="8.3e-05">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="12: update_code_signing_settings" time="0.049919">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="13: gym" time="38.943974">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="14: pgyer" time="12.664269">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>
