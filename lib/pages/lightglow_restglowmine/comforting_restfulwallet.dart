@@ -1,5 +1,6 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
+import 'package:minove/itpeacestorge/lisstillne_tranyjiu.dart';
 import 'package:minove/itpeacestorge/ptoryerfidiousgood.dart';
 import 'package:minove/itpeacestorge/soulbalastorge.dart';
 
@@ -11,24 +12,31 @@ class ComfortingRestfulwallet extends StatefulWidget {
 }
 
 class _ComfortingRestfulwallet extends State<ComfortingRestfulwallet> {
-  EminalpsisGood eminalpsisGood = EminalpsisGood();
+  Ptoryerfidiousgood f2cETfETxkx7s8 = Ptoryerfidiousgood();
+
   @override
   void initState() {
     super.initState();
 
-    eminalpsisGood.onError = (error) {
-      BotToast.showText(text: error);
-    };
-
-    eminalpsisGood.onSuccess = () {
+    f2cETfETxkx7s8.a26CUMXYhKyAHNyZE8jbPCTH = (bBxtCrLonY0UimCNDyLTT2ooCr69) {
+      if (!mounted) return;
       setState(() {});
-      BotToast.showText(text: "Successful purchase");
+      BotToast.showText(text: bBxtCrLonY0UimCNDyLTT2ooCr69);
     };
 
+    f2cETfETxkx7s8.x1Cpu = () {
+      if (!mounted) return;
+      setState(() {});
+      BotToast.showText(
+        text: "bfTu/zSSha8Qu8mfnec79SCbdsjkf5yhPpzYSNberB4=".yb2CPl4zQ6(),
+      );
+    };
   }
 
   @override
   void dispose() {
+    f2cETfETxkx7s8.a26CUMXYhKyAHNyZE8jbPCTH = null;
+    f2cETfETxkx7s8.x1Cpu = null;
     super.dispose();
   }
 
@@ -167,9 +175,19 @@ class _ComfortingRestfulwallet extends State<ComfortingRestfulwallet> {
                             return InkWell(
                               splashColor: Colors.transparent,
                               onTap: () async {
-                                await eminalpsisGood.buyByKey(
-                                  ixorofligList[index]["alcitrantke"],
-                                );
+                                if (f2cETfETxkx7s8.w82Ffl6ZRo7) {
+                                  BotToast.showText(
+                                    text:
+                                        "Syl3rdxqIwC2DVEGQn2lBUWzB/FPKH647MaqKR1XOW31LDsVPfTzyYA0EmF8yh/V"
+                                            .yb2CPl4zQ6(),
+                                  );
+                                  return;
+                                }
+
+                                await f2cETfETxkx7s8
+                                    .uDIednas7QTvbRIXaUmQVNWfejh(
+                                      ixorofligList[index]["alcitrantke"],
+                                    );
                               },
                               child: Container(
                                 width: 154,

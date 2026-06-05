@@ -6,7 +6,7 @@ orbs:
 jobs:
   build-flutter-ios:
     macos:
-      xcode: "26.1"
+      xcode: "26.2"
     resource_class: m4pro.medium
 
     steps:
@@ -39,7 +39,7 @@ jobs:
 
       - flutter/install_sdk_and_pub:
           channel: stable
-          version: 3.32.6
+          version: 3.41.4
 
       - run:
           name: Flutter Build
@@ -62,4 +62,4 @@ workflows:
           filters:
             branches:
               only:
-                - main
+                - Tego
