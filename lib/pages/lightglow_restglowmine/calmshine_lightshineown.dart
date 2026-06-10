@@ -51,7 +51,8 @@ class _CalmshineLightshineown extends State<CalmshineLightshineown> {
           .toList();
       int lousetoastId;
       if (eticuagn.isEmpty) {
-        lousetoastId = Alpradunctice().aceinsideliTable.last["baserentylId"] + 1;
+        lousetoastId =
+            Alpradunctice().aceinsideliTable.last["baserentylId"] + 1;
         final lmcloudxf = {
           "ulreleaseType": 5,
           "baserentylId": lousetoastId,
@@ -726,12 +727,11 @@ class _CalmshineLightshineown extends State<CalmshineLightshineown> {
                                                               0,
                                                             ),
                                                         child: Text(
-                                                          uerileroInfo["uilwindFS"]
-                                                                  .contains(
-                                                                    Alpradunctice()
-                                                                        .aceinsideliTable[Alpradunctice()
-                                                                        .acecenterDex]["baserentylId"],
-                                                                  )
+                                                          uerileroInfo["uilwindFS"].contains(
+                                                                Alpradunctice()
+                                                                    .aceinsideliTable[Alpradunctice()
+                                                                    .acecenterDex]["baserentylId"],
+                                                              )
                                                               ? "Followed"
                                                               : 'Follow',
                                                           style: TextStyle(
@@ -869,74 +869,107 @@ class _CalmshineLightshineown extends State<CalmshineLightshineown> {
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.end,
                                               children: [
-                                                Container(
-                                                  width: 32,
-                                                  height: 32,
-                                                  decoration: BoxDecoration(
-                                                    border: Border.all(
-                                                      color: Color.fromRGBO(
-                                                        255,
-                                                        255,
-                                                        255,
-                                                        1,
-                                                      ),
-                                                      width: 2,
-                                                    ),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                          20,
-                                                        ),
-                                                  ),
-                                                  child: DecoratedBox(
-                                                    decoration: BoxDecoration(
-                                                      border: Border.all(
-                                                        color: Color.fromRGBO(
-                                                          174,
-                                                          106,
-                                                          66,
-                                                          1,
-                                                        ),
-                                                        width: 1,
-                                                      ),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            20,
-                                                          ),
-                                                      color: Color.fromRGBO(
-                                                        251,
-                                                        246,
-                                                        232,
-                                                        1,
-                                                      ),
-                                                    ),
-                                                    child: Align(
-                                                      alignment:
-                                                          AlignmentDirectional(
-                                                            0,
-                                                            0,
-                                                          ),
-                                                      child: Container(
-                                                        width: 20,
-                                                        height: 20,
+                                                Builder(
+                                                  builder: (context) {
+                                                    if (agmireentList[index]["erenevibeUid"] ==
+                                                        Alpradunctice()
+                                                            .aceinsideliTable[Alpradunctice()
+                                                            .acecenterDex]["baserentylId"]) {
+                                                      return Container(
+                                                        width: 32,
+                                                        height: 32,
                                                         decoration:
                                                             BoxDecoration(),
+                                                      );
+                                                    }
+                                                    return InkWell(
+                                                      onTap: () async {
+                                                        await showDialog(
+                                                          context: context,
+                                                          builder: (context) {
+                                                            return TranquilityMeditatjh(
+                                                              phytendausUid:
+                                                                  agmireentList[index]["erenevibeUid"],
+                                                            );
+                                                          },
+                                                        );
+                                                        setState(() {});
+                                                      },
+                                                      child: Container(
+                                                        width: 32,
+                                                        height: 32,
+                                                        decoration: BoxDecoration(
+                                                          border: Border.all(
+                                                            color:
+                                                                Color.fromRGBO(
+                                                                  255,
+                                                                  255,
+                                                                  255,
+                                                                  1,
+                                                                ),
+                                                            width: 2,
+                                                          ),
+                                                          borderRadius:
+                                                              BorderRadius.circular(
+                                                                20,
+                                                              ),
+                                                        ),
                                                         child: DecoratedBox(
                                                           decoration: BoxDecoration(
-                                                            image: DecorationImage(
-                                                              image: AssetImage(
-                                                                "assets/images/iweninvcxd.png",
-                                                              ),
-                                                              fit: BoxFit.cover,
+                                                            border: Border.all(
+                                                              color:
+                                                                  Color.fromRGBO(
+                                                                    174,
+                                                                    106,
+                                                                    66,
+                                                                    1,
+                                                                  ),
+                                                              width: 1,
                                                             ),
                                                             borderRadius:
                                                                 BorderRadius.circular(
-                                                                  24,
+                                                                  20,
                                                                 ),
+                                                            color:
+                                                                Color.fromRGBO(
+                                                                  251,
+                                                                  246,
+                                                                  232,
+                                                                  1,
+                                                                ),
+                                                          ),
+                                                          child: Align(
+                                                            alignment:
+                                                                AlignmentDirectional(
+                                                                  0,
+                                                                  0,
+                                                                ),
+                                                            child: Container(
+                                                              width: 20,
+                                                              height: 20,
+                                                              decoration:
+                                                                  BoxDecoration(),
+                                                              child: DecoratedBox(
+                                                                decoration: BoxDecoration(
+                                                                  image: DecorationImage(
+                                                                    image: AssetImage(
+                                                                      "assets/images/iweninvcxd.png",
+                                                                    ),
+                                                                    fit: BoxFit
+                                                                        .cover,
+                                                                  ),
+                                                                  borderRadius:
+                                                                      BorderRadius.circular(
+                                                                        24,
+                                                                      ),
+                                                                ),
+                                                              ),
+                                                            ),
                                                           ),
                                                         ),
                                                       ),
-                                                    ),
-                                                  ),
+                                                    );
+                                                  },
                                                 ),
 
                                                 Container(

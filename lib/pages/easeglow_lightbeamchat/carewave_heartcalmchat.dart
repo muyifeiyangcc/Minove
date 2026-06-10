@@ -1,4 +1,5 @@
 import 'package:audioplayers/audioplayers.dart';
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:loading_indicator/loading_indicator.dart';
@@ -58,7 +59,8 @@ class _CarewaveHeartcalmchat extends State<CarewaveHeartcalmchat> {
     try {
       final sicalretris = {
         "ulreleaseType": 6,
-        "baserentylId": Alpradunctice().aceinsideliTable.last["baserentylId"] + 1,
+        "baserentylId":
+            Alpradunctice().aceinsideliTable.last["baserentylId"] + 1,
         "stemiousText": etaphytxt,
         "varicateVioce": ificentvoi,
         "pensityLong": fariouslong,
@@ -79,7 +81,9 @@ class _CarewaveHeartcalmchat extends State<CarewaveHeartcalmchat> {
         'hh:mm',
       ).format(DateTime.now());
 
-      Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
+      Alpradunctice().aceinsideliTable = List.from(
+        Alpradunctice().aceinsideliTable,
+      );
     } catch (e) {
       return;
     }
@@ -584,6 +588,12 @@ class _CarewaveHeartcalmchat extends State<CarewaveHeartcalmchat> {
                             Padding(
                               padding: const EdgeInsets.only(bottom: 40),
                               child: GestureDetector(
+                                onTap: () {
+                                  BotToast.showText(
+                                    text:
+                                        "Please press and hold to start recording.",
+                                  );
+                                },
                                 onLongPressStart: (_) async {
                                   setState(() {
                                     olithiclyShow = true;
@@ -606,8 +616,8 @@ class _CarewaveHeartcalmchat extends State<CarewaveHeartcalmchat> {
                                       .difference(saheStart!)
                                       .inSeconds;
 
-                                  if (anietis > 0) {
-                                    sciviousAdd("", laartiy!, "${anietis}s");
+                                  if (anietis > 0 && laartiy != null) {
+                                    sciviousAdd("", laartiy, "${anietis}s");
                                   }
 
                                   setState(() {});

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:minove/itpeacestorge/soulbalastorge.dart';
 import 'package:minove/pages/breathing_reflectiondisc/steady_toleranceuplo.dart';
 import 'package:minove/pages/breathing_reflectiondisc/uplifting_relievedetai.dart';
+import 'package:minove/pages/lightglow_restglowmine/tranquility_meditatjh.dart';
 import 'package:minove/pages/soulglow_purevibehome/easepond_sdpondnav.dart';
 import 'package:waterfall_flow/waterfall_flow.dart';
 
@@ -26,8 +27,13 @@ class _GentlewindPresencedisc extends State<GentlewindPresencedisc> {
   dynamic getTentorian() {
     try {
       return Alpradunctice().aceinsideliTable
-          .where((e) => e["ulreleaseType"] == 3
-          && !Alpradunctice().aceinsideliTable[Alpradunctice().acecenterDex]["softwinddBl"].contains(e["erenevibeUid"])
+          .where(
+            (e) =>
+                e["ulreleaseType"] == 3 &&
+                !Alpradunctice()
+                    .aceinsideliTable[Alpradunctice()
+                        .acecenterDex]["softwinddBl"]
+                    .contains(e["erenevibeUid"]),
           )
           .toList()
           .reversed
@@ -68,12 +74,11 @@ class _GentlewindPresencedisc extends State<GentlewindPresencedisc> {
               InkWell(
                 splashColor: Colors.transparent,
                 onTap: () async {
+                  bool purificaIs = await getTulenuoke(context);
 
-                   bool purificaIs = await getTulenuoke(context);
-
-                            if (purificaIs) {
-                              return;
-                            }
+                  if (purificaIs) {
+                    return;
+                  }
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -169,63 +174,96 @@ class _GentlewindPresencedisc extends State<GentlewindPresencedisc> {
                                       MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
-                                    Container(
-                                      width: 32,
-                                      height: 32,
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                          color: Color.fromRGBO(
-                                            255,
-                                            255,
-                                            255,
-                                            1,
-                                          ),
-                                          width: 2,
-                                        ),
-                                        borderRadius: BorderRadius.circular(20),
-                                      ),
-                                      child: DecoratedBox(
-                                        decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color: Color.fromRGBO(
-                                              174,
-                                              106,
-                                              66,
-                                              1,
-                                            ),
-                                            width: 1,
-                                          ),
-                                          borderRadius: BorderRadius.circular(
-                                            20,
-                                          ),
-                                          color: Color.fromRGBO(
-                                            251,
-                                            246,
-                                            232,
-                                            1,
-                                          ),
-                                        ),
-                                        child: Align(
-                                          alignment: AlignmentDirectional(0, 0),
-                                          child: Container(
-                                            width: 20,
-                                            height: 20,
+                                    Builder(
+                                      builder: (context) {
+                                        if (fulgentList[index]["erenevibeUid"] ==
+                                            Alpradunctice()
+                                                .aceinsideliTable[Alpradunctice()
+                                                .acecenterDex]["baserentylId"]) {
+                                          return Container(
+                                            width: 32,
+                                            height: 32,
                                             decoration: BoxDecoration(),
+                                          );
+                                        }
+                                        return InkWell(
+                                          onTap: () async {
+                                            await showDialog(
+                                              context: context,
+                                              builder: (context) {
+                                                return TranquilityMeditatjh(
+                                                  phytendausUid:
+                                                      fulgentList[index]["erenevibeUid"],
+                                                );
+                                              },
+                                            );
+                                            setState(() {});
+                                          },
+                                          child: Container(
+                                            width: 32,
+                                            height: 32,
+                                            decoration: BoxDecoration(
+                                              border: Border.all(
+                                                color: Color.fromRGBO(
+                                                  255,
+                                                  255,
+                                                  255,
+                                                  1,
+                                                ),
+                                                width: 2,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(20),
+                                            ),
                                             child: DecoratedBox(
                                               decoration: BoxDecoration(
-                                                image: DecorationImage(
-                                                  image: AssetImage(
-                                                    "assets/images/iweninvcxd.png",
+                                                border: Border.all(
+                                                  color: Color.fromRGBO(
+                                                    174,
+                                                    106,
+                                                    66,
+                                                    1,
                                                   ),
-                                                  fit: BoxFit.cover,
+                                                  width: 1,
                                                 ),
                                                 borderRadius:
-                                                    BorderRadius.circular(24),
+                                                    BorderRadius.circular(20),
+                                                color: Color.fromRGBO(
+                                                  251,
+                                                  246,
+                                                  232,
+                                                  1,
+                                                ),
+                                              ),
+                                              child: Align(
+                                                alignment: AlignmentDirectional(
+                                                  0,
+                                                  0,
+                                                ),
+                                                child: Container(
+                                                  width: 20,
+                                                  height: 20,
+                                                  decoration: BoxDecoration(),
+                                                  child: DecoratedBox(
+                                                    decoration: BoxDecoration(
+                                                      image: DecorationImage(
+                                                        image: AssetImage(
+                                                          "assets/images/iweninvcxd.png",
+                                                        ),
+                                                        fit: BoxFit.cover,
+                                                      ),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                            24,
+                                                          ),
+                                                    ),
+                                                  ),
+                                                ),
                                               ),
                                             ),
                                           ),
-                                        ),
-                                      ),
+                                        );
+                                      },
                                     ),
 
                                     Container(
@@ -275,14 +313,13 @@ class _GentlewindPresencedisc extends State<GentlewindPresencedisc> {
                                                 image: DecorationImage(
                                                   image: AssetImage(
                                                     fulgentList[index]["sepeoiceLike"]
-                                                              .contains(
-                                                                Alpradunctice()
-                                                                    .aceinsideliTable[Alpradunctice()
-                                                                    .acecenterDex]["baserentylId"],
-                                                              )
-                                                          ? "assets/images/iubwu_oribund.png"
-                                                          : 
-                                                    "assets/images/zxichiua.png",
+                                                            .contains(
+                                                              Alpradunctice()
+                                                                  .aceinsideliTable[Alpradunctice()
+                                                                  .acecenterDex]["baserentylId"],
+                                                            )
+                                                        ? "assets/images/iubwu_oribund.png"
+                                                        : "assets/images/zxichiua.png",
                                                   ),
                                                   fit: BoxFit.cover,
                                                 ),

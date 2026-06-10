@@ -1,5 +1,7 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
+import 'package:minove/itpeacestorge/soulbalastorge.dart';
+import 'package:minove/pages/lightglow_restglowmine/tranquility_meditatjh.dart';
 import 'package:minove/pages/soulglow_purevibehome/easepond_sdpondnav.dart';
 
 class MindcalmAnchoringlook extends StatefulWidget {
@@ -77,54 +79,106 @@ class _MindcalmAnchoringlook extends State<MindcalmAnchoringlook> {
                             child: DecoratedBox(decoration: BoxDecoration()),
                           ),
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              ClipOval(
-                                child: Container(
-                                  width: 49,
-                                  height: 49,
-                                  decoration: BoxDecoration(),
-                                  child: DecoratedBox(
-                                    decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                        image: AssetImage(
-                                          hebreezeu["tranathAvatar"],
+                              Row(
+                                children: [
+                                  ClipOval(
+                                    child: Container(
+                                      width: 49,
+                                      height: 49,
+                                      decoration: BoxDecoration(),
+                                      child: DecoratedBox(
+                                        decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                            image: AssetImage(
+                                              hebreezeu["tranathAvatar"],
+                                            ),
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
-                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 12,
+                                    child: DecoratedBox(
+                                      decoration: BoxDecoration(),
+                                    ),
+                                  ),
+                                  Flex(
+                                    direction: Axis.vertical,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        hebreezeu["softcloudName"],
+                                        style: TextStyle(
+                                          fontFamily: 'PatrickHand',
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w400,
+                                          color: Color.fromRGBO(91, 56, 41, 1),
+                                        ),
+                                      ),
+                                      Text(
+                                        widget.ecloudWz["acepondDate"],
+                                        style: TextStyle(
+                                          fontFamily: 'PatrickHand',
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w400,
+                                          color: Color.fromRGBO(
+                                            91,
+                                            56,
+                                            41,
+                                            0.6,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              if (hebreezeu["baserentylId"] !=
+                                  Alpradunctice()
+                                      .aceinsideliTable[Alpradunctice()
+                                      .acecenterDex]["baserentylId"])
+                                InkWell(
+                                  splashColor: Colors.transparent,
+                                  onTap: () async {
+                                    await showDialog(
+                                      context: context,
+                                      builder: (context) {
+                                        return TranquilityMeditatjh(
+                                          phytendausUid:
+                                              hebreezeu["baserentylId"],
+                                        );
+                                      },
+                                    );
+                                  },
+                                  child: Container(
+                                    width: 32,
+                                    height: 32,
+                                    decoration: BoxDecoration(),
+                                    child: Align(
+                                      alignment: AlignmentDirectional(0, 0),
+                                      child: Container(
+                                        width: 20,
+                                        height: 20,
+                                        decoration: BoxDecoration(),
+                                        child: DecoratedBox(
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image: AssetImage(
+                                                "assets/images/iweninvcxd.png",
+                                              ),
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: 12,
-                                child: DecoratedBox(
-                                  decoration: BoxDecoration(),
-                                ),
-                              ),
-                              Flex(
-                                direction: Axis.vertical,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    hebreezeu["softcloudName"],
-                                    style: TextStyle(
-                                      fontFamily: 'PatrickHand',
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400,
-                                      color: Color.fromRGBO(91, 56, 41, 1),
-                                    ),
-                                  ),
-                                  Text(
-                                    widget.ecloudWz["acepondDate"],
-                                    style: TextStyle(
-                                      fontFamily: 'PatrickHand',
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400,
-                                      color: Color.fromRGBO(91, 56, 41, 0.6),
-                                    ),
-                                  ),
-                                ],
-                              ),
                             ],
                           ),
                           SizedBox(
@@ -192,16 +246,18 @@ class _MindcalmAnchoringlook extends State<MindcalmAnchoringlook> {
                             child: DecoratedBox(decoration: BoxDecoration()),
                           ),
                           InkWell(
-                          splashColor: Colors.transparent,
-                          onTap: () async {
-                           if(_onrestwad.text!=""){
-                            await thepondLoad();
-                            BotToast.showText(text: "Reply successful.");
-                            Navigator.pop(context);
-                           }else{
-                            BotToast.showText(text: "The reply content cannot be empty.");
-                           }
-                          },
+                            splashColor: Colors.transparent,
+                            onTap: () async {
+                              if (_onrestwad.text != "") {
+                                await thepondLoad();
+                                BotToast.showText(text: "Reply successful.");
+                                Navigator.pop(context);
+                              } else {
+                                BotToast.showText(
+                                  text: "The reply content cannot be empty.",
+                                );
+                              }
+                            },
                             child: Container(
                               width: 236,
                               height: 46,
