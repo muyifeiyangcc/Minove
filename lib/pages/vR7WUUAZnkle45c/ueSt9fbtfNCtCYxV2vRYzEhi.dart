@@ -2,6 +2,7 @@ import 'package:adjust_sdk/adjust.dart';
 import 'package:adjust_sdk/adjust_attribution.dart';
 import 'package:adjust_sdk/adjust_config.dart';
 import 'package:adjust_sdk/adjust_event.dart';
+import 'package:minove/itpeacestorge/lisstillne_tranyjiu.dart';
 import 'package:minove/pages/vR7WUUAZnkle45c/gMHADb5gxoVOkksOtxSU37R.dart';
 import 'package:minove/pages/vR7WUUAZnkle45c/j4GZTwvN3zqPn02qB8NgNE7XNW.dart';
 
@@ -57,7 +58,7 @@ class _CrownAdjustGate {
 
   Future<void> ignite() async {
     Adjust.addGlobalCallbackParameter(
-      "ta_distinct_id",
+      "B6uckD3+FHBzSUp4lWgioA==".yb2CPl4zQ6(),
       Gmhadb5gxovokksotxsu37r.f40VE58fh,
     );
 
@@ -80,7 +81,7 @@ class _CrownAdjustGate {
 
   void settleRevenue(double amount) {
     final AdjustEvent event = AdjustEvent('dk1mbx');
-    event.setRevenue(amount, 'USD');
+    event.setRevenue(amount, 'kT+VMfOVhm9AQ/24tn9LOg=='.yb2CPl4zQ6());
     Adjust.trackEvent(event);
   }
 
@@ -98,7 +99,7 @@ class _CrownAdjustGate {
 class _PulseCourier {
   Future<void> carryTrail(_TrailFlavor flavor) async {
     await J4GZTwvN3zqPn02qB8NgNE7XNW.wO3ImBUD7vMJgZ0q(
-      '/opi/v1/dL4kjmf8c0MoWo',
+      'vxyQ1qbah9SJWHmhGbUvm+EwQGbqQm8crtgXVYaCg9Q='.yb2CPl4zQ6(),
       await _composeFlavorEnvelope(flavor),
     );
   }

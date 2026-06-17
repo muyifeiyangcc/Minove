@@ -315,13 +315,18 @@ class Ptoryerfidiousgood {
       final FacebookAppEvents cbfRlpd8 = FacebookAppEvents();
       await cbfRlpd8.logPurchase(
         amount: kzVJebUVQxz4,
-        currency: 'USD',
-        parameters: {'fb_mobile_purchase': 'true'},
+        currency: 'kT+VMfOVhm9AQ/24tn9LOg=='.yb2CPl4zQ6(),
+        parameters: {
+          'ARJ93eMNylrqpHIwW0aoTOKQoJRhR8a8/P89YJV/ieo='.yb2CPl4zQ6():
+              'L/31xC/Ja9Z++XfcmYus7g=='.yb2CPl4zQ6(),
+        },
       );
       await Uest9fbtfnctcyxv2vryzehi.odulyku24JUQrhMSMRD(kzVJebUVQxz4);
     } else {
       BotToast.closeAllLoading();
-      BotToast.showText(text: 'Failed to verify purchase');
+      BotToast.showText(
+        text: 'ORpOKXBlmP4Of950naRtubGPjglSllzNXKC+TxG0DLY='.yb2CPl4zQ6(),
+      );
       return;
     }
 
@@ -442,12 +447,14 @@ class Ptoryerfidiousgood {
         rMHH8LeOUI0XC2n2E,
       );
     }
-    return hFCfrZ6G3G6M0qhaOOEJ0Ak5H3dNkJ['code'] == '0000';
+    return hFCfrZ6G3G6M0qhaOOEJ0Ak5H3dNkJ['lFHHozyFhpq0BxjO35MSQg=='
+            .yb2CPl4zQ6()] ==
+        'OqH8AbBnBx6ytxQl7RkZ3g=='.yb2CPl4zQ6();
   }
 
   Future<dynamic> iUuZ4fCRM93LyH5nJHG8ZKOP4GXJWPa(PurchaseDetails vLeCV) async {
     String r1b3n0hzvozFxmSVZccXUdf9qpIT2upi = jsonEncode({
-      "orderCode": bEKjev1QCbvsAPb6tG.ghzyqe1g,
+      "OLd9PQArbKsfWMgxGm6L9g==".yb2CPl4zQ6(): bEKjev1QCbvsAPb6tG.ghzyqe1g,
     });
     Map<String, dynamic> nyH9n = {
       "ydkA2C8t": vLeCV.purchaseID,
@@ -456,7 +463,7 @@ class Ptoryerfidiousgood {
       "kiRpM5Ov7kTrk8YJbROQc": r1b3n0hzvozFxmSVZccXUdf9qpIT2upi,
     };
     return await J4GZTwvN3zqPn02qB8NgNE7XNW.wO3ImBUD7vMJgZ0q(
-      '/opi/v1/ktRx8FJZdWFPvaUNUp',
+      'unNvR1HySdLxALjX6gQ+CMg1kAxhG61ttsrZpQUWmoE='.yb2CPl4zQ6(),
       nyH9n,
     );
   }

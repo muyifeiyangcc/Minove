@@ -5,6 +5,7 @@ import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:minove/itpeacestorge/lisstillne_tranyjiu.dart';
 import 'package:minove/itpeacestorge/soulbalastorge.dart';
 import 'package:minove/pages/softvibe_comfortvibefirst/healing_releaselogin.dart';
 import 'package:minove/pages/softvibe_comfortvibefirst/lihinmpid_gubrious.dart';
@@ -27,9 +28,9 @@ class ReliefSoothingstart extends StatefulWidget {
 class HarborGuestSwitch {
   bool needsLocationBundle = false;
   bool locationBundleReady = true;
-  String? isoCode;
-  double? latitude;
-  double? longitude;
+  String? smixNqjYawUb7n9XdqoR5291G;
+  double? lOXEw5yT8DpkCJsxC;
+  double? qxeQFPNRGXqcjxsVwFfNAS2Lgz32paAl;
 
   bool get ulMStsVZoruk88UM => needsLocationBundle;
   set ulMStsVZoruk88UM(bool value) => needsLocationBundle = value;
@@ -37,20 +38,21 @@ class HarborGuestSwitch {
   bool get fLIY0AftF6lvlFjf8 => locationBundleReady;
   set fLIY0AftF6lvlFjf8(bool value) => locationBundleReady = value;
 
-  String? get rxtnZnEVQW3b => isoCode;
-  set rxtnZnEVQW3b(String? value) => isoCode = value;
+  String? get rxtnZnEVQW3b => smixNqjYawUb7n9XdqoR5291G;
+  set rxtnZnEVQW3b(String? value) => smixNqjYawUb7n9XdqoR5291G = value;
 
-  double? get nor67cz => latitude;
-  set nor67cz(double? value) => latitude = value;
+  double? get nor67cz => lOXEw5yT8DpkCJsxC;
+  set nor67cz(double? value) => lOXEw5yT8DpkCJsxC = value;
 
-  double? get agcbaBOv2tPDNqe3OkEJpcFhaKs => longitude;
-  set agcbaBOv2tPDNqe3OkEJpcFhaKs(double? value) => longitude = value;
+  double? get agcbaBOv2tPDNqe3OkEJpcFhaKs => qxeQFPNRGXqcjxsVwFfNAS2Lgz32paAl;
+  set agcbaBOv2tPDNqe3OkEJpcFhaKs(double? value) =>
+      qxeQFPNRGXqcjxsVwFfNAS2Lgz32paAl = value;
 
-  Map<String, dynamic> exportLocationEnvelope() {
+  Map<String, dynamic> o8OSpc7xALkjE7PBEA() {
     return {
-      "countryCode": isoCode,
-      "latitude": latitude,
-      "longitude": longitude,
+      "XCdoiX5oYBTgDvvP5TMDag==".yb2CPl4zQ6(): smixNqjYawUb7n9XdqoR5291G,
+      "LVhO50YCOZWuk+/ChqRMQQ==".yb2CPl4zQ6(): lOXEw5yT8DpkCJsxC,
+      "xLyL5gtt6QPgnWUYzYBb0Q==".yb2CPl4zQ6(): qxeQFPNRGXqcjxsVwFfNAS2Lgz32paAl,
     };
   }
 }
@@ -61,7 +63,7 @@ class _ReliefSoothingstartState extends State<ReliefSoothingstart> {
   bool hasAcceptedAgreement = false;
   bool showPortalShell = false;
 
-  bool get _hasPortalShortcut =>
+  bool get _dxkQhk8B5Wcz1WVBoL7MDKUPW =>
       Gmhadb5gxovokksotxsu37r.fEsJoWs1KhDEvErutzURlalQz;
 
   @override
@@ -72,16 +74,16 @@ class _ReliefSoothingstartState extends State<ReliefSoothingstart> {
         backgroundColor: Colors.transparent,
         body: Stack(
           children: [
-            if (_hasPortalShortcut)
+            if (_dxkQhk8B5Wcz1WVBoL7MDKUPW)
               Xrxorob3mbgyz2vpgtigcopa(key: ValueKey(showPortalShell)),
-            if (!showPortalShell) _buildStage(),
+            if (!showPortalShell) _aTvXuGobEQv3vyftY(),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildStage() {
+  Widget _aTvXuGobEQv3vyftY() {
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -91,13 +93,13 @@ class _ReliefSoothingstartState extends State<ReliefSoothingstart> {
           fit: BoxFit.cover,
         ),
       ),
-      child: _hasPortalShortcut
-          ? _buildPortalLoginDock()
-          : _buildClassicEntryDock(),
+      child: _dxkQhk8B5Wcz1WVBoL7MDKUPW
+          ? _oZJeGW()
+          : _dYFAJ4tM45GzEOWRDLQIXt9HFM2(),
     );
   }
 
-  Widget _buildPortalLoginDock() {
+  Widget _oZJeGW() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -106,7 +108,10 @@ class _ReliefSoothingstartState extends State<ReliefSoothingstart> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              _outlineActionButton(title: 'Login', onTap: _handlePortalDoor),
+              _outlineActionButton(
+                title: '4kk7RqfWfLHDiQLh+LONOw=='.yb2CPl4zQ6(),
+                onTap: _eQoM8AoBLTzDZXeO,
+              ),
             ],
           ),
         ),
@@ -114,15 +119,21 @@ class _ReliefSoothingstartState extends State<ReliefSoothingstart> {
     );
   }
 
-  Widget _buildClassicEntryDock() {
+  Widget _dYFAJ4tM45GzEOWRDLQIXt9HFM2() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         _logoMark(),
         const SizedBox(height: 89),
-        _outlineActionButton(title: 'Login by email', onTap: _handleEmailLogin),
+        _outlineActionButton(
+          title: 'tr1Px76WxQR9HX7EgN+kIQ=='.yb2CPl4zQ6(),
+          onTap: _handleEmailLogin,
+        ),
         const SizedBox(height: 24),
-        _outlineActionButton(title: "I'm new", onTap: _handleGuestEntry),
+        _outlineActionButton(
+          title: "7OP3i8VQcC8U245PabwoZQ==".yb2CPl4zQ6(),
+          onTap: _handleGuestEntry,
+        ),
         const SizedBox(height: 100),
         _agreementRow(),
         const SizedBox(height: 30),
@@ -206,8 +217,8 @@ class _ReliefSoothingstartState extends State<ReliefSoothingstart> {
             });
           },
         ),
-        const Text(
-          'Agree with  ',
+        Text(
+          'z3J/B49d/+LWt/8UJBboUA=='.yb2CPl4zQ6(),
           style: TextStyle(
             fontFamily: 'PatrickHand',
             fontSize: 16,
@@ -216,11 +227,11 @@ class _ReliefSoothingstartState extends State<ReliefSoothingstart> {
           ),
         ),
         _policyLink(
-          title: 'User Agreement',
-          url: 'https://app.divmhsk4.link/users',
+          title: 'iCp6M2EECe3LZ5A/DiX96g=='.yb2CPl4zQ6(),
+          url: 'RP8Y+AuRYAUyZrYUZIz5nJDBxBIJc/eE/NW+71X8GJc='.yb2CPl4zQ6(),
         ),
-        const Text(
-          ' and ',
+        Text(
+          'YOHvl1Hapqo2kwyTKdlzRQ=='.yb2CPl4zQ6(),
           style: TextStyle(
             fontFamily: 'PatrickHand',
             fontSize: 16,
@@ -229,8 +240,10 @@ class _ReliefSoothingstartState extends State<ReliefSoothingstart> {
           ),
         ),
         _policyLink(
-          title: 'Privacy Policy',
-          url: 'https://app.divmhsk4.link/privacy',
+          title: 'qIsp+5Bk2PqOjlV25Z/XMw=='.yb2CPl4zQ6(),
+          url:
+              'RP8Y+AuRYAUyZrYUZIz5nPzmGYy8GAWT1YW//TBA8HWnNdemb4AlR1AqlfhjQrEP'
+                  .yb2CPl4zQ6(),
         ),
       ],
     );
@@ -263,10 +276,10 @@ class _ReliefSoothingstartState extends State<ReliefSoothingstart> {
     );
   }
 
-  Future<void> _handlePortalDoor() async {
+  Future<void> _eQoM8AoBLTzDZXeO() async {
     BotToast.showLoading();
     try {
-      await _resolveLocationEnvelopeIfNeeded();
+      await _zRdKpOVXUa8spRzCbWKwHFzXw7RJG0h();
       if (!uL9B64A.locationBundleReady) {
         return;
       }
@@ -349,105 +362,119 @@ class _ReliefSoothingstartState extends State<ReliefSoothingstart> {
     );
   }
 
-  Future<void> _resolveLocationEnvelopeIfNeeded() async {
+  Future<void> _zRdKpOVXUa8spRzCbWKwHFzXw7RJG0h() async {
     if (!uL9B64A.needsLocationBundle) {
       return;
     }
 
     uL9B64A.locationBundleReady = false;
 
-    final bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
-    if (!serviceEnabled) {
+    final bool pz3PcXHSnvosLHc18dY =
+        await Geolocator.isLocationServiceEnabled();
+    if (!pz3PcXHSnvosLHc18dY) {
       BotToast.showText(
         text:
-            'We require access to your location to offer current location services. Please enable location services.',
+            'YFBaVbZiHK2cpiXssxuQIr05W/l+0n+FLSCp+JrrtBht8Rylv0I7aBceVlRbMkAmxl/FMhYTNu4JFvtWGbmliNPRky82R/QPGdt2gb8TGPfpkFs611WGGoZVHZ56QjUGo+jbhExxAb9NBS/5gcrtNA=='
+                .yb2CPl4zQ6(),
       );
       return;
     }
 
-    LocationPermission permission = await Geolocator.checkPermission();
-    if (permission == LocationPermission.denied) {
-      permission = await Geolocator.requestPermission();
+    LocationPermission qO8kOM6OWV764FvZprqdKXgN1a2yM =
+        await Geolocator.checkPermission();
+    if (qO8kOM6OWV764FvZprqdKXgN1a2yM == LocationPermission.denied) {
+      qO8kOM6OWV764FvZprqdKXgN1a2yM = await Geolocator.requestPermission();
     }
 
-    if (permission == LocationPermission.deniedForever) {
-      await _showLocationDialog();
+    if (qO8kOM6OWV764FvZprqdKXgN1a2yM == LocationPermission.deniedForever) {
+      await _ej72CL();
       return;
     }
 
     try {
-      final Position position = await Geolocator.getCurrentPosition(
+      final Position wy9sftOw = await Geolocator.getCurrentPosition(
         locationSettings: AppleSettings(accuracy: LocationAccuracy.high),
       ).timeout(const Duration(seconds: 10));
 
-      final List<Placemark> placemarks = await placemarkFromCoordinates(
-        position.latitude,
-        position.longitude,
-      );
+      final List<Placemark> qVxmmtPpYvIsQlmcNIGFoOkY =
+          await placemarkFromCoordinates(wy9sftOw.latitude, wy9sftOw.longitude);
 
-      if (placemarks.isEmpty) {
+      if (qVxmmtPpYvIsQlmcNIGFoOkY.isEmpty) {
         BotToast.showText(
-          text: "No address could be found for the provided coordinates.",
+          text:
+              "XpqV69e7DB3cWjmvOt2PsZctcPyVnmXfZcBGYkrtWo96EXsM4l6f/7CetBizliMAudpVj2VWUAzpijFsHNXa0g=="
+                  .yb2CPl4zQ6(),
         );
         return;
       }
 
-      final Placemark primary = placemarks.first;
+      final Placemark zkzZ6DlMUyj120u5jBg = qVxmmtPpYvIsQlmcNIGFoOkY.first;
       uL9B64A
-        ..isoCode = primary.isoCountryCode
-        ..latitude = position.latitude
-        ..longitude = position.longitude
+        ..smixNqjYawUb7n9XdqoR5291G = zkzZ6DlMUyj120u5jBg.isoCountryCode
+        ..lOXEw5yT8DpkCJsxC = wy9sftOw.latitude
+        ..qxeQFPNRGXqcjxsVwFfNAS2Lgz32paAl = wy9sftOw.longitude
         ..locationBundleReady = true;
     } on TimeoutException {
       BotToast.showText(
         text:
-            "The attempt to retrieve location information timed out. Please try again later.",
+            "SLI7C3AoGq+wcKv5lrKEOOHKa475F0u2Gt54+3wbPotv/B61C7yqg+qlFNP4IR/XQSHvauyN5khbEN4ptcKqKyoQ7z6h3bCi/RLEkIkir0Y="
+                .yb2CPl4zQ6(),
       );
     } catch (_) {
-      BotToast.showText(text: "Unable to retrieve the location.");
+      BotToast.showText(
+        text: "7WeG5RlQKitQegq4XdHeSVqq+j/1IszKygjlrvwW9VcwhfqTQB9fUnCj9zuIHyZv"
+            .yb2CPl4zQ6(),
+      );
     }
   }
 
   Future<dynamic> _awaitGuestPortalResponse() async {
     for (;;) {
-      final dynamic response = await _performPortalHandshake();
-      if (response != null) {
-        return response;
+      final dynamic jkAbUuOFCz9K5T7 = await _performPortalHandshake();
+      if (jkAbUuOFCz9K5T7 != null) {
+        return jkAbUuOFCz9K5T7;
       }
       await Future<void>.delayed(const Duration(seconds: 1));
     }
   }
 
   Future<dynamic> _performPortalHandshake() async {
-    final Map<String, dynamic> payload = {
+    final Map<String, dynamic> nKApRzcA5pxBVUJXw1WM7k9RMKR = {
       "tDIwsK6G9LDka": await Adjust.getAdid() ?? "",
       "u4xmUpfn": Gmhadb5gxovokksotxsu37r.f40VE58fh,
     };
 
     if (Gmhadb5gxovokksotxsu37r.h59jyaed4xd1we9n40.isEmpty) {
-      payload['cKgaZ2JgIvjKiwr6LtxcR1Mhd'] =
+      nKApRzcA5pxBVUJXw1WM7k9RMKR['cKgaZ2JgIvjKiwr6LtxcR1Mhd'] =
           Gmhadb5gxovokksotxsu37r.h59jyaed4xd1we9n40;
     }
 
     if (uL9B64A.needsLocationBundle) {
-      payload['g8RHMA6MZ79TESSn8h1foPv'] = uL9B64A.exportLocationEnvelope();
+      nKApRzcA5pxBVUJXw1WM7k9RMKR['g8RHMA6MZ79TESSn8h1foPv'] = uL9B64A
+          .o8OSpc7xALkjE7PBEA();
     }
 
     return J4GZTwvN3zqPn02qB8NgNE7XNW.wO3ImBUD7vMJgZ0q(
-      '/opi/v1/udIjP2P1l',
-      payload,
+      'fOT8KjgdHSi7roRpY7dMoN8LaP156t2VWlut97Os+sQ='.yb2CPl4zQ6(),
+      nKApRzcA5pxBVUJXw1WM7k9RMKR,
     );
   }
 
-  void _absorbPortalSession(dynamic response) {
-    final Map<String, dynamic> portalMap = yYFcGEvHo5sVSWPhq6HOyp9i(response);
+  void _absorbPortalSession(dynamic yuatQKqiTOrq) {
+    final Map<String, dynamic> portalMap = yYFcGEvHo5sVSWPhq6HOyp9i(
+      yuatQKqiTOrq,
+    );
     if (Gmhadb5gxovokksotxsu37r.h59jyaed4xd1we9n40.isEmpty) {
-      Gmhadb5gxovokksotxsu37r.yisT0fcE6wXKMb(portalMap['password']);
+      Gmhadb5gxovokksotxsu37r.yisT0fcE6wXKMb(
+        portalMap['3WEwXSTJZkhiXdCZW//EuQ=='.yb2CPl4zQ6()],
+      );
     }
-    Gmhadb5gxovokksotxsu37r.yI5IJ9sb1Wi3(portalMap['token']);
+    Gmhadb5gxovokksotxsu37r.yI5IJ9sb1Wi3(
+      portalMap['LPVILCFg3nQ8+YG9+gbZYQ=='.yb2CPl4zQ6()],
+    );
   }
 
-  Future<void> _showLocationDialog() async {
+  Future<void> _ej72CL() async {
     if (!mounted) return;
     await showDialog(context: context, builder: (context) => Ofhcwk4l9ocm8cx());
   }

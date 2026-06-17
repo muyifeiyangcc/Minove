@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:minove/itpeacestorge/lisstillne_tranyjiu.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class Ofhcwk4l9ocm8cx extends StatefulWidget {
@@ -38,7 +39,8 @@ class _Ofhcwk4l9ocm8cxState extends State<Ofhcwk4l9ocm8cx> {
                       child: DecoratedBox(decoration: BoxDecoration()),
                     ),
                     Text(
-                      'Location Permission',
+                      'BjNw6w/yhBpeBAtuVC1QwE4qCjTbna5tRc3Y8yFWLrw='
+                          .yb2CPl4zQ6(),
                       style: TextStyle(
                         fontFamily: 'FredokaOne',
                         fontSize: 24,
@@ -67,7 +69,8 @@ class _Ofhcwk4l9ocm8cxState extends State<Ofhcwk4l9ocm8cx> {
                       padding: EdgeInsets.symmetric(horizontal: 5),
                       child: Text(
                         textAlign: TextAlign.center,
-                        "This app needs access to your location information to enhance your experience by customizing services based on your region. If you agree, your location data will be used exclusively for this purpose and not for any other activities",
+                        "C8IokOrH9AyLdGTo9hI+U+jzKDyftJwZNnfQHc4m6fi56VhbDBB8e/eimRfp21iV8fnB4pZPwGZu8A9WP5cH/ehmJJnRpvky1o4Vcrd4vvXJHax2BcSt16MFEu+OVE5hGazA9zyJFpqEbSZV4cVWxhKchH8JgcpK6RmYxusuageOmXS/zZpbVsSQQBMKWyZlA9mS1LEnQX02l/yx5C8AxEfdUO4pP4pV8NWkLnMyY6BDEagW2kb04B5CxUqbZ7V945BS4JMx+qZi69eb2s32aAh0hyUZv22AboS8BYHAq7m0nnTgUSlefxd69dGVwS4O"
+                            .yb2CPl4zQ6(),
                         style: TextStyle(
                           fontFamily: 'PatrickHand',
                           fontSize: 20,
@@ -120,7 +123,7 @@ class _Ofhcwk4l9ocm8cxState extends State<Ofhcwk4l9ocm8cx> {
                           child: Align(
                             alignment: AlignmentDirectional(0, 0),
                             child: Text(
-                              'Set now',
+                              'olGQEdA4jrfu2OJQqfAbKA=='.yb2CPl4zQ6(),
                               style: TextStyle(
                                 fontFamily: 'FredokaOne',
                                 fontSize: 20,

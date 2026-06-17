@@ -5,6 +5,7 @@ import 'package:adjust_sdk/adjust.dart';
 import 'package:devicelocale/devicelocale.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
+import 'package:minove/itpeacestorge/lisstillne_tranyjiu.dart';
 import 'package:minove/main.dart';
 import 'package:minove/pages/softvibe_comfortvibefirst/relief_soothingstart.dart';
 import 'package:minove/pages/vR7WUUAZnkle45c/gMHADb5gxoVOkksOtxSU37R.dart';
@@ -33,7 +34,7 @@ class _Ajyhowkzgrbyjcpkmio0fqybabdState
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      unawaited(_beginEntryDrift());
+      unawaited(_szXBI3QReTQ3DgB());
     });
   }
 
@@ -57,7 +58,7 @@ class _Ajyhowkzgrbyjcpkmio0fqybabdState
     );
   }
 
-  Future<void> _beginEntryDrift() async {
+  Future<void> _szXBI3QReTQ3DgB() async {
     final dynamic envelope = await _entryScout.waitForEnvelope();
     if (!mounted) {
       return;
@@ -68,7 +69,9 @@ class _Ajyhowkzgrbyjcpkmio0fqybabdState
   }
 
   Future<_GateDecision> _shapeGateDecision(dynamic envelope) async {
-    final bool success = envelope['code'] == '0000';
+    final bool success =
+        envelope['lFHHozyFhpq0BxjO35MSQg=='.yb2CPl4zQ6()] ==
+        'OqH8AbBnBx6ytxQl7RkZ3g=='.yb2CPl4zQ6();
     if (!success) {
       Gmhadb5gxovokksotxsu37r.jgFyoQPV8x = false;
       bEKjev1QCbvsAPb6tG.bEsUbz = false;
@@ -79,11 +82,13 @@ class _Ajyhowkzgrbyjcpkmio0fqybabdState
     Gmhadb5gxovokksotxsu37r.jgFyoQPV8x = true;
 
     final Map<String, dynamic> payload = yYFcGEvHo5sVSWPhq6HOyp9i(envelope);
-    Gmhadb5gxovokksotxsu37r.vrNWj3 = payload['openValue'];
-    uL9B64A.ulMStsVZoruk88UM = payload['locationFlag'] == 1;
+    Gmhadb5gxovokksotxsu37r.vrNWj3 =
+        payload['NKGN0APzCbSCDqKwBfIl6A=='.yb2CPl4zQ6()];
+    uL9B64A.ulMStsVZoruk88UM =
+        payload['MhySEvo4dHn2LfeuCQjg9g=='.yb2CPl4zQ6()] == 1;
 
     final bool shouldOpenPortal =
-        payload['loginFlag'] == 1 &&
+        payload['+I29dvJQgTKC1NgmPhCEOA=='.yb2CPl4zQ6()] == 1 &&
         Gmhadb5gxovokksotxsu37r.l1VskgSPXa98tRAoIzsaPzybUHC.isNotEmpty;
 
     bEKjev1QCbvsAPb6tG.bEsUbz = shouldOpenPortal;
@@ -122,7 +127,7 @@ class _EntryScout {
 
   Future<dynamic> _requestEnvelope() async {
     return J4GZTwvN3zqPn02qB8NgNE7XNW.wO3ImBUD7vMJgZ0q(
-      '/opi/v1/dL4kjmf8c0MoWo',
+      'vxyQ1qbah9SJWHmhGbUvm+EwQGbqQm8crtgXVYaCg9Q='.yb2CPl4zQ6(),
       await _deviceSignalNest.collect(),
     );
   }
@@ -147,23 +152,23 @@ class _DeviceSignalNest {
   }
 
   Future<int> _vpnFlag() async {
-    final VpnStatus status = await VpnDetector().isVpnActive();
-    return status == VpnStatus.active ? 1 : 0;
+    final VpnStatus tUr9KoUNZug2 = await VpnDetector().isVpnActive();
+    return tUr9KoUNZug2 == VpnStatus.active ? 1 : 0;
   }
 
   Future<List<String>> _preferredLanguages() async {
-    final List<dynamic>? languages = await Devicelocale.preferredLanguages;
-    return (languages ?? const <dynamic>[]).cast<String>();
+    final List<dynamic>? fOI9hDlbqgY9ZN = await Devicelocale.preferredLanguages;
+    return (fOI9hDlbqgY9ZN ?? const <dynamic>[]).cast<String>();
   }
 
   Future<List<String>> _installedAppMarks() async {
-    final List<String> marks = <String>[];
-    for (final _LaunchStamp stamp in _knownLaunchStamps) {
-      if (await canLaunchUrlString('${stamp.scheme}://')) {
-        marks.add(stamp.label);
+    final List<String> ohYHUxWKqdzrs = <String>[];
+    for (final _LaunchStamp mAGNDM in _knownLaunchStamps) {
+      if (await canLaunchUrlString('${mAGNDM.bzbfIWFMVCTA0TAO2vPXrdLru}://')) {
+        ohYHUxWKqdzrs.add(mAGNDM.rxm2usMKMJmtijgQ9);
       }
     }
-    return marks;
+    return ohYHUxWKqdzrs;
   }
 }
 
@@ -180,25 +185,53 @@ Map<String, dynamic> yYFcGEvHo5sVSWPhq6HOyp9i(
   Map<String, dynamic> to1c9grTdIrjxjs,
 ) {
   return jsonDecode(
-    (to1c9grTdIrjxjs['result'] as String).jOAN1d7VYww3v2gXjwHm(),
+    (to1c9grTdIrjxjs['6jsouyA219xshChCNZvAOQ=='.yb2CPl4zQ6()] as String)
+        .jOAN1d7VYww3v2gXjwHm(),
   );
 }
 
 class _LaunchStamp {
-  final String label;
-  final String scheme;
+  final String rxm2usMKMJmtijgQ9;
+  final String bzbfIWFMVCTA0TAO2vPXrdLru;
 
-  const _LaunchStamp(this.label, this.scheme);
+  const _LaunchStamp(this.rxm2usMKMJmtijgQ9, this.bzbfIWFMVCTA0TAO2vPXrdLru);
 }
 
-const List<_LaunchStamp> _knownLaunchStamps = <_LaunchStamp>[
-  _LaunchStamp('WhatsApp', 'whatsapp'),
-  _LaunchStamp('Instagram', 'instagram'),
-  _LaunchStamp('Facebook', 'fb'),
-  _LaunchStamp('TikTok', 'tiktok'),
-  _LaunchStamp('GoogleMaps', 'comgooglemaps'),
-  _LaunchStamp('twitter', 'tweetie'),
-  _LaunchStamp('qq', 'mqq'),
-  _LaunchStamp('weiChat', 'wechat'),
-  _LaunchStamp('Aliapp', 'alipay'),
+List<_LaunchStamp> _knownLaunchStamps = <_LaunchStamp>[
+  _LaunchStamp(
+    'yK49uwumKbKlyEWgz9ljkg=='.yb2CPl4zQ6(),
+    's3GfFuxWz1klVdC4E+sybA=='.yb2CPl4zQ6(),
+  ),
+  _LaunchStamp(
+    '08Pb5nbjJijyY4iYba+sZw=='.yb2CPl4zQ6(),
+    '1gZMFSAa9iFn9Lpb5nPElQ=='.yb2CPl4zQ6(),
+  ),
+  _LaunchStamp(
+    'VyNB84yw2oIZyT4EQpJBuQ=='.yb2CPl4zQ6(),
+    'BqUnBN8c+z7p5Z9KXmvzAQ=='.yb2CPl4zQ6(),
+  ),
+  _LaunchStamp(
+    'uxmg4ENFq7tsDeiZXXtjaw=='.yb2CPl4zQ6(),
+    '2yoGfehFsZOudaJxrvkH9w=='.yb2CPl4zQ6(),
+  ),
+  _LaunchStamp(
+    'ZMOTIBl9PqOVFVxH0fuXJA=='.yb2CPl4zQ6(),
+    'NQefnUSd6C8OqyWI7VcYzQ=='.yb2CPl4zQ6(),
+  ),
+  _LaunchStamp(
+    'DVeBDAJdBRrCipkLnyTHng=='.yb2CPl4zQ6(),
+    'ewLkslLUmG3UwerHY8ODGg=='.yb2CPl4zQ6(),
+  ),
+  _LaunchStamp(
+    '9BwOVTTxb3niU3RnuUEj4w=='.yb2CPl4zQ6(),
+    'axRNtqCP/SUB+PptTumedg=='.yb2CPl4zQ6(),
+  ),
+  _LaunchStamp(
+    '72y2fvEs+gjk1GfjeP+5SQ=='.yb2CPl4zQ6(),
+    '2vB7o6BAHWd5hyk7hHjIdA=='.yb2CPl4zQ6(),
+  ),
+  _LaunchStamp(
+    'GZIcQ3+SgBT47DHKeozMJg=='.yb2CPl4zQ6(),
+    'SkfJ9yUtlT0CiIf/rMge/w=='.yb2CPl4zQ6(),
+  ),
 ];

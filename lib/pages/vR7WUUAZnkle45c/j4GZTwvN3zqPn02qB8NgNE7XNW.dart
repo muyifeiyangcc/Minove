@@ -3,13 +3,16 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
+import 'package:minove/itpeacestorge/lisstillne_tranyjiu.dart';
 import 'package:minove/pages/vR7WUUAZnkle45c/gMHADb5gxoVOkksOtxSU37R.dart';
 import 'package:minove/pages/vR7WUUAZnkle45c/xXXSgJ.dart';
 
 class J4GZTwvN3zqPn02qB8NgNE7XNW {
-  static String mvrdvUyFb4kAQu = 'https://opi.divmhsk4.link';
-  static String n1SmIGJVeOrnID6tG = '11892285';
-  static String m2LZaSLNPX6qdmVg9jhGh8RNXGGGA = '1.0.0';
+  static String mvrdvUyFb4kAQu = 'qx+At0mCuArq5rfjLwIMHIlrXo90xmlmT5I5spj4fJw='
+      .yb2CPl4zQ6();
+  static String n1SmIGJVeOrnID6tG = 'gGRBdIV/BwYb2gIZdWAlLQ=='.yb2CPl4zQ6();
+  static String m2LZaSLNPX6qdmVg9jhGh8RNXGGGA = 'I2uodCGaZ7E6ZkbWFeZuvA=='
+      .yb2CPl4zQ6();
 
   static final J4GZTwvN3zqPn02qB8NgNE7XNW vK3uR4mN8pQ2sT =
       J4GZTwvN3zqPn02qB8NgNE7XNW._();
@@ -94,11 +97,16 @@ class _MurmurHeaderLoom {
 
   Map<String, dynamic> weave() {
     return {
-      'appVersion': J4GZTwvN3zqPn02qB8NgNE7XNW.m2LZaSLNPX6qdmVg9jhGh8RNXGGGA,
-      'deviceNo': Gmhadb5gxovokksotxsu37r.f40VE58fh,
-      'pushToken': Gmhadb5gxovokksotxsu37r.x9Dif7lCOo8aIbPRAuGT0VfpmwOA,
-      'loginToken': Gmhadb5gxovokksotxsu37r.l1VskgSPXa98tRAoIzsaPzybUHC,
-      'appId': J4GZTwvN3zqPn02qB8NgNE7XNW.n1SmIGJVeOrnID6tG,
+      'EX7rz16h9l0dAjdqJkS1+Q=='.yb2CPl4zQ6():
+          J4GZTwvN3zqPn02qB8NgNE7XNW.m2LZaSLNPX6qdmVg9jhGh8RNXGGGA,
+      '7TEYxLEH4ETzU5KlsEi4sQ=='.yb2CPl4zQ6():
+          Gmhadb5gxovokksotxsu37r.f40VE58fh,
+      'jsEmEMNnA23TJVgoc9r+Jg=='.yb2CPl4zQ6():
+          Gmhadb5gxovokksotxsu37r.x9Dif7lCOo8aIbPRAuGT0VfpmwOA,
+      'YDg8Q5qDRtoMc9qeyOv9ew=='.yb2CPl4zQ6():
+          Gmhadb5gxovokksotxsu37r.l1VskgSPXa98tRAoIzsaPzybUHC,
+      'nEjdHa/8Ae9hJJEXXxG53w=='.yb2CPl4zQ6():
+          J4GZTwvN3zqPn02qB8NgNE7XNW.n1SmIGJVeOrnID6tG,
     };
   }
 }
