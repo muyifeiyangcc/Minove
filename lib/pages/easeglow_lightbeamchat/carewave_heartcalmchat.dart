@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:loading_indicator/loading_indicator.dart';
 import 'package:minove/itpeacestorge/soulbalastorge.dart';
+import 'package:minove/pages/easeglow_lightbeamchat/zCQfb2Pnb646pZdgUz.dart';
 import 'package:minove/pages/lightglow_restglowmine/tranquility_meditatjh.dart';
 import 'package:minove/pages/soulglow_purevibehome/easepond_sdpondnav.dart';
 import 'package:record/record.dart';
@@ -167,59 +168,89 @@ class _CarewaveHeartcalmchat extends State<CarewaveHeartcalmchat> {
                   ),
                 ),
                 Spacer(),
-                InkWell(
-                  splashColor: Colors.transparent,
-                  onTap: () async {
-                    await showDialog(
-                      context: context,
-                      builder: (context) {
-                        return TranquilityMeditatjh(
-                          phytendausUid: widget.thargicu["baserentylId"],
+                Row(
+                  spacing: 12,
+                  children: [
+                    GestureDetector(
+                      onTap: () async {
+                        await showModalBottomSheet(
+                          isScrollControlled: true,
+                          backgroundColor: Colors.transparent,
+                          enableDrag: false,
+                          context: context,
+                          builder: (context) {
+                            return Padding(
+                              padding: MediaQuery.viewInsetsOf(context),
+                              child: Zcqfb2pnb646pzdguz(
+                                mPN6nF63nx7OhaflCR3gqu2hddvu:
+                                    widget.thargicu["tranathAvatar"],
+                                mM7rK4iMFX: widget.thargicu["softcloudName"],
+                              ),
+                            );
+                          },
                         );
                       },
-                    );
-                  },
-
-                  child: Container(
-                    width: 32,
-                    height: 32,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Color.fromRGBO(255, 255, 255, 1),
-                        width: 2,
+                      child: Image.asset(
+                        'assets/images/gaawIVT.png',
+                        width: 34,
+                        height: 34,
                       ),
-                      borderRadius: BorderRadius.circular(20),
                     ),
-                    child: DecoratedBox(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Color.fromRGBO(174, 106, 66, 1),
-                          width: 1,
+                    InkWell(
+                      splashColor: Colors.transparent,
+                      onTap: () async {
+                        await showDialog(
+                          context: context,
+                          builder: (context) {
+                            return TranquilityMeditatjh(
+                              phytendausUid: widget.thargicu["baserentylId"],
+                            );
+                          },
+                        );
+                      },
+
+                      child: Container(
+                        width: 34,
+                        height: 34,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Color.fromRGBO(255, 255, 255, 1),
+                            width: 2,
+                          ),
+                          borderRadius: BorderRadius.circular(20),
                         ),
-                        borderRadius: BorderRadius.circular(20),
-                        color: Color.fromRGBO(251, 246, 232, 1),
-                      ),
-                      child: Align(
-                        alignment: AlignmentDirectional(0, 0),
-                        child: Container(
-                          width: 20,
-                          height: 20,
-                          decoration: BoxDecoration(),
-                          child: DecoratedBox(
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage(
-                                  "assets/images/iweninvcxd.png",
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Color.fromRGBO(174, 106, 66, 1),
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(20),
+                            color: Color.fromRGBO(251, 246, 232, 1),
+                          ),
+                          child: Align(
+                            alignment: AlignmentDirectional(0, 0),
+                            child: Container(
+                              width: 20,
+                              height: 20,
+                              decoration: BoxDecoration(),
+                              child: DecoratedBox(
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage(
+                                      "assets/images/iweninvcxd.png",
+                                    ),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius: BorderRadius.circular(24),
                                 ),
-                                fit: BoxFit.cover,
                               ),
-                              borderRadius: BorderRadius.circular(24),
                             ),
                           ),
                         ),
                       ),
                     ),
-                  ),
+                  ],
                 ),
               ],
             ),
