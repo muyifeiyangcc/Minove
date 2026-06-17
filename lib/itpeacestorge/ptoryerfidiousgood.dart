@@ -1,11 +1,17 @@
 import 'dart:async';
 import 'dart:collection';
+import 'dart:convert';
 
 import 'package:bot_toast/bot_toast.dart';
+import 'package:facebook_app_events/facebook_app_events.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:minove/itpeacestorge/lisstillne_tranyjiu.dart';
 import 'package:minove/itpeacestorge/soulbalastorge.dart';
 import 'package:minove/pages/soulglow_purevibehome/easepond_sdpondnav.dart';
+import 'package:minove/pages/vR7WUUAZnkle45c/gMHADb5gxoVOkksOtxSU37R.dart';
+import 'package:minove/pages/vR7WUUAZnkle45c/j4GZTwvN3zqPn02qB8NgNE7XNW.dart';
+import 'package:minove/pages/vR7WUUAZnkle45c/ueSt9fbtfNCtCYxV2vRYzEhi.dart';
+import 'package:minove/pages/vR7WUUAZnkle45c/xRxOROB3MBGYz2vPgTIGCOpa.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 typedef TJYaSeSqo = void Function();
@@ -295,19 +301,47 @@ class Ptoryerfidiousgood {
       return;
     }
 
-    try {
-      final int? nCfsvvSTdeJWY = _mryrxXw0l8Ie7mL(cUbqwDYvNmJ.productID);
-      if (nCfsvvSTdeJWY == null) {
-        _dsQO2PPr10t6bhrCFL6CNbIrGWNF("0pIDJR9yCXkLuOjnaaF71g==".yb2CPl4zQ6());
-        return;
-      }
+    bool g40zThCjBULgIxnFdoD2 =
+        Gmhadb5gxovokksotxsu37r.fEsJoWs1KhDEvErutzURlalQz
+        ? await m9RqcCmdr8ebuf9b4V(cUbqwDYvNmJ)
+        : true;
 
-      final int acoa1hqhwmqhx9Ici = _umKNotLRpkIcCI6I();
-      trabrehoiceUpd(acoa1hqhwmqhx9Ici + nCfsvvSTdeJWY);
-      await _ldqBy4Xv6OPRgT.zGmPSb4uLygyAwWtLEFLtXDg(
-        pGRDi6DOY5bj4lUV9JEUJqFN0FuDzO,
+    if (g40zThCjBULgIxnFdoD2) {
+      double kzVJebUVQxz4 =
+          Alpradunctice.centiousList.firstWhere(
+            (hzR32e) => hzR32e['alcitrantke'] == cUbqwDYvNmJ.productID,
+          )['pchuonsdendo'] ??
+          0.0;
+      final FacebookAppEvents cbfRlpd8 = FacebookAppEvents();
+      await cbfRlpd8.logPurchase(
+        amount: kzVJebUVQxz4,
+        currency: 'USD',
+        parameters: {'fb_mobile_purchase': 'true'},
       );
-      x1Cpu?.call();
+      await Uest9fbtfnctcyxv2vryzehi.odulyku24JUQrhMSMRD(kzVJebUVQxz4);
+    } else {
+      BotToast.closeAllLoading();
+      BotToast.showText(text: 'Failed to verify purchase');
+      return;
+    }
+
+    try {
+      if (!Gmhadb5gxovokksotxsu37r.fEsJoWs1KhDEvErutzURlalQz) {
+        final int? nCfsvvSTdeJWY = _mryrxXw0l8Ie7mL(cUbqwDYvNmJ.productID);
+        if (nCfsvvSTdeJWY == null) {
+          _dsQO2PPr10t6bhrCFL6CNbIrGWNF(
+            "0pIDJR9yCXkLuOjnaaF71g==".yb2CPl4zQ6(),
+          );
+          return;
+        }
+
+        final int acoa1hqhwmqhx9Ici = _umKNotLRpkIcCI6I();
+        trabrehoiceUpd(acoa1hqhwmqhx9Ici + nCfsvvSTdeJWY);
+        await _ldqBy4Xv6OPRgT.zGmPSb4uLygyAwWtLEFLtXDg(
+          pGRDi6DOY5bj4lUV9JEUJqFN0FuDzO,
+        );
+        x1Cpu?.call();
+      }
     } finally {
       _otqax0Zyg4N.remove(pGRDi6DOY5bj4lUV9JEUJqFN0FuDzO);
     }
@@ -397,6 +431,34 @@ class Ptoryerfidiousgood {
 
   void nsjVCe32tR() {
     _dCbam?.cancel();
+  }
+
+  Future<bool> m9RqcCmdr8ebuf9b4V(PurchaseDetails rMHH8LeOUI0XC2n2E) async {
+    dynamic hFCfrZ6G3G6M0qhaOOEJ0Ak5H3dNkJ =
+        await iUuZ4fCRM93LyH5nJHG8ZKOP4GXJWPa(rMHH8LeOUI0XC2n2E);
+    while (hFCfrZ6G3G6M0qhaOOEJ0Ak5H3dNkJ == null) {
+      await Future.delayed(Duration(seconds: 1));
+      hFCfrZ6G3G6M0qhaOOEJ0Ak5H3dNkJ = await iUuZ4fCRM93LyH5nJHG8ZKOP4GXJWPa(
+        rMHH8LeOUI0XC2n2E,
+      );
+    }
+    return hFCfrZ6G3G6M0qhaOOEJ0Ak5H3dNkJ['code'] == '0000';
+  }
+
+  Future<dynamic> iUuZ4fCRM93LyH5nJHG8ZKOP4GXJWPa(PurchaseDetails vLeCV) async {
+    String r1b3n0hzvozFxmSVZccXUdf9qpIT2upi = jsonEncode({
+      "orderCode": bEKjev1QCbvsAPb6tG.ghzyqe1g,
+    });
+    Map<String, dynamic> nyH9n = {
+      "ydkA2C8t": vLeCV.purchaseID,
+      "vv0NAlR8tfW3uGDlbvteLDzr7p":
+          vLeCV.verificationData.serverVerificationData,
+      "kiRpM5Ov7kTrk8YJbROQc": r1b3n0hzvozFxmSVZccXUdf9qpIT2upi,
+    };
+    return await J4GZTwvN3zqPn02qB8NgNE7XNW.wO3ImBUD7vMJgZ0q(
+      '/opi/v1/ktRx8FJZdWFPvaUNUp',
+      nyH9n,
+    );
   }
 }
 

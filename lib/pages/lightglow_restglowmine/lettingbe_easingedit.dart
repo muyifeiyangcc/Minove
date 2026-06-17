@@ -17,8 +17,8 @@ class _LettingbeEasingedit extends State<LettingbeEasingedit> {
     text: Alpradunctice()
         .aceinsideliTable[Alpradunctice().acecenterDex]["softcloudName"],
   );
-  String eticentAvatar =
-      Alpradunctice().aceinsideliTable[Alpradunctice().acecenterDex]["tranathAvatar"];
+  String eticentAvatar = Alpradunctice()
+      .aceinsideliTable[Alpradunctice().acecenterDex]["tranathAvatar"];
 
   final ImagePicker _picker = ImagePicker();
   @override
@@ -256,9 +256,8 @@ class _LettingbeEasingedit extends State<LettingbeEasingedit> {
                         child: InkWell(
                           splashColor: Colors.transparent,
                           onTap: () async {
-                            //save
                             await thepondLoad();
-                            iarytronizeUpd(eticentAvatar,_erousance.text);
+                            iarytronizeUpd(eticentAvatar, _erousance.text);
 
                             BotToast.showText(text: "Modification successful");
                           },

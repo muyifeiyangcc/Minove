@@ -44,7 +44,6 @@ class Alpradunctice extends ChangeNotifier {
 
   late SharedPreferences prefs;
 
-  //0用户 1信封 2信封回复 3文章 4文章评论 5聊天 6聊天详情
   List<dynamic> _aceinsideliTable = [
     {
       "ulreleaseType": 0,
@@ -124,7 +123,6 @@ class Alpradunctice extends ChangeNotifier {
       "softwinddBl": [],
       "anquilwater": 2,
     },
-    //-------------- 信封
     {
       "ulreleaseType": 1,
       "baserentylId": 7,
@@ -165,7 +163,6 @@ class Alpradunctice extends ChangeNotifier {
       "serenecloudUid": 5,
       "acepondDate": "Thursday April 2 2026",
     },
-    //-------------信封回复
     {
       "ulreleaseType": 2,
       "baserentylId": 12,
@@ -175,7 +172,6 @@ class Alpradunctice extends ChangeNotifier {
       "tlebloomReplyId": 7,
       "acepondDate": "Friday April 3 2026",
     },
-    //--------------文章
     {
       "ulreleaseType": 3,
       "baserentylId": 13,
@@ -232,7 +228,6 @@ class Alpradunctice extends ChangeNotifier {
       "gentlepulsDz": "assets/images/zxkjcbu_a6.mp4",
       "sepeoiceLike": [],
     },
-    //--------评论
     {
       "ulreleaseType": 4,
       "baserentylId": 19,
@@ -249,7 +244,6 @@ class Alpradunctice extends ChangeNotifier {
       "niveomitantId": 18,
       "latarcateDate": "Friday April 3 2026",
     },
-    //--------聊天
     {
       "ulreleaseType": 5,
       "baserentylId": 21,
@@ -257,7 +251,6 @@ class Alpradunctice extends ChangeNotifier {
       "meiheriterLast": "Hello",
       "heritougeTime": "8:20 am",
     },
-    //--------聊天详情
     {
       "ulreleaseType": 6,
       "baserentylId": 22,
@@ -267,7 +260,6 @@ class Alpradunctice extends ChangeNotifier {
       "agmaticUid": 2,
       "erfunctoryId": 21,
     },
-    //-------游客
     {
       "ulreleaseType": 0,
       "baserentylId": 23,
@@ -308,7 +300,6 @@ class Alpradunctice extends ChangeNotifier {
 
   int rolificIndex = 0;
 
-  //signup
   String oundingEmail = "";
   String ovementName = "";
   String matgroundPasw = "";
@@ -317,7 +308,7 @@ class Alpradunctice extends ChangeNotifier {
     {
       "tidianragopr": 400,
       "pchuonsdendo": 0.99,
-      "alcitrantke": "zwcljdloioxdstkf",
+      "alcitrantke": "lvbsvhxcgcrvesor",
     },
     {
       "tidianragopr": 800,
@@ -332,7 +323,7 @@ class Alpradunctice extends ChangeNotifier {
     {
       "tidianragopr": 2450,
       "pchuonsdendo": 4.99,
-      "alcitrantke": "waxjlfgqqdvavdld",
+      "alcitrantke": "dxismgcwewhrtezo",
     },
     {
       "tidianragopr": 4450,
@@ -342,17 +333,17 @@ class Alpradunctice extends ChangeNotifier {
     {
       "tidianragopr": 4900,
       "pchuonsdendo": 9.99,
-      "alcitrantke": "lrqnyrskjuwiohau",
+      "alcitrantke": "khtxlcejaxmqcsra",
     },
     {
       "tidianragopr": 9800,
       "pchuonsdendo": 19.99,
-      "alcitrantke": "klhmpkrcfaiarznc",
+      "alcitrantke": "yadwwvxspgxwlndb",
     },
     {
       "tidianragopr": 24500,
       "pchuonsdendo": 49.99,
-      "alcitrantke": "vipsghcjbemssqdx",
+      "alcitrantke": "qnrcuelbtiuflyky",
     },
     {
       "tidianragopr": 34500,
@@ -362,7 +353,7 @@ class Alpradunctice extends ChangeNotifier {
     {
       "tidianragopr": 49000,
       "pchuonsdendo": 99.99,
-      "alcitrantke": "iwcpxhsdbguloxwl",
+      "alcitrantke": "ymohxnvpkqxutvab",
     },
   ];
 }

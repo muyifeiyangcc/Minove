@@ -24,6 +24,27 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>whatsapp</string>
+		<string>instagram</string>
+		<string>fb</string>
+		<string>tiktok</string>
+		<string>comgooglemaps</string>
+		<string>tweetie</string>
+		<string>wechat</string>
+		<string>alipay</string>
+		<string>mqq</string>
+		<string>squarecash</string>
+		<string>cashme</string>
+		<string>upi</string>
+		<string>phonepe</string>
+		<string>paytmmp</string>
+		<string>gpay</string>
+		<string>com.amazon.mobile.shopping</string>
+		<string>mobikwik</string>
+		<string>freecharge</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -37,6 +58,8 @@
 	<string>This app needs access to your microphone for audio recording, which lets you have smooth voice chats. We will only use or access the recorded content if you give us explicit permission.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This app needs access to your album to let you select and upload videos or other pictures. All the files you choose will only be used for the purposes you've approved, and they'll be securely stored on your device—we'll only upload or share them if you agree.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app needs access to your location information to provide you with more personalized services.  Your location data will be strictly kept confidential, and we will only use it with your authorization, all to enhance your overall user experience.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -79,5 +102,39 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	    <key>CFBundleURLTypes</key> 
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb1015662824259445</string>  
+            </array>
+        </dict>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>tego</string>  
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>1015662824259445</string>
+    <key>FacebookClientToken</key>
+    <string>2d79eab88391620a0b1a6f55f40b159e</string>
+    <key>FacebookDisplayName</key>
+    <string>Tego</string>
+    <key>FacebookAutoLogAppEventsEnabled</key>
+    <true/>
+	<key>UIBackgroundModes</key>
+    <array>
+        <string>remote-notification</string>
+    </array>
+    <key>UNUserNotificationCenter</key>
+    <dict>
+        <key>UNAuthorizationOptions</key>
+        <array>
+            <string>alert</string>
+        </array>
+    </dict>
 </dict>
 </plist>

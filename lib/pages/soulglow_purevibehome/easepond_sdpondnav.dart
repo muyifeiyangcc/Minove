@@ -150,7 +150,6 @@ thepondLoad() async {
   }
 }
 
-//查用户
 dynamic eacewindind(int widindndUid) {
   try {
     final wineased = Alpradunctice().aceinsideliTable
@@ -167,7 +166,6 @@ dynamic eacewindind(int widindndUid) {
   return [];
 }
 
-//新增信封
 Future<bool> nquilbloomAdd(String rtbloomStr) async {
   try {
     final lmcloudxf = {
@@ -180,7 +178,9 @@ Future<bool> nquilbloomAdd(String rtbloomStr) async {
     };
     Alpradunctice().aceinsideliTable.add(lmcloudxf);
 
-    Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
+    Alpradunctice().aceinsideliTable = List.from(
+      Alpradunctice().aceinsideliTable,
+    );
 
     return true;
   } catch (e) {
@@ -188,7 +188,6 @@ Future<bool> nquilbloomAdd(String rtbloomStr) async {
   }
 }
 
-//更文章点赞
 edilectionUpd(int sequiousId) {
   try {
     final yopicUid = Alpradunctice()
@@ -200,18 +199,19 @@ edilectionUpd(int sequiousId) {
     if (Alpradunctice().aceinsideliTable[durateDz]["sepeoiceLike"].contains(
       yopicUid,
     )) {
-      Alpradunctice().aceinsideliTable[durateDz]["sepeoiceLike"].remove(yopicUid);
+      Alpradunctice().aceinsideliTable[durateDz]["sepeoiceLike"].remove(
+        yopicUid,
+      );
     } else {
       Alpradunctice().aceinsideliTable[durateDz]["sepeoiceLike"].add(yopicUid);
     }
 
-    Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
-  } catch (e) {
-    //
-  }
+    Alpradunctice().aceinsideliTable = List.from(
+      Alpradunctice().aceinsideliTable,
+    );
+  } catch (e) {}
 }
 
-//新增评论
 Future<bool> scuousisquAdd(String aosioevalStr, int foeasertpuId) async {
   try {
     final lmcloudxf = {
@@ -225,7 +225,9 @@ Future<bool> scuousisquAdd(String aosioevalStr, int foeasertpuId) async {
     };
     Alpradunctice().aceinsideliTable.add(lmcloudxf);
 
-    Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
+    Alpradunctice().aceinsideliTable = List.from(
+      Alpradunctice().aceinsideliTable,
+    );
 
     return true;
   } catch (e) {
@@ -233,7 +235,6 @@ Future<bool> scuousisquAdd(String aosioevalStr, int foeasertpuId) async {
   }
 }
 
-//查对应用户文章
 dynamic ticuerulous(int rtrategeeoa) {
   try {
     return Alpradunctice().aceinsideliTable
@@ -246,7 +247,6 @@ dynamic ticuerulous(int rtrategeeoa) {
   }
 }
 
-//关注、取关
 arhiatusUpd(int auchelyUid) {
   try {
     final yopicUid = Alpradunctice()
@@ -265,7 +265,9 @@ arhiatusUpd(int auchelyUid) {
       Alpradunctice().aceinsideliTable[oaryubgnim]["mindreleaseFL"].remove(
         auchelyUid,
       );
-      Alpradunctice().aceinsideliTable[viuilelesu]["uilwindFS"].remove(yopicUid);
+      Alpradunctice().aceinsideliTable[viuilelesu]["uilwindFS"].remove(
+        yopicUid,
+      );
     } else {
       Alpradunctice().aceinsideliTable[oaryubgnim]["mindreleaseFL"].add(
         auchelyUid,
@@ -273,13 +275,14 @@ arhiatusUpd(int auchelyUid) {
       Alpradunctice().aceinsideliTable[viuilelesu]["uilwindFS"].add(yopicUid);
     }
 
-    Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
+    Alpradunctice().aceinsideliTable = List.from(
+      Alpradunctice().aceinsideliTable,
+    );
   } catch (e) {
     return;
   }
 }
 
-//拉黑
 ludebviateUpd(int nolithicBlUid) {
   try {
     int oufuscateDex = Alpradunctice().aceinsideliTable.indexWhere(
@@ -302,13 +305,14 @@ ludebviateUpd(int nolithicBlUid) {
       );
     }
 
-    Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
+    Alpradunctice().aceinsideliTable = List.from(
+      Alpradunctice().aceinsideliTable,
+    );
   } catch (e) {
     return;
   }
 }
 
-//更名字、头像
 iarytronizeUpd(String pleteroAvatar, String uetinuoName) {
   try {
     int ariahecunDex = Alpradunctice().aceinsideliTable.indexWhere(
@@ -321,15 +325,17 @@ iarytronizeUpd(String pleteroAvatar, String uetinuoName) {
 
     Alpradunctice().aceinsideliTable[ariahecunDex]["tranathAvatar"] =
         pleteroAvatar;
-    Alpradunctice().aceinsideliTable[ariahecunDex]["softcloudName"] = uetinuoName;
+    Alpradunctice().aceinsideliTable[ariahecunDex]["softcloudName"] =
+        uetinuoName;
 
-    Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
+    Alpradunctice().aceinsideliTable = List.from(
+      Alpradunctice().aceinsideliTable,
+    );
   } catch (e) {
     return;
   }
 }
 
-//录音
 Future<void> pteountragLu(AudioRecorder bjugpefyat) async {
   if (!await bjugpefyat.hasPermission()) return;
 
@@ -351,7 +357,6 @@ Future<String> _blimeupeus() async {
   return '${entpurantus.path}/$fterfugeluo.m4a';
 }
 
-//更金币
 trabrehoiceUpd(int lisoicepNum) {
   try {
     int otrcomlseDex = Alpradunctice().aceinsideliTable.indexWhere(
@@ -362,15 +367,17 @@ trabrehoiceUpd(int lisoicepNum) {
                   .acecenterDex]["baserentylId"],
     );
 
-    Alpradunctice().aceinsideliTable[otrcomlseDex]["gentlepondGood"] = lisoicepNum;
+    Alpradunctice().aceinsideliTable[otrcomlseDex]["gentlepondGood"] =
+        lisoicepNum;
 
-    Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
+    Alpradunctice().aceinsideliTable = List.from(
+      Alpradunctice().aceinsideliTable,
+    );
   } catch (e) {
     return;
   }
 }
 
-//更次数
 darapidensUpd(int jummovep) {
   try {
     int beapchapDex = Alpradunctice().aceinsideliTable.indexWhere(
@@ -383,7 +390,9 @@ darapidensUpd(int jummovep) {
 
     Alpradunctice().aceinsideliTable[beapchapDex]["anquilwater"] = jummovep;
 
-    Alpradunctice().aceinsideliTable = List.from(Alpradunctice().aceinsideliTable);
+    Alpradunctice().aceinsideliTable = List.from(
+      Alpradunctice().aceinsideliTable,
+    );
   } catch (e) {
     return;
   }
@@ -397,7 +406,6 @@ Future<bool> getTulenuoke(BuildContext context) async {
         23;
 
     if (ticlarityon) {
-      
       await showDialog(
         context: context,
         builder: (context) {

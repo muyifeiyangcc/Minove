@@ -21,7 +21,6 @@ class _MellowNurturingmessag extends State<MellowNurturingmessag> {
     super.dispose();
   }
 
-  //获取聊天集合
   dynamic getLebeian() {
     try {
       return Alpradunctice().aceinsideliTable
@@ -31,9 +30,15 @@ class _MellowNurturingmessag extends State<MellowNurturingmessag> {
                 e["lowerherithu"].contains(
                   Alpradunctice().aceinsideliTable[Alpradunctice()
                       .acecenterDex]["baserentylId"],
-                )
-                && !Alpradunctice().aceinsideliTable[Alpradunctice().acecenterDex]["softwinddBl"].contains(e["lowerherithu"][0])
-                && !Alpradunctice().aceinsideliTable[Alpradunctice().acecenterDex]["softwinddBl"].contains(e["lowerherithu"][1])
+                ) &&
+                !Alpradunctice()
+                    .aceinsideliTable[Alpradunctice()
+                        .acecenterDex]["softwinddBl"]
+                    .contains(e["lowerherithu"][0]) &&
+                !Alpradunctice()
+                    .aceinsideliTable[Alpradunctice()
+                        .acecenterDex]["softwinddBl"]
+                    .contains(e["lowerherithu"][1]),
           )
           .toList();
     } catch (e) {
@@ -119,7 +124,8 @@ class _MellowNurturingmessag extends State<MellowNurturingmessag> {
                             .where(
                               (e) =>
                                   e !=
-                                  Alpradunctice().aceinsideliTable[Alpradunctice()
+                                  Alpradunctice()
+                                      .aceinsideliTable[Alpradunctice()
                                       .acecenterDex]["baserentylId"],
                             )
                             .first;
@@ -129,7 +135,16 @@ class _MellowNurturingmessag extends State<MellowNurturingmessag> {
                         return InkWell(
                           splashColor: Colors.transparent,
                           onTap: () {
-                            Navigator.push(context,MaterialPageRoute(builder: (context) =>  CarewaveHeartcalmchat(xtdiciousId: ulantrydList[index]["baserentylId"], thargicu: icaciousus,)));
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => CarewaveHeartcalmchat(
+                                  xtdiciousId:
+                                      ulantrydList[index]["baserentylId"],
+                                  thargicu: icaciousus,
+                                ),
+                              ),
+                            );
                           },
                           child: Padding(
                             padding: const EdgeInsets.only(bottom: 24),
@@ -151,11 +166,12 @@ class _MellowNurturingmessag extends State<MellowNurturingmessag> {
                                     ),
                                   ),
                                 ),
-                          
+
                                 Padding(
                                   padding: const EdgeInsets.only(left: 10),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         icaciousus["softcloudName"],
@@ -178,7 +194,12 @@ class _MellowNurturingmessag extends State<MellowNurturingmessag> {
                                           fontFamily: 'PatrickHand',
                                           fontSize: 12,
                                           fontWeight: FontWeight.w400,
-                                          color: Color.fromRGBO(91, 56, 41, 0.6),
+                                          color: Color.fromRGBO(
+                                            91,
+                                            56,
+                                            41,
+                                            0.6,
+                                          ),
                                         ),
                                       ),
                                     ],
