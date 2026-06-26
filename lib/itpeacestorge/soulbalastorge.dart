@@ -308,7 +308,7 @@ class Alpradunctice extends ChangeNotifier {
     {
       "tidianragopr": 400,
       "pchuonsdendo": 0.99,
-      "alcitrantke": "lvbsvhxcgcrvesor",
+      "alcitrantke": "zwcljdloioxdstkf",
     },
     {
       "tidianragopr": 800,
@@ -323,7 +323,7 @@ class Alpradunctice extends ChangeNotifier {
     {
       "tidianragopr": 2450,
       "pchuonsdendo": 4.99,
-      "alcitrantke": "dxismgcwewhrtezo",
+      "alcitrantke": "waxjlfgqqdvavdld",
     },
     {
       "tidianragopr": 4450,
@@ -333,17 +333,17 @@ class Alpradunctice extends ChangeNotifier {
     {
       "tidianragopr": 4900,
       "pchuonsdendo": 9.99,
-      "alcitrantke": "khtxlcejaxmqcsra",
+      "alcitrantke": "lrqnyrskjuwiohau",
     },
     {
       "tidianragopr": 9800,
       "pchuonsdendo": 19.99,
-      "alcitrantke": "yadwwvxspgxwlndb",
+      "alcitrantke": "klhmpkrcfaiarznc",
     },
     {
       "tidianragopr": 24500,
       "pchuonsdendo": 49.99,
-      "alcitrantke": "qnrcuelbtiuflyky",
+      "alcitrantke": "vipsghcjbemssqdx",
     },
     {
       "tidianragopr": 34500,
@@ -353,7 +353,7 @@ class Alpradunctice extends ChangeNotifier {
     {
       "tidianragopr": 49000,
       "pchuonsdendo": 99.99,
-      "alcitrantke": "ymohxnvpkqxutvab",
+      "alcitrantke": "iwcpxhsdbguloxwl",
     },
   ];
 }

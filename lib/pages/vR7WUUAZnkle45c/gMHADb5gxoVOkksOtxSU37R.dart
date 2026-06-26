@@ -81,18 +81,18 @@ class Gmhadb5gxovokksotxsu37r {
 }
 
 enum _PebbleField {
-  bIPVBc8MRkjans63IAF('kJ6pUQ2M5'),
-  dQs376cdbfw18r44Nm('zyvkIFnZ2Xp96P0re1BC0yg'),
-  vLguD0Wffjk('rVBOJsCI');
+  bIPVBc8MRkjans63IAF('m5FwmVoCQNQE7GoDYEQk7jbZZ6rYv'),
+  dQs376cdbfw18r44Nm('u2tLMXKf39Ap'),
+  vLguD0Wffjk('zgyz7pdnTwIIVV088');
 
   const _PebbleField(this.boxKey);
   final String boxKey;
 }
 
 enum _VaultField {
-  goUJLeBLfDn('hAiEVvJZRCze2y293pPJuS8cqS9EhDmO1'),
-  pL4E4('iaev3bx3mW1'),
-  aHriYJ17oqh9URKTtT7hHQj('qSFJBzVxeOpDtpuZut6ve7UYv1');
+  goUJLeBLfDn('zRsQOpmk341B9RNITtsYyIfxHuw4y'),
+  pL4E4('tYsVghgH8KQgTHRWfhMBpYsLtm58'),
+  aHriYJ17oqh9URKTtT7hHQj('qa4OX');
 
   const _VaultField(this.boxKey);
   final String boxKey;
